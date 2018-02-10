@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/
+}
+/* COLORS 
+
+Reds- 
+#8D0C0C
+#B32727
+#D14747
+#F47474
+#FFA4A4
+
+Oranges- 
+#8D460C
+#B36627
+#D18647
+#F4AE74
+#FFCDA4
+
+Purple- 
+#A83978
+
+Blue-
+#2B7D7D
+*/
+
+a {
+  color: #A83978;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+
+}
+
+::selection {
+  background: #d14747;
+  color: #FFCDA4;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.sans-serif {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.serif {
+    font-family: 'Eczar', serif;
+}
+
+
+.special {
+    font-size: 150%;
+}
+
+.footer {
+    font-size: 14px;
+    bottom: 3px;
+    left: 1.5%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    color: white;
+    opacity: .35;
+}
+
+
+h1 {
+    font-size: 4vw;
+}
+
+p {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1vw;
+}
+
+#homepage {
+
+    margin-top: 10%;
+    text-align: center;
+}
+
+/* Smartphones and Tablets ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
+    /* Styles */
+
+    h1 {
+        font-size: 6.5vw;
+    }
+
+    p {
+        padding-top: 5%;
+        font-size: 2vw;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 321px) and (orientation : portrait) {
+    /* Styles */
+    #homepage {
+        margin-top: 20%;
+    }
+
+    h1 {
+        font-size: 7.5vw;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 320px) and  (orientation : landscape){
+    /* Styles */
+    #homepage {
+        margin-top: 10%;
+    }
+    p {
+        padding-top: 1.5%;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
+    /* Styles */
+    #homepage {
+        margin-top: 20%;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1366px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1366px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    /* Styles */
+}
