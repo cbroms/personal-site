@@ -5,6 +5,7 @@ html, body {
 body {
     background-repeat: no-repeat;
     background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/
+    margin: 0;
 }
 /* COLORS 
 
@@ -56,25 +57,47 @@ a:focus {
     font-family: 'Eczar', serif;
 }
 
-
 .special {
     font-size: 150%;
 }
 
 .footer {
-    font-size: 14px;
+    background-color: black;
+    font-size: 10px;
     bottom: 3px;
-    left: 1.5%;
-    position: fixed;
+    position: static;
     margin: 0;
     padding: 0;
     color: white;
-    opacity: .35;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.hover-background {
+    background-color: #fffaf7;
+    height: auto;
+    width: 97%;
+    margin-left: 3%;
+    position: static;
+}
+
+.second {
+    margin-left: 0;
+    margin-right: 3%;
+    margin-top: 7%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
 
 h1 {
     font-size: 4vw;
+    padding-left: 5px;
 }
 
 p {
@@ -86,7 +109,7 @@ p {
 
 #homepage {
 
-    margin-top: 10%;
+    padding-top: 10%;
     text-align: center;
 }
 
@@ -99,7 +122,7 @@ p {
     }
 
     p {
-        padding-top: 5%;
+        padding-top: 1.5%;
         font-size: 2vw;
     }
 }
@@ -107,47 +130,45 @@ p {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (min-width : 321px) and (orientation : portrait) {
-    /* Styles */
     #homepage {
-        margin-top: 20%;
-    }
-
-    h1 {
-        font-size: 7.5vw;
-    }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (max-width : 320px) and  (orientation : landscape){
-    /* Styles */
-    #homepage {
-        margin-top: 10%;
+        padding-top: 7%;
     }
     p {
         padding-top: 1.5%;
     }
 }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 321px) and (orientation : portrait) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 320px) and  (orientation : landscape){
+    /* Styles */
+    
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
     /* Styles */
-    #homepage {
-        margin-top: 20%;
-    }
+    
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) and (orientation : landscape) {
     /* Styles */
+    #homepage {
+        padding-top: 10%;
+    }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+    #homepage {
+        padding-top: 20%;
+    }
 }
 
 /* Desktops and laptops ----------- */
