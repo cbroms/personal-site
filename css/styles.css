@@ -1,7 +1,3 @@
-html, body {
-    height: 100%;
-}
-
 body {
     background-repeat: no-repeat;
     background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/
@@ -44,10 +40,29 @@ a:focus {
   background: #d14747;
   color: #FFCDA4;
 }
-
+/*
 ::-webkit-scrollbar { 
     display: none; 
+} */
+
+::-webkit-scrollbar-track
+{
+    background-color: #A83978;
 }
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #A83978;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: black;
+}
+
 
 .sans-serif {
     font-family: 'Work Sans', sans-serif;
@@ -57,13 +72,11 @@ a:focus {
     font-family: 'Eczar', serif;
 }
 
-
-
 .footer {
     background-color: black;
     font-size: 12px;
-    bottom: 3px;
-    position: static;
+    bottom: 0;
+    position: relative;
     margin: 0;
     padding: 0;
     color: grey;
@@ -75,7 +88,7 @@ a:focus {
 .hover-background {
     background-color: #fffaf7;
     height: auto;
-    width: 97%;
+    width: 94%;
     margin-right: 4%;
     position: static;
 }
@@ -87,7 +100,7 @@ a:focus {
 }
 
 .wrapper {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     overflow: auto;
 }
@@ -113,6 +126,15 @@ li {
     display:inline-block; */
 }
 
+.black {
+    background-color: #190101;
+    color: #d6cfcf;
+}
+
+.portfolio-title {
+    padding-left: 2%;
+}
+
 h1 {
     font-size: 4vw;
     padding-left: 5px;
@@ -128,6 +150,12 @@ p {
     padding-left: 2%;
     padding-right: 2%;
     font-size: 1vw;
+}
+
+.centered {
+    max-width: 50%;
+    padding-top: 2%;
+    padding-left: 19%; /* 25% - 6% gutter to center*/
 }
 
 #homepage {
@@ -165,8 +193,12 @@ p {
     #homepage {
         padding-top: 20%;
     }
+    h1 {
+        font-size: 8vw;
+    }
     p {
         padding-top: 1.5%;
+        font-size: 2.8vw;
     }
 
 }
