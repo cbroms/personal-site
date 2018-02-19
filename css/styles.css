@@ -44,24 +44,24 @@ a:focus {
 ::-webkit-scrollbar { 
     display: none; 
 } */
-
+/*
 ::-webkit-scrollbar-track
 {
-    background-color: black;
+    background-color: #d14747;
 }
 
 ::-webkit-scrollbar
 {
     width: 12px;
-    background-color: black;
+    background-color: #d14747;
 }
 
 ::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    background-color: #A83978;
+    background-color: black;
 }
-
+*/
 
 .sans-serif {
     font-family: 'Work Sans', sans-serif;
@@ -117,6 +117,7 @@ li {
     left: 1%;
     transform-origin: 0 50%;
     transform: rotate(-90deg) translate(-50%, 50%);
+    z-index: -1;
 }
 
 .special {
@@ -126,7 +127,8 @@ li {
 }
 
 .black {
-    background-color: #190101;
+   /* background-color: #190101; */
+   background-color: black;
     color: #d6cfcf;
 }
 
@@ -163,6 +165,36 @@ p {
     text-align: center;
 }
 
+.container {
+
+  margin: 0 0 auto;
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  padding: 0;
+  max-width: 100%;
+}
+
+.photos img {
+  display: block;
+  padding: 8px;
+  float: center;
+  flex: 0 0 auto;
+  background-color: inherit;
+}
+
+.photos img {
+    width: calc(100%/4 - 16px);
+    height: calc(100%/4 - 16px);
+}
+
+
+
 /* Smartphones and Tablets ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
     /* Styles */
@@ -182,7 +214,11 @@ p {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (max-device-width : 480px) {
+    .photos img {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+  }
 
 }
 
@@ -204,6 +240,7 @@ p {
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (max-device-width : 667px) and  (orientation : landscape) {
+    
 
     #homepage {
         padding-top: 3%;
@@ -212,8 +249,18 @@ p {
         padding-top: .5%;
     }
 }
+@media only screen and (max-device-width : 768px) and (min-device-width : 480px) {
+    .photos img {
+    width: calc(100%/2 - 16px);
+    height: calc(100%/2 - 16px);
+  }
+}
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
+    .photos img {
+    width: calc(100%/3 - 16px);
+    height: calc(100%/3 - 16px);
+  }
 
 }
 
