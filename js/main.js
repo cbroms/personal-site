@@ -19,6 +19,7 @@ jQuery.expr.filters.offscreen = function(el) {
   return ((rect.x + rect.width) < 0 || (rect.y + rect.height) < 0 || (rect.x > window.innerWidth || rect.y > window.innerHeight));
 };
 
+
 /*******************************************************
 *********  Change background to black          ********
 *******************************************************/
@@ -35,19 +36,25 @@ $(window).scroll(function() {
 // on menu button press
 function menuButton(x) {
     x.classList.toggle('change');
-    if ($(x).hasClass('change')) {
+    if ($(x).hasClass('change')) {/*
         $('.navigation').css('display', 'block');
-        $('.navigation').animate({'opacity': '1'}, 1300);
+        $('.navigation').animate({'opacity': '1'}, 1300);*/
+        setTimeout( function() {
+           $('.navigation').slideToggle('slow');
+       }, 300);
+
         if ($(window).width() <= 1366){
             $('.second').animate({'margin-left': '40%'}, 300);
         } else {
          $('.second').animate({'margin-left': '25%'}, 300);
      }
  } else {
+    $('.navigation').slideToggle('slow');
+    /*
     $('.navigation').animate({'opacity': '0'}, 500, function(){
-        $('.navigation').css('display', 'none');
+        $('.navigation').css('display', 'none'); 
     });
-
+    */
     if ($(window).width() <= 1366){
         $('.second').animate({'margin-left': '0px'}, 300);
     } else {
@@ -69,6 +76,17 @@ $(window).resize(function(){
 }
 });
 
+function subNavButton(x) {
+    if($(x).is('#one')){
+        $('#projects').slideToggle(function(){
+            $('#portfolio').slideToggle();
+        });
+    } else {
+        $('#portfolio').slideToggle(function(){
+            $('#projects').slideToggle();
+        });
+    }
+}
 
 /*******************************************************
 *********  Smooth scroll when clicking a link   ********
@@ -117,5 +135,13 @@ $('a[href*="#"]')
 }
 });
 
+/*******************************************************
+******  prevent links with # from changing url   *******
+*******************************************************/
 
+addEventListener('click', function (ev) {
+    if (ev.target.classList.contains('safe-link')) {
+        ev.preventDefault();
+    }   
+});
 
