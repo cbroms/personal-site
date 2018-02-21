@@ -1,7 +1,10 @@
 body {
     background-repeat: no-repeat;
-    background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/
+    /*background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/ 
+    background: linear-gradient(90deg, black, white);
+    height: auto;
     margin: 0;
+    overflow-x: hidden;
 }
 /* COLORS 
 
@@ -27,8 +30,13 @@ Blue-
 */
 
 a {
-  color: #A83978;
+  /*color: #A83978; */
+  color: #d14747; 
   text-decoration: none;
+}
+
+a:hover {
+    text-decoration: overline underline;
 }
 
 a:focus {
@@ -43,7 +51,7 @@ a:focus {
 /*
 ::-webkit-scrollbar { 
     display: none; 
-} */
+    } */
 /*
 ::-webkit-scrollbar-track
 {
@@ -62,6 +70,13 @@ a:focus {
     background-color: black;
 }
 */
+
+.change-function {
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
 
 .sans-serif {
     font-family: 'Work Sans', sans-serif;
@@ -95,13 +110,16 @@ a:focus {
 .second {
     margin-right: 0;
     margin-left: 6%;
-    margin-top: 7%;
+    margin-bottom: 7%;
+    transition: 0.75s;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .wrapper {
-    height: 100vh;
+    height: auto;
     width: 100%;
-    overflow: auto;
+    
 }
 
 li {
@@ -109,27 +127,54 @@ li {
     display: inline;
 }
 
-.vert {
-    position: fixed;
-    top: 20%;
-    bottom: 0;
-    margin: auto;
-    left: 1%;
-    transform-origin: 0 50%;
-    transform: rotate(-90deg) translate(-50%, 50%);
-    z-index: -1;
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+.menu-wrapper {
+    position: -webkit-sticky;  
+    position: sticky;
+    top: 6px; 
+    padding-left: 6px;
+}
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #D14747;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .special {
-
     /*background:#676470;
     display:inline-block; */
+}
+
+.current-page {
+    text-decoration: overline underline;
 }
 
 .black {
    /* background-color: #190101; */
    background-color: black;
-    color: #d6cfcf;
+   color: #d6cfcf;
 }
 
 .portfolio-title {
@@ -166,7 +211,6 @@ p {
 }
 
 .container {
-
   margin: 0 0 auto;
 }
 
@@ -175,29 +219,69 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: stretch;
+  align-content: space-between;
   padding: 0;
   max-width: 100%;
 }
 
-.photos img {
+.around {
   display: block;
-  padding: 8px;
+  padding-bottom: 40px;
+  max-width: 100%;
   float: center;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   background-color: inherit;
 }
 
-.photos img {
-    width: calc(100%/4 - 16px);
-    height: calc(100%/4 - 16px);
+.photos .flex-content {
+    display: block;
+    margin: auto;
+    max-width: 100%; 
+    max-height: 415px; 
 }
 
+.flex-text {
+    max-width: 60% !important;
+    /* Change margins here*/
+} 
 
+.navigation {
+    position: fixed;
+    padding-left: 6%;
+    opacity: 0;
+    display: none;
+}
+
+.sub-navigation {
+    padding-left: 4%;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1366px) {
+    .photos .flex-content {
+        max-height: 450px; /* Value to change*/
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    .photos .flex-content {
+        max-height: 750px; /* Value to change*/
+    }
+}
 
 /* Smartphones and Tablets ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
     /* Styles */
+
+    .second {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-icon {
+    margin-left: 0;
+}
 
     h1 {
         font-size: 6.5vw;
@@ -215,11 +299,22 @@ p {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-device-width : 480px) {
-    .photos img {
-    width: calc(100% - 16px);
-    height: calc(100% - 16px);
-  }
 
+    .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #D14747;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+    .around {
+        padding: 20px;
+    }
+
+    .photos .flex-content {
+        max-height: 1500px; /* Value to change */
+    }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -235,12 +330,11 @@ p {
         padding-top: 1.5%;
         font-size: 2.8vw;
     }
-
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (max-device-width : 667px) and  (orientation : landscape) {
-    
+
 
     #homepage {
         padding-top: 3%;
@@ -250,22 +344,28 @@ p {
     }
 }
 @media only screen and (max-device-width : 768px) and (min-device-width : 480px) {
-    .photos img {
-    width: calc(100%/2 - 16px);
-    height: calc(100%/2 - 16px);
-  }
+
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
-    .photos img {
-    width: calc(100%/3 - 16px);
-    height: calc(100%/3 - 16px);
-  }
+h1 {
+        font-size: 5vw;
+    }
+    h2 {
+        font-size: 2.5vw;
+    }
+
+    p {
+        font-size: 1.4vw;
+    }
 
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) and (orientation : landscape) {
+    .photos .flex-content {
+        max-height: 415px; /* Value to change*/
+    }
 
     #homepage {
         padding-top: 5%;
@@ -274,18 +374,11 @@ p {
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
-    #homepage {
-        padding-top: 20%;
-    }
+   .photos .flex-content {
+    max-height: 415px; /* Value to change*/
 }
 
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1366px) {
-
+#homepage {
+    padding-top: 20%;
 }
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-
 }
