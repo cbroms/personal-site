@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="preload" href="../css/styles.css" as="style">
-  <link rel="preload" href="../js/main.js" as="script">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/main.js" as="script">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar|Work+Sans" rel="stylesheet">
     <script
@@ -19,9 +20,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="hover-background" id="header">
-            <h1 class="serif portfolio-title">Portfolio &mdash; Photography</h1>
-            <!--<h3 class="sans-serif portfolio-title">Home > Portfolio > Photography</h3>-->
+        <div id="header">
+            <h1 class="serif portfolio-title">Photography</h1>
         </div>
         <div class="content-wrapper">
             <div class="menu-wrapper" >
@@ -33,40 +33,66 @@
               <div class="navigation">
                 <h2 class="sans-serif current-page" id="first" onclick="subNavButton(this)"><a class="safe-link" href="#">Portfolio</a></h2>
                 <div class="sub-navigation" id="portfolio">
+
                     <h3 class="sans-serif current-page"><a class="safe-link" href="#">Photography</a></h3>
-                    <h3 class="sans-serif"><a href="#"></span>Renderings</a></h3>
-                    <h3 class="sans-serif"><a href="/projection.html"></span>Projection</a></h3>
+                    <h3 class="sans-serif"><a href="/arch-render.html">Architectural Rendering</a></h3>
+                    <h3 class="sans-serif"><a href="/environ-render.html">Environmental Rendering</a></h3>
+                    <h3 class="sans-serif"><a href="/projection.html">Projection</a></h3>
+                    <h3 class="sans-serif"><a href="/code.html">Code</a></h3>
                 </div>
                 <h2 class="sans-serif" id="second" onclick="subNavButton(this)"><a class="safe-link" href="#">Recent Projects</a></h2>
                 <div class="sub-navigation" id="projects" style="display: none;">
-                    <h3 class="sans-serif"><a href="#"></span>Pizza Oven</a></h3>
-                    <h3 class="sans-serif"><a href="#"></span>Critical Theory</a></h3>
-                    <h3 class="sans-serif"><a href="#"></span>Transhumanism</a></h3>
+                    <h3 class="sans-serif"><a href="#">Websites in Development</a></h3>
+                    <h3 class="sans-serif"><a href="#">Things I'm Building</a></h3>
+                    <h3 class="sans-serif"><a href="#">Writings</a></h3>
+                    <h3 class="sans-serif"><a href="#">Drawings</a></h3>
                 </div>
                 <h2 class="sans-serif"><a href="../about.html">About</a></h2>
             </div>
         </div>
         <div class="hover-background second">
             <div class="container">
-              <div class="photos">
-                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch01.jpg"></div>
-        <!--<div class="around"><p class="sans-serif flex-content flex-text">This is some flex-content right here my dude. And we have even more where that came from!</p></div>
-            <div class="around"><p class="sans-serif flex-content flex-text">This is some flex-content right here my dude. And we have even more where that came from!</p></div>-->
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch03.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch04.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch02.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape03.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape01.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape04.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape02.jpg"></div>
-            <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape05.jpg"></div>
+                <p class="sans-serif">Hey!</p>
+                <div class="photos">
 
+                    <!--<div class="around exclude"><p class="sans-serif flex-content flex-text">This is some flex-content right here my dude. And we have even more where that came from!</p></div>-->
+                    <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch01.jpg" onclick="imageButton(this)"></div>
+               <!-- <div class="around"><p class="sans-serif flex-content flex-text">This is some flex-content right here my dude. And we have even more where that came from!</p></div>
+                <div class="around"><p class="sans-serif flex-content flex-text">This is some flex-content right here my dude. And we have even more where that came from!</p></div> -->
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch03.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch04.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_architecture/parch02.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape03.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape01.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape04.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape02.jpg" onclick="imageButton(this)"></div>
+                <div class="around"><img class="flex-content" src="http://www.christianbroms.com/images/personal_landscape/landscape05.jpg" onclick="imageButton(this)"></div>
+            </div>
         </div>
+        <div class="enlarged-image-nav">
+            <div class="image-nav-inner">
+                <div class="icon arrow-left" onclick="arrowLeft(this)">
+                    <div class="bar1 short"></div>
+                    <div class="bar2 short"></div>
+                </div>
+                <div class="icon x-button change" onclick="arrowClose(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="icon arrow-right"  onclick="arrowRight(this)">
+                    <div class="bar1 short"></div>
+                    <div class="bar2 short"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
-</div>
-<div class="footer sans-serif">
-    Copyright &copy;2018 Christian Broms &mdash; View this site's <a href="https://github.com/CBR0MS/PortfolioSite2018">source code</a> on GitHub &mdash; <a href="http://christianbroms.com/about.html">Contact</a> &mdash; View the <a href="http://portfolio2017.christianbroms.com">2017 Portfolio</a>
-</div>
 </body>
+<div class="footer sans-serif">
+    <div class="footer-text">
+        Copyright &copy; 2015-2018 Christian Broms &mdash; View this site's <a href="https://github.com/CBR0MS/PortfolioSite2018">source code</a> on GitHub &mdash; <a href="http://christianbroms.com/about.html">Contact</a> &mdash; View the <a href="http://portfolio2017.christianbroms.com">2017 Portfolio</a>
+    </div>
+</div>
 </html>
