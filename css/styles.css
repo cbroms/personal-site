@@ -247,9 +247,9 @@ li {
 }
 
 .black {
-   /* background-color: #190101; */
-   background-color: black;
-   color: #d6cfcf;
+ /* background-color: #190101; */
+ background-color: black;
+ color: #d6cfcf;
 }
 
 .portfolio-title {
@@ -286,18 +286,23 @@ p {
 
 .around img:hover {
     cursor: pointer;
-  /*  box-shadow: 0 0 170px 25px rgba(0, 0, 0, 0.2); */
+    /*  box-shadow: 0 0 170px 25px rgba(0, 0, 0, 0.2); */
 
 }
 
 .around img{
-  /*  transition: box-shadow 1s; */
+  height: 700px;
+  width: 700px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .centered {
     max-width: 50%;
     padding-top: 2%;
-    padding-left: 19%; /* 25% - 6% gutter to center*/
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 3%; /* 25% - 6% gutter to center*/
 }
 
 #homepage {
@@ -305,6 +310,11 @@ p {
     padding-top: 10%;
     text-align: center;
 }
+
+iframe {
+  max-width: 100%;
+}
+
 
 .container {
   margin: 0 0 auto;
@@ -380,25 +390,33 @@ p {
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1366px) {
     .photos .flex-content {
-        max-height: 300px; /* Value to change*/
+     
     }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     .photos .flex-content {
-        max-height: 400px; /* Value to change*/
-    }
-    h1 {
-        font-size: 2.5vw;
-    }
-    p {
-        font-size: 0.75vw;
-    }
+       /* Value to change*/
+       width: 375px;
+       display: block
+   }
+   h1 {
+    font-size: 2.5vw;
+}
+p {
+    font-size: 0.75vw;
+}
 }
 
 /* Smartphones and Tablets ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
+
+    .around img{
+        width: 400px;
+        overflow: hidden;
+        object-fit: cover;
+    }
 
     .enlarged-image-nav {
       overflow: hidden;
@@ -518,7 +536,7 @@ p {
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-   .photos .flex-content {
+ .photos .flex-content {
     max-height: 340px; /* Value to change*/
 }
 
