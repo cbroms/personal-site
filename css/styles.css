@@ -80,6 +80,7 @@ a:focus {
 
 .sans-serif {
     font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
 }
 
 .serif {
@@ -91,7 +92,6 @@ a:focus {
     width: 100%;
     font-size: 12px;
     height: 20px;
-    bottom: 0;
     position: absolute;
     color: grey;
     padding-bottom: 15px;
@@ -105,14 +105,14 @@ a:focus {
 .hover-background {
     background-color: #fffaf7;
     height: auto;
-    width: 94%;
+    width: 96%;
     margin-right: 4%;
     position: static;
 }
 
 .second {
     margin-right: 0;
-    margin-left: 6%;
+    margin-left: 4%;
     margin-top: 10%;
     -webkit-transition: 0.75s;
     -moz-transition: 0.75s;
@@ -247,9 +247,9 @@ li {
 }
 
 .black {
-   /* background-color: #190101; */
-   background-color: black;
-   color: #d6cfcf;
+ /* background-color: #190101; */
+ background-color: black;
+ color: #d6cfcf;
 }
 
 .portfolio-title {
@@ -257,11 +257,12 @@ li {
     position: absolute;
     z-index: -3;
     margin-top: -3%;
-    opacity: 0.3;
+    opacity: 0.15;
     color: grey;
     padding-left: 2%;
 
 }
+
 
 #header {
     background-color: rgba(0, 0, 0, 0);
@@ -286,16 +287,21 @@ p {
 
 .around img:hover {
     cursor: pointer;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
 }
 
 .centered {
     max-width: 50%;
     padding-top: 2%;
     text-align: justify;
+    margin: auto;
+}
+
+.title-justify {
     text-justify: inter-word;
     text-align: center;
     vertical-align: middle;
-    margin: auto;
 }
 
 #homepage {
@@ -306,6 +312,14 @@ p {
 
 iframe {
   max-width: 100%;
+}
+
+.outline {
+    color: black;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 2px black;
+    font-size: 4.5vmin;
+    font-weight: 700;
 }
 
 .container {
@@ -321,38 +335,6 @@ iframe {
   padding: 0;
   max-width: 100%;
 }
-
-.around {
-  display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 100%;
-  float: center;
-  flex: 1 1 auto;
-  background-color: inherit;
-}
-
-.around-text {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 100%;
-  float: center;
-  flex: 1 1 auto;
-  background-color: inherit;
-}
-
-.photos .flex-content {
-    display: flex;
-    margin: auto;
-   /* max-width: 100%; 
-   max-height: 300px; */
-}
-
-.flex-text {
-    max-width: 60% !important;
-    /* Change margins here*/
-} 
 
 .navigation {
     position: fixed;
@@ -380,11 +362,32 @@ iframe {
 }
 
 
-.around img {
-  max-width: auto;
-  overflow: hidden;
-  object-fit: contain;
-} 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-left: auto;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 24%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  margin-left: 3%;
+}
+
+img {
+   -webkit-filter: grayscale(100%); 
+   filter: grayscale(100%);
+   width: 93%; 
+}
 
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1366px) {
@@ -394,7 +397,7 @@ iframe {
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 
- h1 {
+   h1 {
     font-size: 2.5vmax;
 }
 
@@ -409,52 +412,78 @@ p {
 /* Smartphones and Tablets ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
 
-        .centered {
-            max-width: 75%;
-        }
-
-        .second {
-            margin-left: 0;
-            width: 100%;
-        }
-
-        .menu-icon {
-            margin-left: 0;
-        }
-
-        h1 {
-            font-size: 6.5vmin;
-        }
-
-        h2 {
-            font-size: 3.5vmin;
-        }
-
-        p {
-            padding-top: 1.5%;
-            font-size: 2vmin;
-        }
+    .centered {
+        max-width: 75%;
     }
 
-    /* Smartphones (portrait and landscape) ----------- */
-    @media only screen and (max-device-width : 480px) {
-
-
-      .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #D14747;
-        margin: 6px 0;
-        transition: 0.4s;
+    .second {
+        margin-left: 0;
+        width: 100%;
     }
 
-    .around {
-        padding: 20px;
+    .menu-icon {
+        margin-left: 0;
     }
 
-    .around-text {
-        padding: 20px;
+    h1 {
+        font-size: 6.5vmin;
     }
+
+    h2 {
+        font-size: 3.5vmin;
+    }
+
+    p {
+        padding-top: 1.5%;
+        font-size: 2vmin;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 480px) {
+
+    img {
+        width: 100%; /* you can use % */
+    }
+
+    .column {
+      flex: 100%;
+      max-width: 100%;
+  }
+
+  .outline {
+
+    font-size: 9vmin;
+}
+
+.centered {
+    max-width: 85%;
+}
+
+h2 {
+    font-size: 5.5vmin;
+}
+
+p {
+    font-size: 4vmin;
+}
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #D14747;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.around {
+    padding: 20px;
+}
+
+.around-text {
+    padding: 20px;
+}
 
 }
 
@@ -466,10 +495,6 @@ p {
     }
     h1 {
         font-size: 8vw;
-    }
-    p {
-        padding-top: 1.5%;
-        font-size: 2.8vw;
     }
 }
 
@@ -490,9 +515,14 @@ p {
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
 
-    h1 {
-        font-size: 5vw;
-    }
+    .column {
+      flex: 48%;
+      max-width: 50%;
+  }
+
+  h1 {
+    font-size: 5vw;
+}
     /*
     h2 {
         font-size: 2.5vw;
