@@ -1,3 +1,8 @@
+html {
+    background-color: #d14747;
+    
+}
+
 body {
     background-repeat: no-repeat;
     /*background: linear-gradient( 90deg, #F4AE74  , #d14747 ); /*#2B7D7D*/ 
@@ -5,6 +10,7 @@ body {
     height: auto;
     margin: 0;
     overflow-x: hidden;
+    
 }
 /* COLORS 
 
@@ -88,7 +94,7 @@ a:focus {
 }
 
 .footer {
-    background-color: #212121;
+    background-color: black;
     width: 100%;
     font-size: 12px;
     height: 20px;
@@ -120,6 +126,7 @@ a:focus {
     transition: 0.75s;
     display: inline-block;
     vertical-align: top;
+    z-index: 1;
 }
 
 .wrapper {
@@ -127,6 +134,7 @@ a:focus {
     width: 100%;
     position: relative;
     padding-bottom: 50px;
+    z-index: 0;
     
 }
 
@@ -159,6 +167,10 @@ li {
     -webkit-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
+}
+
+.hidden {
+    display: none;
 }
 
 .short {
@@ -196,6 +208,76 @@ li {
     -webkit-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  z-index: -5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  /*background: #d14747;*/
+  background: white;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
 }
 
 .enlarged-image-nav {
@@ -255,7 +337,7 @@ li {
 .portfolio-title {
     font-size: 15vw;
     position: absolute;
-    z-index: -3;
+    z-index: -1;
     margin-top: -3%;
     opacity: 0.15;
     color: grey;
@@ -318,6 +400,7 @@ iframe {
     color: black;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 2px black;
+    letter-spacing: 2.5px;
     font-size: 4.5vmin;
     font-weight: 700;
 }
@@ -463,7 +546,9 @@ p {
 h2 {
     font-size: 5.5vmin;
 }
-
+h3 {
+    font-size: 4vmin;
+}
 p {
     font-size: 4vmin;
 }

@@ -32,6 +32,39 @@ $(window).scroll(function() {
       }
     });
 
+/*******************************************************
+*********       animate before leaving         ********
+*******************************************************/
+
+// fade out the page
+var goToURL;
+
+$('a').click(function() {
+
+goToURL = $(this).attr('href');
+
+ if ($('.menu-icon').hasClass('change')) {
+  $('.menu-icon').click();
+}
+
+setTimeout(function(){
+  $('.portfolio-title').fadeOut();
+  $('.content-wrapper').fadeOut();
+}, 500);
+
+setTimeout(function(){
+  window.location = goToURL;
+}, 1000);
+
+return false; 
+});
+
+//fade in the page 
+$(document).ready(function(){
+  $('.portfolio-title').fadeIn().removeClass('hidden');
+  $('.content-wrapper').fadeIn().removeClass('hidden');
+});
+
 
 /*******************************************************
 *********                  Menu Button          ********
@@ -39,7 +72,7 @@ $(window).scroll(function() {
 
 var initalImagesLayout;
 $(document).ready(function(){
-   initalImagesLayout = $('#initial').clone(); 
+ initalImagesLayout = $('.photos').clone(); 
 });
 
 // on menu button press
@@ -126,7 +159,6 @@ function imageButton(x){
    });
     $(x).fadeOut();
 
-
     // scroll to the top of the second div
     $('html, body').animate({
       scrollTop: $('.second').offset().top
@@ -139,6 +171,8 @@ function imageButton(x){
       setProportionalHW(x);
         //$('.flex-content').css('width', '95%');
         //$('.flex-content').css('height', 'auto');
+        $('.flex-content').css('filter', 'grayscale(0%)');
+        $('.flex-content').css('-webkit-filter', 'grayscale(0%)');
         $('.flex-content').css('position', 'relative');
         $('.flex-content').animate({'top': '50%'}, {queue: false, duration: 1000});
         $('.flex-content').css('transform', 'translateY(-50%)');
@@ -204,6 +238,9 @@ function arrowClose(x){
     //$('.around img').css('object-fit', 'cover');
     $('.second').removeClass('black');
     $('.flex-content').finish();
+
+    $('.flex-content').css('filter', '');
+    $('.flex-content').css('-webkit-filter', '');
     $('.flex-content').css('width', '');
     $('.flex-content').css('height', '');
     $('.flex-content').css('max-height', '');
