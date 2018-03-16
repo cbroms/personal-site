@@ -171,14 +171,16 @@ function imageButton(x){
       setProportionalHW(x);
         //$('.flex-content').css('width', '95%');
         //$('.flex-content').css('height', 'auto');
+        $('.around').css('padding-right', '2.5%');
         $('.flex-content').css('filter', 'grayscale(0%)');
         $('.flex-content').css('-webkit-filter', 'grayscale(0%)');
-        $('.flex-content').css('position', 'relative');
-        $('.flex-content').animate({'top': '50%'}, {queue: false, duration: 1000});
-        $('.flex-content').css('transform', 'translateY(-50%)');
-        $('.flex-content').css('-webkit-transform', 'translateY(-50%)');
-        $('.flex-content').css('-moz-transform', 'translateY(-50%)');
-        $('.flex-content').css('-ms-transform', 'translateY(-50%)');
+        $('.flex-content').css('position', 'absolute');
+        $('.flex-content').css('left', '50%');
+        $('.flex-content').css('top', '48%');
+        $('.flex-content').css('transform', 'translate(-50%, -50%)');
+        $('.flex-content').css('-webkit-transform', 'translate(-50%, -50%)');
+        $('.flex-content').css('-moz-transform', 'translate(-50%, -50%)');
+        $('.flex-content').css('-ms-transform', 'translate(-50%, -50%)');
       }, 500);
 
     $('.enlarged-image-nav').fadeIn();
@@ -238,7 +240,6 @@ function arrowClose(x){
     //$('.around img').css('object-fit', 'cover');
     $('.second').removeClass('black');
     $('.flex-content').finish();
-
     $('.flex-content').css('filter', '');
     $('.flex-content').css('-webkit-filter', '');
     $('.flex-content').css('width', '');
@@ -251,6 +252,7 @@ function arrowClose(x){
     $('.flex-content').css('-webkit-transform', '');
     $('.flex-content').css('-moz-transform', '');
     $('.flex-content').css('-ms-transform', '');
+    $('.around').css('padding-right', '');
     $('.enlarged-image-nav').fadeOut();
     $('.exclude').each(function(){
      $(this).show();
@@ -260,13 +262,36 @@ function arrowClose(x){
   function setProportionalHW(x) {
 
   // set height or width to 90 depending on image orientation
-  if ((x.naturalWidth < x.naturalHeight) ) {
-    $('img.flex-content').animate({'height': '90vh'}, 800);
-    $('img.flex-content').animate({'width': 'auto'}, 1000);
+  if (x.naturalWidth < x.naturalHeight ) {
+    console.log("tall");
+    $(x).css('height', '70vh');
+    $(x).css('width', 'auto');
+
+    if ($(window).width() > 1366){
+      $(x).css('height', '80vh');
+    $(x).css('width', 'auto');
+    }
+    //$(x).css('padding-left', '13%');
+  }
+  else if (x.naturalWidth > x.naturalHeight ){
+    console.log("wide");
+    $(x).css('width', '40vw');
+    $(x).css('height', 'auto');
+
+     if ($(window).width() > 1366){
+      $(x).css('width', '80vw');
+      $(x).css('height', 'auto');
+    }
   }
   else {
-    $('img.flex-content').animate({'width': '95vw'}, 800);
-    $('img.flex-content').css('height', 'auto');
+    console.log("square");
+    $(x).css('width', '80vw');
+    $(x).css('height', '80vw');
+
+     if ($(window).width() > 1366){
+      $(x).css('width', '50vw');
+    $(x).css('height', '50vw');
+    }
   }
 }
 
@@ -323,6 +348,7 @@ $('a[href*="#"]')
 
 addEventListener('click', function (ev) {
   if (ev.target.classList.contains('safe-link')) {
+    console.log("click");
     ev.preventDefault();
   }   
 });
@@ -351,6 +377,17 @@ function adjustIframes() {
   });
 }
 $(window).on('resize load', adjustIframes);
+
+/*******************************************************
+*****  Remove loading animation when loading done  *****
+*******************************************************/
+
+$(window).on('load', function(){ 
+
+console.log("done");
+$('.lds-ellipsis').remove();
+
+});
 
 
 
