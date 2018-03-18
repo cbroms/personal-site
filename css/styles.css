@@ -348,7 +348,7 @@ li {
 .full {
   -webkit-filter: grayscale(0%); 
     filter: grayscale(0%);
-    height: 450px;
+    max-height: 450px;
     width: auto;
     max-width: 100%;
     vertical-align: middle;
@@ -514,7 +514,7 @@ p {
 }
 
 /* Smartphones and Tablets ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 1366px) {
+@media only screen and (min-width : 320px) and (max-width : 1366px) {
 
     .centered {
         max-width: 75%;
@@ -544,7 +544,7 @@ p {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-width : 480px) {
 
   .full {
     height: auto;
@@ -624,7 +624,7 @@ p {
 
 }
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1366px) {
+@media only screen and (min-width : 768px) and (max-width : 1366px) {
 
     .column {
       flex: 48%;
