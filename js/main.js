@@ -347,6 +347,7 @@ $('a[href*="#"]')
 ******  prevent links with # from changing url   *******
 *******************************************************/
 
+// add an event listener
 document.addEventListener('click', function (ev) {
   if (ev.target.classList.contains('safe-link')) {
     console.log("click");
