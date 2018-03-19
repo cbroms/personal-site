@@ -125,6 +125,7 @@ function subNavButton(x) {
       $('#projects').slideToggle();
     });
   }
+  return false;
 }
 
 /*******************************************************
@@ -346,7 +347,7 @@ $('a[href*="#"]')
 ******  prevent links with # from changing url   *******
 *******************************************************/
 
-addEventListener('click', function (ev) {
+document.addEventListener('click', function (ev) {
   if (ev.target.classList.contains('safe-link')) {
     console.log("click");
     ev.preventDefault();
