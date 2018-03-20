@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar|Work+Sans" rel="stylesheet">
     <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 
 
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/objects-sketch.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/objects-sketch.js"></script>
 
-    <title>Christian Broms</title>
+    <title>Home - Christian Broms</title>
 </head>
 <body>
-    
-    
+
+    <div class="wrapper" style="z-index: 1;">
+
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+        <div id="header">
+
+        </div>
+        <div class="content-wrapper hidden" style="height: 90vh;">
+          <div class="menu-wrapper" >
+            <div class="menu-icon change-function" onclick="menuButton(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+          </div>
+          <div class="navigation">
+            <h2 class="sans-serif current-page"><a class="safe-link" href="#">Home</a></h2>
+            <h2 class="sans-serif" id="first" onclick="subNavButton(this)"><a class="safe-link" href="#">Portfolio</a></h2>
+            <div class="sub-navigation" id="portfolio"  style="display: none;">
+
+                <h3 class="sans-serif"><a href="portfolio/photography.html">Photography</a></h3>
+                <h3 class="sans-serif"><a href="portfolio/rendering.html">Rendering</a></h3>
+                <h3 class="sans-serif"><a href="portfolio/interactive.html">Web & Interactive</a></h3>
+            </div>
+            <h2 class="sans-serif" id="second" onclick="subNavButton(this)"><a class="safe-link" href="#">Recent Projects</a></h2>
+            <div class="sub-navigation" id="projects"  style="display: none;">
+                <h3 class="sans-serif"><a href="projects/digital-things.html">Digital Things I'm Building</a></h3>
+                <h3 class="sans-serif"><a href="projects/physical-things.html">Physical Things I'm Building</a></h3>
+                <h3 class="sans-serif"><a href="projects/writings.html">Writings</a></h3>
+                <h3 class="sans-serif"><a href="projects/drawings.html">Drawings</a></h3>
+            </div>
+            <h2 class="sans-serif"><a href="about.html">About</a></h2>
+        </div>
+    </div>
+</div>
+<div class="circle "></div>
+<div class="top-title" style="position: fixed;">
+    <h3 class="sans-serif centered title-justify" style="color: white;">WEBSITE OF CHRISTIAN BROMS <br><br> v. 2018</h3>
+    <h1 class="serif centered title-justify intro-text"><b>Portfolio & Projects</b></h1>
+    <h2 class="sans-serif centered title-justify" ><a class="safe-link" href="#" onclick="$('.menu-icon').click();" style="background-color: white; padding: 5px;">Begin ></a></h2></div>
+</div>
+
 </body>
+<div class="footer sans-serif">
+    <div class="footer-text">
+      Copyright &copy; 2015-2018 Christian Broms &mdash; View this site's <a href="https://github.com/CBR0MS/PortfolioSite2018">source code</a> on GitHub &mdash; <a href="../about.html">Contact</a> &mdash;
+  </div>
+</div>
 </html>

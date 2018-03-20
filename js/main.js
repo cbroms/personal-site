@@ -83,6 +83,9 @@ function menuButton(x) {
      $('.navigation').slideToggle('slow');
    }, 300);
 
+    $('.top-title').fadeOut();
+    $('.circle').animate({'opacity': '0.5'}, 300);
+
     if ($(window).width() <= 1366){
       if ($(window).width() <= 480){
         $('.second').animate({'margin-left': '85%'}, 300);
@@ -93,6 +96,9 @@ function menuButton(x) {
      $('.second').animate({'margin-left': '30%'}, 300);
    }
  } else {
+  $('.top-title').fadeIn();
+  $('.circle').animate({'opacity': '1'}, 300);
+
   $('.navigation').slideToggle('slow');
   if ($(window).width() <= 1366){
     $('.second').animate({'margin-left': '0px'}, 300);
