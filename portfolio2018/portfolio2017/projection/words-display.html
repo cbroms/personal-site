@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <script
+         src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+    <title>Joined Words Horizontal</title>
+
+    <script src="https://use.typekit.net/row6yvs.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+          // get data every 10 seconds
+          setInterval(timer, 15000);
+
+          // array index of the data we want to get
+          var n = 0;
+
+          // get the data from the server, increment n to the next array index
+          function timer() {
+            // get data
+            getValue(n);
+            // increment 
+            n++;
+          }
+
+          // get data from server via php with ajax call (no reload needed)
+          function getValue(arr_ind) {
+
+            $.ajax({
+                type: "POST",
+                data: {data: arr_ind},
+                url: "dequeue.php",
+                success: function(response) {
+
+                    // if there is no data, decrement n to keep the current array index
+                    if (($.trim(response).length <= 0) || response == null) {
+                      // decrement n 
+                      n--;
+                    } else {
+                      // if there is data, display it on the screen
+                      display(response);
+                    }
+                }
+            });
+          }
+
+          // displays the text over the screen
+          function display(response) {
+
+            // make a unique identifier for each new div and response
+            var uniqueId = new Date().valueOf() % 1000000;
+            // append # to unique id for jQuery access 
+            var stringName =  "#" + uniqueId;
+            // randomm width between lo and hi 
+            var randomWidth = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
+
+            console.log(response + " " + stringName);
+
+            // add a new div element with a unique id and the response data
+            $(".body").append("<div class='data-element'" + " id=" + uniqueId + ">" + response + "</div>");
+            // add the random width value  
+            $(stringName).css("margin-left", randomWidth + '%');
+            // animate the new div up the page  
+            $(stringName).animate({'margin-top': '-20%'}, 65000, "linear", function() {
+              // remove the div when animation completes 
+              $(stringName).remove();
+            }); 
+          }
+        });
+
+    </script>
+
+    <div class="body">
+      <!-- new div elements with data added here -->
+
+    </div>
+
+  </body>
+</html>
