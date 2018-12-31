@@ -6,14 +6,6 @@ body {
     font-style: normal;
 }
 
-/*a {
-    color: #DFDFDF;
-}
-
-a:hover {
-    color: #DFDFDF;
-}*/
-
 ::selection {
   background: #F0CF00; 
   color: #2B2B2B;
@@ -22,10 +14,11 @@ a:hover {
   background: #F0CF00; 
   color: #2B2B2B;
 }
-
+.project-tile-container {
+    opacity: 0;
+}
 .project-tile {
     color: #DFDFDF !important;
-    opacity: 0;
     width: 70vw;
     height: 70vh;
     margin-left: 15vw;
@@ -49,10 +42,12 @@ a:hover {
 }
 .head {
     height: 30vh;
+    min-height: 300px;
     margin-bottom: 15vh;
 }
 
 .main-image {
+    display: none;
     height: 70vh;
     width: 70vw;
     object-fit: cover;
@@ -87,7 +82,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: ibm-plex-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -107,10 +102,11 @@ h2 {
     position: absolute;
     top: 0vh;
     left: 15vw;
+    right: 15vw;
 }
 
 .head-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: ibm-plex-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -118,7 +114,11 @@ h2 {
 }
 
 @media (min-width: 768px) { 
+    .head-title {
+        font-size: 4rem;
+    }
     .main-image {
+        display: block;
         width: 50vw;
     }
     h1 {

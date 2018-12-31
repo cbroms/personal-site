@@ -17,10 +17,80 @@
   <script src="/static/js/project-main.js"></script>
 </head>
 <body>
+  <nav>
+    <a href="/about"><h5>About & Contact</h5></a> <span class="dash">&mdash;</span>
+    <a href="/projects"><h5>Completed Projects </h5></a>
+  </nav>
   <div class="container-main">
     <div class="content">
       {{ content }}
     </div>
   </div>
+  <style type="text/css">
+  nav a {
+    color: #DFDFDF !important;
+  }
+  nav a:hover {
+    text-decoration: none;
+  }
+  nav {
+    opacity: 0;
+    z-index: 1000;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: fixed;
+    top: -400px;
+    right: 0.25vw;
+    mix-blend-mode: difference;
+  }
+  h5 {
+    display: inline-block;
+    margin: 0;
+  }
+  .dash {
+    color: #DFDFDF;
+    padding: 10px 0 10px 0;
+  }
+  </style>
+  <script type="text/javascript">
+  $(document).ready(function(){ 
+    $('nav').animate({top: '2vw', opacity: 1}, 1500)
+  })
+  // get scroll direction
+  $(document).on( 'DOMMouseScroll mousewheel', function ( event ) {
+    if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
+        //scroll down
+        hideNav()
+      } else {
+        //scroll up
+        revealNav()
+      }
+    });
+  var ts;
+  $(document).bind('touchstart', function (e){
+    ts = e.originalEvent.touches[0].clientY;
+  });
+
+  $(document).bind('touchend', function (e){
+    let te = e.originalEvent.changedTouches[0].clientY;
+    if (ts > te + 5) {
+        // drag up
+        hideNav()
+      } else if (ts < te - 5) {
+        // drag down
+        revealNav()
+      }
+    });
+
+  function hideNav() {
+    if (document.documentElement.scrollHeight !== document.documentElement.clientHeight){
+      $('nav').animate({top: '-400px'}, {duration: 1000, queue: false})
+    }
+    
+  }
+
+  function revealNav() {
+    $('nav').animate({top: '2vw'}, {duration: 1000, queue: false})
+  }</script>
 </body>
 </html>

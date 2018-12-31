@@ -5,8 +5,8 @@ $(document).ready(function(){
     // the images from the paragraph wrapping
     const parents = $('p > img').parent();
     parents.each(function() {
-       this.outerHTML = this.innerHTML
-    });
+     this.outerHTML = this.innerHTML
+ });
     // consolidate elements from jekyll into various divs for styling
     $('.content').append($("<div class='body-text'></div>"))
     $('.content').prepend($("<div class='title'></div>"))
@@ -39,7 +39,7 @@ $(document).ready(function(){
     // set up the grid system for the contents of the body
     $('.body-text').children().each(function(index){
         if (index == 0) { $('.body-text').append("<div class='row'></div>") }
-        let elt = $(this).detach()
+            let elt = $(this).detach()
         if ($(elt).is('img')){
             elt = $(elt).addClass('img-fluid')
         }
@@ -61,29 +61,39 @@ $(document).ready(function(){
         }        
     })
 
-    //  animate in image on page load
-    $('.hero-image').animate({
-        width: '55vw'
-    }, 1500);
-    // animate in title
-    $('.title').animate({
-        top: '30vh',
-        opacity: 1
-    }, 1500)
-
     // initialize scrollreveal
     ScrollReveal({
-        distance: '40%', 
         duration: 1500,
         delay: 600,
         interval: 800
-    }).reveal('.body-content');
+    }).reveal('.img-fluid');
 
-    // when images are loaded, adjust the size of the project panel
-    $(document).imagesLoaded(function(){  resizeAdjust() });
-    // when window is resized, do the same
+    ScrollReveal({
+        distance: '40px',
+        duration: 1500,
+        delay: 600,
+        interval: 800
+    }).reveal('.content-wrapper');
+
+    // when window is resized, adjust height of container
     $(window).resize(function(){ resizeAdjust() })
 
+    // animate in the page on image load
+    // also ajust height of container
+    $(document).imagesLoaded(function(){  
+        resizeAdjust() 
+        $('.content').animate({opacity: 1}, 1000, function(){
+            //  animate in image on page load
+            $('.hero-image').animate({
+                width: '55vw'
+            }, 1500);
+             // animate in title
+            $('.title').animate({
+                top: '30vh',
+                opacity: 1
+            }, 1500)
+        })  
+    });
 });
 
 function resizeAdjust() {
@@ -91,3 +101,4 @@ function resizeAdjust() {
     let currentHBody = parseInt($('.body-text').css('height'))
     $('.container-main').css({height: (currentHCont + currentHBody).toString() + 'px'})
 }
+

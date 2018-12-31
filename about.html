@@ -12,6 +12,9 @@ title: About & Contact
         padding-bottom: 20px;
     }
 </style>
+<nav>
+    <a href="/"><h5>All Projects </h5></a>
+</nav>
 <div class="title-front">
     <h1>About & Contact</h1>
     <p>I build interactive web-related things, make photographs, and create 3D digital spaces.</p>
@@ -22,3 +25,32 @@ title: About & Contact
 <script type="text/javascript">
     $('.title-front').animate({opacity: 1}, 1500);
 </script>
+
+
+<style type="text/css">
+nav a {
+    color: #202020 !important;
+}
+nav a:hover {
+    text-decoration: none;
+}
+nav {
+    opacity: 0;
+    z-index: 1000;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: fixed;
+    top: -400px;
+    right: 0.25vw;
+    mix-blend-mode: difference;
+}
+h5 {
+    display: inline-block;
+    margin: 0;
+}
+.dash {
+    color: #202020;
+    padding: 10px 0 10px 0;
+}
+</style>
+<script src="/static/js/nav-main.js"></script>

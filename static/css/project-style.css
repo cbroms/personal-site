@@ -70,9 +70,10 @@ ul {
 }
 
 .hero-image {
+    display: none;
     object-fit: cover;
     object-position: 50% 0;
-    width: -1vw;
+    width: 0vw;
     height: 100vh !important;
     max-height: 100vh !important;
     float: left;
@@ -88,6 +89,9 @@ ul {
 }
 
 @media (min-width: 768px) { 
+    .hero-image {
+        display: block;
+    }
     .col-sm-12 {
         padding-bottom: 15vh;
     }
@@ -128,7 +132,8 @@ ul {
     display: none; 
 }
 .content {
-    opacity: 1;
+    opacity: 0;
+
 }
 
 .content-wrapper{

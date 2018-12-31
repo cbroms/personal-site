@@ -34,18 +34,6 @@ $(document).ready(function(){
         $.scrollify.move('#' + (this.href.split('#')[1]));
     });
 
-    // animate in 
-    $('.centered-head').animate({
-        opacity: 1,
-        top: '15vh'
-    }, 1500)
-    $('.project-tile').animate({
-        opacity: 1
-    }, 500)
-    $('.dots').animate({
-        opacity: 1
-    }, 1500)
-
     // on project panel click, animate out to page change
     $('.project-tile').click(function(e) {
         let target = $(this).parent()[0].href;
@@ -60,6 +48,8 @@ $(document).ready(function(){
         }
         // make dots dissapear
         $('.dots').animate({opacity: 0}, 1000);
+        // animate up nav if it is down 
+        $('nav').animate({top: '-400px'}, {duration: 1000, queue: false})
         // animate the project panel 
         $(this).animate({
             width: "96vw",
@@ -95,3 +85,21 @@ $(document).ready(function(){
         return false;
     });
 });
+
+$(document).imagesLoaded(function(){  
+     // animate in 
+    $('.centered-head').animate({
+        opacity: 1,
+        top: '15vh'
+    }, 1000) 
+    setTimeout(function(){
+        $('.project-tile-container').animate({
+            opacity: 1,
+        }, {duration: 1500, queue: false})
+    }, 300)
+    
+    $('.dots').animate({
+        opacity: 1
+    }, 500)
+});
+
