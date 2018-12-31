@@ -96,3 +96,12 @@ function goToWIP() {
         window.location.href =  window.location.href + "/wip"
     })
 }
+
+
+
+// prevent safari from retaining a cached version of the page and force reload
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload() 
+    }
+});
