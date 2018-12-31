@@ -10,7 +10,7 @@ filename: photography-videography
 # Photography & Videography
 ## Short films and black and white digital and film photography.
 
-### Landscapes, urban and natural.
+### 1. Landscapes, urban and natural
 
 Much of what I photograph is the urban and natural landscape. I enjoy finding patterns and compositions in the clutter of industrial areas and simple lines in the complexity of nature. 
 
@@ -28,7 +28,7 @@ This portfolio includes images from several personal projects. The first is a se
 
 ![](/static/img/photo_cover.jpg){: .small }
 
-### Pinhole photographs.
+### 2. Pinhole photographs
 
 I also sometimes take the opposite approach, and opt for a less analytical look at the landscape. In this project, I fit my camera with a pinhole body cap and explored the edges of the San Francisco Bay, where the mash meets the developed land. 
 

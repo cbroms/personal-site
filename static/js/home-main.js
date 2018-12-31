@@ -2,6 +2,13 @@ $(document).ready(function(){
     // set default easing function for all animations
     jQuery.easing.def = "easeOutCubic";
 
+    $('#finished').click(function(){
+        goToProjects()
+    })
+    $('#progress').click(function(){
+        goToWIP()
+    })
+
     $('body').css({overflow: 'hidden'})
     // animate top and title text in 
     $('.top').animate({
