@@ -1,7 +1,7 @@
 ---
 layout: project-page
 title: Renderings, Visualizations, Architectural Photography
-time: Architectural and environmental visualizations, renderings, and photography, made with Revit, Unreal Engine, and Photoshop. 
+subtitle: Architectural and environmental visualizations, renderings, and photography, made with Revit, Unreal Engine, and Photoshop. 
 image: /static/img/rendering_cover.jpg
 filename: renderings-visualizations
 

@@ -89,7 +89,7 @@ $(document).ready(function(){
             }, 1500);
              // animate in title
             $('.title').animate({
-                top: '30vh',
+                top: '25vh',
                 opacity: 1
             }, 1500)
         })  
@@ -101,4 +101,3 @@ function resizeAdjust() {
     let currentHBody = parseInt($('.body-text').css('height'))
     $('.container-main').css({height: (currentHCont + currentHBody).toString() + 'px'})
 }
-

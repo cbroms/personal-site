@@ -103,3 +103,9 @@ $(document).imagesLoaded(function(){
     }, 500)
 });
 
+// prevent safari from retaining a cached version of the page and force reload
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload() 
+    }
+});

@@ -74,10 +74,11 @@ body {
 }
 
 h1 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     font-family: ibm-plex-mono, sans-serif;
     font-weight: 400;
     font-style: italic;
+    margin-bottom: 0.75rem;
     
 }
 
@@ -91,7 +92,7 @@ h2 {
 .title {
     max-width: 68vw;
     position: absolute;
-    margin-top: 15vh;
+    margin-top: 10vh;
     left: 17vw;
     padding: 20px;
     background-color: #2B2B2B;

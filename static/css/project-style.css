@@ -45,6 +45,7 @@ h2 {
 }
 
 .title {
+    z-index: 1000;
     padding: 20px;
     background-color: #FAF9F8;
     position: absolute;
@@ -88,6 +89,12 @@ ul {
     padding-bottom: 3vh;
 }
 
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 500px;
+}
+
 @media (min-width: 768px) { 
     .hero-image {
         display: block;
@@ -115,10 +122,7 @@ ul {
 .container-main {
     max-width:96vw;
     background-color: #FAF9F8;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2vw;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 5vh;
@@ -133,15 +137,10 @@ ul {
 }
 .content {
     opacity: 0;
-
 }
 
 .content-wrapper{
     padding: 20px;
-}
-
-p {
-    max-width: 550px;
 }
 
 h3 {

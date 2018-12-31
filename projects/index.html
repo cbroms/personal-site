@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Christian Broms - Finished Projects
+title: Completed Projects - Christian Broms
 ---
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="/static/js/project-panel-main.js"></script>
@@ -22,7 +22,7 @@ var posts = [
 {% for project in site.projects %}
 {
     "title": "{{ project.title }}",
-    "time": "{{ project.time }}",
+    "subtitle": "{{ project.subtitle }}",
     "url": "{{ project.url }}",
     "img": "{{ project.image }}"
 }
@@ -47,7 +47,7 @@ console.log(posts);
         <img class="main-image" src="{{ project.image }}">
         <div class="title">
            <h1>{{ project.title }}</h1>
-           <h2>{{ project.time }}</h2>
+           <h2>{{ project.subtitle }}</h2>
        </div>
    </div>
 </a>
