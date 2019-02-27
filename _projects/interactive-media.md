@@ -58,7 +58,7 @@ This is a project that I developed over four days for [an HCI class](http://huma
 
 The next two days I spent designing and implementing the site. I trained the models offline and encoded them to json format, so they could be opened and used again with Tensorflow JS, making the site very lightweight. The interface is very simple, with one page for input and a second to display and visualize the results.
 
-I'm currently working on expanding this project into something more significant. I've built an [API](https://api.flygeni.us/docs/) for accessing flight information using the Django rest framework, and am now developing the main site with React. I am redesigning the entire interface of the website as well as integrating new features, such as an option to directly compare airlines. 
+I'm currently working on expanding this project into something more significant. I've built an [API](https://api.flygeni.us/docs/) for accessing flight information using the Django rest framework, and am now developing the main site with React. I am redesigning the entire interface of the website as well as integrating new features, such as an option to directly compare airlines.
 
 **_Year_**: 2018
 
@@ -70,9 +70,9 @@ I'm currently working on expanding this project into something more significant.
 
 ![](/static/img/web_7.JPG){: .small}
 
-The new iteration of the front page, which adapts based on the time of day: 
+![](/static/img/edit-2.gif){: .small }
 
-![](/static/img/edit-2.gif){: .big }
+The new iteration of the site adapts its color scheme and imagery based on the time of day.
 
 ![](/static/img/edit-4.gif){: .small}
 
