@@ -72,7 +72,7 @@ I'm currently working on expanding this project into something more significant.
 
 ![](/static/img/edit-2.gif){: .small }
 
-The new iteration of the site adapts its color scheme and imagery based on the time of day.
+The new iteration of the site adapts its color scheme and imagery based on the time of day. You can find the latest work in progress version of the site [here](http://flygenius.surge.sh). 
 
 ![](/static/img/edit-4.gif){: .small}
 
