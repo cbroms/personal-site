@@ -54,7 +54,7 @@ This was a project I made to teach myself different techniques for sentiment ana
 
 ### 3. Flight time prediction with machine learning
 
-This is a project that I developed over four days for [an HCI class](http://humanaiclass.org/) at CMU. I started with a dataset from the US Department of Transportation of data from every domestic flight since the late 80's. I spent the first two days [visualizing, cleaning, and developing a model from the data](https://github.com/CBR0MS/flight-time-model/blob/docs/Flight%20Time%20Modeling.ipynb), using Tensorflow.
+This is a project that I developed over four days for [an HCI class](http://humanaiclass.org/) at CMU. I started with a dataset from the US Department of Transportation of data from every domestic flight since the late 80's. I spent the first two days [visualizing, cleaning, and developing a model from the data](https://github.com/CBR0MS/flight-time-model-data/blob/master/visualization/v1/v1Modeling.md), using Tensorflow.
 
 The next two days I spent designing and implementing the site. I trained the models offline and encoded them to json format, so they could be opened and used again with Tensorflow JS, making the site very lightweight. The interface is very simple, with one page for input and a second to display and visualize the results.
 
