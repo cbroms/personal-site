@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Eczar:400,800|Work+Sans:400,700" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+
+  <title>About</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="header">
+      <h1 class="serif portfolio-title">About</h1>
+  </div>
+  <div class="content-wrapper hidden">
+      <div class="menu-wrapper" >
+        <div class="menu-icon change-function" onclick="menuButton(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </div>
+
+      <div class="navigation">
+        <h2 class="sans-serif"><a href="index.html">Home</a></h2>
+          <h2 class="sans-serif" id="first" onclick="subNavButton(this)"><a class="safe-link" href="#">Portfolio</a></h2>
+          <div class="sub-navigation" id="portfolio"  style="display: none;">
+
+            <h3 class="sans-serif"><a href="portfolio/photography.html">Photography</a></h3>
+            <h3 class="sans-serif"><a href="portfolio/rendering.html">Rendering</a></h3>
+            <h3 class="sans-serif"><a href="portfolio/interactive.html">Web & Interactive</a></h3>
+        </div>
+        <h2 class="sans-serif" id="second" onclick="subNavButton(this)"><a class="safe-link" href="#">Recent Projects</a></h2>
+        <div class="sub-navigation" id="projects"  style="display: none;">
+            <h3 class="sans-serif"><a href="projects/digital-things.html">Digital Things I'm Building</a></h3>
+            <h3 class="sans-serif"><a href="projects/physical-things.html">Physical Things I'm Building</a></h3>
+            <h3 class="sans-serif"><a href="projects/writings.html">Writings</a></h3>
+            <h3 class="sans-serif"><a href="projects/drawings.html">Drawings</a></h3>
+        </div>
+        <h2 class="sans-serif current-page"><a class="safe-link" href="#">About</a></h2>
+    </div>
+</div>
+<div class="hover-background second">
+    <div class="container">
+      <h3 class="sans-serif centered exclude title-justify">HOME &mdash; ABOUT</h3>
+      <h2 class="serif centered exclude outline title-justify"><b>About & Contact</b></h2>
+      <p class="sans-serif centered exclude"> I work to combine art, design, and technology to create digital experiences and experiments that mix these disciplines and others in novel and interestingly different ways. I build websites, interactive exhibitions, and experimental code, I take photographs, I create photorealistic architectural and environmental renderings. Much of this work can be found in my portfolio. 
+       <br><br><br>
+       Additionally, I build a variety of physical and digital things to learn about new processes. I write and occasionally draw too. See some of these assorted random things in the more frequently updated projects section. <br><br><br>
+       For the most part, I am self-taught, and have been using tools such as C++, Java, Unreal Engine 4, Photoshop, and 3Ds Max to create a wide array of different work. I constantly am looking for new mediums and processes to explore that merge art, design, and technology. Currently I'm a student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a> in Pittsburgh, Pennsylvania. For inquiries, feel free to contact me by <a href="mailto:hello@christianbroms.com">email</a>.
+   </p>
+   <p class="sans-serif centered exclude title-justify">
+    Check out my <a href="https://www.youtube.com/channel/UC0zCQIpN4Lpyz3VK91q1qHA/feed">YouTube</a>, <a href="https://github.com/CBR0MS">GitHub</a>, and <a href="https://www.linkedin.com/in/christian-broms-99a883141/">LinkedIn</a>,
+</p>
+<p class="sans-serif centered exclude title-justify">
+    Contact me at <a href="mailto:hello@christianbroms.com">hello@christianbroms.com</a>,
+</p>
+<p class="sans-serif centered exclude title-justify">
+    Download my <a href="https://drive.google.com/uc?export=download&id=15d7B9ArOhMT3-CHvIBisGiFe-yI45f-2">Resume</a>.<br><br><br><br>
+</p>
+</div>
+</div>
+</body>
+<div class="footer sans-serif">
+  <div class="footer-text">
+    Copyright &copy; 2015-2018 Christian Broms &mdash; View this site's <a href="https://github.com/CBR0MS/PortfolioSite2018">source code</a> on GitHub &mdash; <a href="#">Contact</a> &mdash;
+</div>
+</div>
+
+</html>

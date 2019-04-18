@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Admin</title>
+
+    <script
+         src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        
+    $(document).ready(function(){
+
+        $('.del-button').click(function() {
+
+            console.log("click");
+
+            $.ajax({
+            type: "POST",
+             url: "delete.php"
+            });
+            alert( "DELETED queue.txt" );
+        });    
+    });
+
+    </script>
+
+    <input class="del-button" type="submit" name="Submit" value="Delete Responses" ></input>
+
+</body>
+</html>
