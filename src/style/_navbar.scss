@@ -1,0 +1,25 @@
+.nav-logo {
+    display: inline-block;
+    font-style: italic;
+    float: left;
+}
+
+.nav-links {
+    display: inline-block;
+    float: right;
+}
+
+.nav-link {
+    color: $main-type;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 40px);
+    background-color: $body;
+    padding: 40px 20px 20px 20px;
+}

@@ -1,0 +1,23 @@
+.project-container {
+    width: 100vw;
+    margin: $nav-height + 80px auto;
+    text-align: center;
+}
+
+.project-post-content {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 800px;
+}
+
+.project-post-section {
+    padding: 20px;
+    background-color: $content;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    margin: 40px 0;
+}
+
+.project-head {
+    height: 300px;
+}
