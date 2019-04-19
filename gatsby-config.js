@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
     plugins: [
         `gatsby-plugin-sass`,
@@ -10,13 +12,23 @@ module.exports = {
             }
         },
         `gatsby-transformer-remark`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: ["gatsby-remark-copy-linked-files"]
+            }
+        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
                     {
-                        resolve: `gatsby-remark-figure-caption`,
-                        options: { figureClassName: "md-figure" }
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800
+                        }
                     }
                 ]
             }
