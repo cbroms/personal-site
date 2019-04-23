@@ -5,6 +5,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Navbar from "../components/Navbar";
 
+import "../style/main.scss";
+
 const slugify = require("slugify");
 const uuidv4 = require("uuid/v4");
 

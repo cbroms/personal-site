@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import "../style/main.scss";
+
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
