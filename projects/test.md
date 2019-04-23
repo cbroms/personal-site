@@ -11,6 +11,7 @@ link: https://snippet.rainfla.me
 
 Curabitur luctus dictum massa. Nam eros libero, sagittis vitae tortor sit amet, vulputate faucibus diam. Ut hendrerit diam sed arcu gravida, ut mollis erat hendrerit. Cras non molestie enim. Duis sodales dignissim maximus. Vivamus posuere mi ac justo maximus, at gravida turpis lobortis. Nam accumsan finibus libero at accumsan.
 
+![test](images/mountain.jpg)
 #Prototyping
 
 Curabitur luctus dictum massa. Nam eros libero, sagittis vitae tortor sit amet, vulputate faucibus diam. Ut hendrerit diam sed arcu gravida, ut mollis erat hendrerit. Cras non molestie enim. Duis sodales dignissim maximus. Vivamus posuere mi ac justo maximus, at _gravida turpis lobortis. Nam accumsan finibus libero at accumsan_.

@@ -11,20 +11,11 @@ const uuidv4 = require("uuid/v4");
 class Template extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      percentFromTop: 0
-    };
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  handleScroll() {
-    // const toTop = window.pageYOffset;
-    // if (toTop < 100) {
-    //   this.setState({ percentFromTop: toTop / 100 });
-    // }
+    this.state = {};
   }
 
   componentDidMount() {
+
     // if (typeof window !== 'undefined') {
     //   window.addEventListener("scroll", this.handleScroll);
     // }
@@ -36,22 +27,27 @@ class Template extends React.Component {
 
     let fullTree = parse("<div></div>");
     let currentTree = [];
+    let sections = [];
     let index = 0;
 
+    // parse html from markdown into sections formed from the h1 tags
     for (const i in root.childNodes) {
       if (
         (root.childNodes[i].tagName && root.childNodes[i].tagName === "h1") ||
         parseInt(i) === root.childNodes.length - 1
       ) {
+        // create slugs for the section links
+        const slug = slugify(root.childNodes[i].text);
+
         if (parseInt(i) === root.childNodes.length - 1) {
           currentTree[index].firstChild.appendChild(root.childNodes[i]);
+        } else {
+          sections.push({ title: root.childNodes[i].text, slug: slug });
         }
         if (currentTree.length > 0) {
           fullTree.firstChild.appendChild(currentTree[index]);
           index += 1;
         }
-
-        const slug = slugify(root.childNodes[i].text);
         currentTree.push(
           parse(`<div class='project-post-section' id='${slug}'></div>`)
         );
@@ -59,32 +55,28 @@ class Template extends React.Component {
 
       currentTree[index].firstChild.appendChild(root.childNodes[i]);
     }
-
-    this.setState({ tree: fullTree.toString() });
+    this.setState({ sections: sections, tree: fullTree.toString() });
   }
 
   render() {
     const { markdownRemark } = this.props.data;
     const { frontmatter } = markdownRemark;
 
-    // const titleStyle = {
-    //   marginRight:
-    //     this.state.percentFromTop * (parseInt(window.innerWidth / 2) + 400),
-    //   position: this.state.percentFromTop >= 0.9 ? "fixed" : "",
-    //   top: this.state.percentFromTop >= 0.9 ? 65 : "",
-    //   fontSize:
-    //     1 - this.state.percentFromTop * 2 > 1.5
-    //       ? `${1 - this.state.percentFromTop * 2}rem`
-    //       : "1.5rem"
-    // };
-
     let content = <div />;
+    let sections = <div />;
 
     if (this.state.tree) {
+
       const tags = frontmatter.tags.map(value => (
         <span className="project-tags" key={uuidv4()}>
           {value}
         </span>
+
+      sections = this.state.sections.map(value => (
+        <AnchorLink offset="100" href={`#${value.slug}`} key={uuidv4()}>
+          {value.title}
+        </AnchorLink>
+
       ));
       content = (
         <div className="project-container">
@@ -94,12 +86,7 @@ class Template extends React.Component {
               <p>{frontmatter.subtitle}</p>
               <div>{tags}</div>
 
-              <AnchorLink offset="100" href="#Ideation">
-                Ideation
-              </AnchorLink>
-              <AnchorLink offset="100" href="#Prototyping">
-                Prototyping
-              </AnchorLink>
+              {sections}
             </div>
 
             <div
