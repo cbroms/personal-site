@@ -1,7 +1,10 @@
 ---
 path: "/projects/first"
 date: "2017-11-07"
-title: "My first blog post"
+title: "Rainflame Snippets"
+subtitle: "Reformatting text to reflect heiarchies of meaning"
+tags: [big projects, website, UX design]
+link: https://snippet.rainfla.me
 ---
 
 #Ideation

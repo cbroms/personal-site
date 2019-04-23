@@ -15,9 +15,16 @@
     background-color: $content;
     border-radius: $radius;
     box-shadow: $shadow;
-    margin: 40px 0;
+    margin: 40px auto;
+    width: 85%;
 }
 
 .project-head {
-    height: 300px;
+    min-height: 100px;
+}
+
+.project-tags {
+    text-transform: uppercase;
+    font-size: 80%;
+    margin: 0 15px;
 }

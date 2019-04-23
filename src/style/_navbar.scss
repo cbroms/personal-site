@@ -1,12 +1,21 @@
 .nav-logo {
+    // color: $accent !important;
     display: inline-block;
     font-style: italic;
     float: left;
+    // font-weight: bold;
+    font-size: 120%;
+    transition: all $duration ease;
+}
+
+.nav-logo:hover {
+    text-shadow: 1px 1px $accent-light, 2px 2px $accent-light;
 }
 
 .nav-links {
     display: inline-block;
     float: right;
+    margin-right: 20px;
 }
 
 .nav-link {
@@ -19,7 +28,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100vw - 40px);
+    width: 100vw;
     background-color: $body;
     padding: 40px 20px 20px 20px;
 }

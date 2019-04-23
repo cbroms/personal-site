@@ -6,6 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Navbar from "../components/Navbar";
 
 const slugify = require("slugify");
+const uuidv4 = require("uuid/v4");
 
 class Template extends React.Component {
   constructor(props) {
@@ -24,10 +25,12 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    // if (typeof window !== 'undefined') {
+    //   window.addEventListener("scroll", this.handleScroll);
+    // }
 
     const { markdownRemark } = this.props.data;
-    const { frontmatter, html } = markdownRemark;
+    const { html } = markdownRemark;
 
     const root = parse(html);
 
@@ -78,12 +81,18 @@ class Template extends React.Component {
     let content = <div />;
 
     if (this.state.tree) {
+      const tags = frontmatter.tags.map(value => (
+        <span className="project-tags" key={uuidv4()}>
+          {value}
+        </span>
+      ));
       content = (
         <div className="project-container">
           <div className="project-post">
             <div className="project-head">
               <h1>{frontmatter.title}</h1>
-              <h2>{frontmatter.subtitle}</h2>
+              <p>{frontmatter.subtitle}</p>
+              <div>{tags}</div>
 
               <AnchorLink offset="100" href="#Ideation">
                 Ideation
@@ -120,6 +129,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
+        subtitle
       }
     }
   }

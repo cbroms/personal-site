@@ -2,4 +2,21 @@ body {
     background-color: $body;
     font-family: $font;
     color: $main-type;
+    font-size: 110%;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+    text-underline: none;
+    transition: all $duration ease;
+}
+
+a:hover {
+    text-shadow: 1px 1px $accent-light, 2px 2px $accent-light;
+}
+
+::selection {
+    background-color: $accent;
+    color: $body;
 }
