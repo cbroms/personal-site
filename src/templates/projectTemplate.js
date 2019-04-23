@@ -15,7 +15,6 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-
     // if (typeof window !== 'undefined') {
     //   window.addEventListener("scroll", this.handleScroll);
     // }
@@ -63,21 +62,20 @@ class Template extends React.Component {
     const { frontmatter } = markdownRemark;
 
     let content = <div />;
-    let sections = <div />;
 
     if (this.state.tree) {
-
       const tags = frontmatter.tags.map(value => (
         <span className="project-tags" key={uuidv4()}>
           {value}
         </span>
+      ));
 
-      sections = this.state.sections.map(value => (
+      const sections = this.state.sections.map(value => (
         <AnchorLink offset="100" href={`#${value.slug}`} key={uuidv4()}>
           {value.title}
         </AnchorLink>
-
       ));
+
       content = (
         <div className="project-container">
           <div className="project-post">
