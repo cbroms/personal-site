@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { parse } from "node-html-parser";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Img from "gatsby-image";
 
 import Navbar from "../components/Navbar";
 
@@ -73,7 +74,12 @@ class Template extends React.Component {
       ));
 
       const sections = this.state.sections.map(value => (
-        <AnchorLink offset="100" href={`#${value.slug}`} key={uuidv4()}>
+        <AnchorLink
+          className="project-link"
+          offset="100"
+          href={`#${value.slug}`}
+          key={uuidv4()}
+        >
           {value.title}
         </AnchorLink>
       ));
@@ -82,9 +88,16 @@ class Template extends React.Component {
         <div className="project-container">
           <div className="project-post">
             <div className="project-head">
-              <h1>{frontmatter.title}</h1>
-              <p>{frontmatter.subtitle}</p>
+              <h1 className="page-head">{frontmatter.title}</h1>
+              <p className="page-head">{frontmatter.subtitle}</p>
               <div>{tags}</div>
+              <div style={{ padding: 20 }}>
+                <Img
+                  className="project-image-container"
+                  fluid={frontmatter.image.childImageSharp.fluid}
+                  alt=""
+                />
+              </div>
 
               {sections}
             </div>
@@ -118,6 +131,13 @@ export const pageQuery = graphql`
         title
         tags
         subtitle
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,13 +1,14 @@
 .project-container {
     width: 100vw;
-    margin: $nav-height + 80px auto;
+    background-color: $body;
+    margin: $nav-height + 20px auto;
     text-align: center;
 }
 
 .project-post-content {
     margin: 0 auto;
     text-align: left;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .project-post-section {
@@ -23,8 +24,31 @@
     min-height: 100px;
 }
 
+h1.page-head {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+p.page-head {
+    font-size: 1.4rem;
+    font-style: italic;
+    padding: 0 20px 20px 20px;
+}
+
 .project-tags {
     text-transform: uppercase;
     font-size: 80%;
+    margin: 0 15px;
+}
+
+.project-image-container {
+    max-width: 600px;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    object-fit: cover;
+    margin: 30px auto;
+}
+
+.project-link {
     margin: 0 15px;
 }

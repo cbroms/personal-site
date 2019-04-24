@@ -19,9 +19,13 @@
 }
 
 .nav-link {
-    color: $main-type;
+    color: $sec-type;
     text-decoration: none;
     padding: 0 20px;
+}
+
+.nav-link:hover {
+    color: $main-type;
 }
 
 .nav {

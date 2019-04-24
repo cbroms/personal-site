@@ -5,6 +5,7 @@ title: "Rainflame Snippets"
 subtitle: "Reformatting text to reflect heiarchies of meaning"
 tags: [big projects, website, UX design]
 link: https://snippet.rainfla.me
+image: images/mountain.jpg
 ---
 
 #Ideation
