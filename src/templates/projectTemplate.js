@@ -1,8 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { parse } from "node-html-parser";
+
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Img from "gatsby-image";
+import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
 
@@ -18,16 +20,12 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-    // if (typeof window !== 'undefined') {
-    //   window.addEventListener("scroll", this.handleScroll);
-    // }
-
     const { markdownRemark } = this.props.data;
     const { html } = markdownRemark;
 
     const root = parse(html);
 
-    let fullTree = parse("<div></div>");
+    let sectionTrees = [];
     let currentTree = [];
     let sections = [];
     let index = 0;
@@ -47,17 +45,17 @@ class Template extends React.Component {
           sections.push({ title: root.childNodes[i].text, slug: slug });
         }
         if (currentTree.length > 0) {
-          fullTree.firstChild.appendChild(currentTree[index]);
+          //fullTree.firstChild.appendChild(currentTree[index]);
+          sectionTrees.push(currentTree[index]);
           index += 1;
         }
         currentTree.push(
           parse(`<div class='project-post-section' id='${slug}'></div>`)
         );
       }
-
       currentTree[index].firstChild.appendChild(root.childNodes[i]);
     }
-    this.setState({ sections: sections, tree: fullTree.toString() });
+    this.setState({ sections: sections, trees: sectionTrees });
   }
 
   render() {
@@ -66,7 +64,13 @@ class Template extends React.Component {
 
     let content = <div />;
 
-    if (this.state.tree) {
+    if (this.state.trees) {
+      const sectionTrees = this.state.trees.map(value => (
+        <Fade bottom distance="100px">
+          <div dangerouslySetInnerHTML={{ __html: value.toString() }} />
+        </Fade>
+      ));
+
       const tags = frontmatter.tags.map(value => (
         <span className="project-tags" key={uuidv4()}>
           {value}
@@ -87,25 +91,24 @@ class Template extends React.Component {
       content = (
         <div className="project-container">
           <div className="project-post">
-            <div className="project-head">
-              <h1 className="page-head">{frontmatter.title}</h1>
-              <p className="page-head">{frontmatter.subtitle}</p>
-              <div>{tags}</div>
-              <div style={{ padding: 20 }}>
-                <Img
-                  className="project-image-container"
-                  fluid={frontmatter.image.childImageSharp.fluid}
-                  alt=""
-                />
+            <Fade bottom distance="100px">
+              <div className="project-head">
+                <h1 className="page-head">{frontmatter.title}</h1>
+                <p className="page-head">{frontmatter.subtitle}</p>
+                <div>{tags}</div>
+                <div style={{ padding: 20 }}>
+                  <Img
+                    className="project-image-container"
+                    fluid={frontmatter.image.childImageSharp.fluid}
+                    alt=""
+                  />
+                </div>
+
+                {sections}
               </div>
+            </Fade>
 
-              {sections}
-            </div>
-
-            <div
-              className="project-post-content"
-              dangerouslySetInnerHTML={{ __html: this.state.tree }}
-            />
+            <div className="project-post-content">{sectionTrees}</div>
           </div>
         </div>
       );
