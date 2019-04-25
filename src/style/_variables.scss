@@ -3,17 +3,18 @@ $font: IBM Plex Sans;
 
 $body: hsl(0, 0%, 93%);
 $content: hsl(0, 0%, 96%);
-$main-type: hsl(0, 0%, 17%);
-$sec-type: hsl(0, 0%, 28%);
-$ter-type: hsl(0, 0%, 58%);
+$main-type: hsl(217, 15%, 17%);
+$sec-type: hsl(217, 15%, 35%);
+$ter-type: hsl(217, 15%, 60%);
+$qad-type: hsl(217, 15%, 80%);
 //$accent: hsl(1, 91%, 34%);
 $accent: hsl(217, 83%, 38%);
-$accent-light: hsl(217, 83%, 70%);
+$accent-light: hsl(217, 83%, 75%);
 
 $duration: 0.6s;
 
 $radius: 10px;
-$shadow: 0 10px 36px $ter-type;
+$shadow: 0 10px 36px $qad-type;
 $nav-height: 100px;
 
 $break-small: 380px;

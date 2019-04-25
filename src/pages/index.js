@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Navbar from "../components/Navbar";
-import style from "../style/main.scss";
+import "../style/main.scss";
 
 import { graphql } from "gatsby";
 import PostLink from "../components/PostLink";
@@ -14,8 +14,7 @@ const Index = ({
     }
 }) => {
     const [loadedTags, setLoadedTags] = useState(false);
-    const [allTags, setAllTags] = useState(true);
-    const [tags, setTags] = useState(["Show All"]);
+    const [tags, setTags] = useState(["everything"]);
     const [activeTags, setActiveTags] = useState([]);
 
     if (!loadedTags) {
@@ -29,36 +28,25 @@ const Index = ({
         });
         setTags(allTags);
         setLoadedTags(true);
-        setActiveTags(["Show All"]);
+        setActiveTags("everything");
     }
 
     console.log(activeTags);
 
     const tagButtons = tags.map(tag => {
-        const tagClassSCSS = tag.toLowerCase().replace(" ", "-");
-        const tagJoined = tag.toLowerCase().replace(" ", "");
-
-        const setActive = tag =>
-            setActiveTags(activeTags.filter(value => value !== tag));
-        const setInactive = tag => setActiveTags(activeTags.concat(tag));
+        // filtering and activation for multiple tags at a time
+        // const setActive = tag =>
+        //     setActiveTags(activeTags.filter(value => value !== tag));
+        // const setInactive = tag => setActiveTags(activeTags.concat(tag));
 
         return (
             <span
-                className={`tag-button ${tagClassSCSS}`}
-                style={
-                    activeTags.includes(tag)
-                        ? { backgroundColor: style[tagJoined] }
-                        : {}
-                }
+                className={`tag-button ${
+                    activeTags.includes(tag) ? "enabled" : ""
+                }`}
                 key={uuidv4()}
                 onClick={() => {
-                    tag === "Show All"
-                        ? activeTags.includes(tag)
-                            ? setAllTags(!allTags) && setActive(tag)
-                            : setAllTags(!allTags) && setInactive(tag)
-                        : activeTags.includes(tag)
-                        ? setActive(tag)
-                        : setInactive(tag);
+                    setActiveTags(tag);
                 }}
             >
                 {tag}
@@ -74,7 +62,10 @@ const Index = ({
     });
 
     const posts = edges
-        .filter(edge => allTags || goodEdges.includes(edge))
+        .filter(
+            edge =>
+                activeTags.includes("everything") || goodEdges.includes(edge)
+        )
         .map((edge, index) => (
             <PostLink key={edge.node.id} post={edge.node} pos={index} />
         ));

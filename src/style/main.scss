@@ -4,12 +4,3 @@
 @import "project";
 @import "link";
 @import "tags";
-
-:export {
-    websites: $websites-color-light;
-    bigprojects: $big-projects-color-light;
-    dataviz: $data-viz-color-light;
-    experiments: $experiments-color-light;
-    arvr: $ar-vr-color-light;
-    showall: $show-all-color-light;
-}

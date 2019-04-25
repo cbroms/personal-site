@@ -67,7 +67,7 @@ class Template extends React.Component {
 
     if (this.state.trees) {
       const sectionTrees = this.state.trees.map(value => (
-        <Fade bottom distance="100px">
+        <Fade bottom distance="100px" key={uuidv4()}>
           <div dangerouslySetInnerHTML={{ __html: value.toString() }} />
         </Fade>
       ));
@@ -75,7 +75,7 @@ class Template extends React.Component {
       const sections = this.state.sections.map(value => (
         <AnchorLink
           className="project-link"
-          offset="100"
+          offset="120"
           href={`#${value.slug}`}
           key={uuidv4()}
         >

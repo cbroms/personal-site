@@ -12,11 +12,12 @@
 }
 
 .project-post-section {
+    color: $sec-type;
     padding: 20px;
     background-color: $content;
     border-radius: $radius;
     box-shadow: $shadow;
-    margin: 40px auto;
+    margin: 80px auto;
     width: 85%;
 }
 
@@ -30,6 +31,7 @@ h1.page-head {
 }
 
 p.page-head {
+    color: $sec-type;
     font-size: 1.4rem;
     font-style: italic;
     padding: 0 20px 20px 20px;
