@@ -7,6 +7,7 @@ import Img from "gatsby-image";
 import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
+import Tags from "../components/Tags";
 
 import "../style/main.scss";
 
@@ -71,12 +72,6 @@ class Template extends React.Component {
         </Fade>
       ));
 
-      const tags = frontmatter.tags.map(value => (
-        <span className="project-tags" key={uuidv4()}>
-          {value}
-        </span>
-      ));
-
       const sections = this.state.sections.map(value => (
         <AnchorLink
           className="project-link"
@@ -95,7 +90,7 @@ class Template extends React.Component {
               <div className="project-head">
                 <h1 className="page-head">{frontmatter.title}</h1>
                 <p className="page-head">{frontmatter.subtitle}</p>
-                <div>{tags}</div>
+                <Tags tags={frontmatter.tags} />
                 <div style={{ padding: 20 }}>
                   <Img
                     className="project-image-container"

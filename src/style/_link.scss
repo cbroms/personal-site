@@ -1,0 +1,54 @@
+.project-link-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all $duration ease;
+    border-radius: $radius;
+}
+
+.project-image-link-container {
+    max-width: 600px;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    object-fit: cover;
+    margin: 30px auto;
+    transition: all $duration ease;
+}
+
+.project-link-container:hover {
+    background-color: $content;
+    box-shadow: $shadow;
+
+    .project-image-link-container {
+        box-shadow: none;
+    }
+}
+
+.project-link-flex {
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 888px) {
+    .first {
+        order: 1;
+    }
+    .second {
+        order: 2;
+    }
+}
+
+.link-title {
+    font-weight: 400;
+}
+
+.link-subtitle {
+    color: $sec-type;
+    font-style: italic;
+    padding: 0 20px 20px 20px;
+}

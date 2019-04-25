@@ -1,12 +1,12 @@
 ---
-path: "/projects/first"
+path: "/projects/second"
 date: "2017-11-07"
-title: "Snippets"
-subtitle: "Reformatting text to reflect possible heiarchies of meaning"
-tags: [websites, big projects, ar vr]
+title: "Whispers"
+subtitle: "A digital version of the game Telephone"
+tags: [big projects, websites, experiments]
 link: https://snippet.rainfla.me
 image: images/mountain.jpg
-disp_order: 1
+disp_order: 2
 ---
 
 #Ideation

@@ -1,0 +1,74 @@
+.tags {
+    text-transform: uppercase;
+    font-size: 80%;
+    margin: 5px 10px;
+    padding: 6px;
+    color: $ter-type;
+    // border: 1px solid $accent-light;
+    border-radius: $radius;
+    display: inline-block;
+}
+
+// .tag-dot {
+//     display: inline-block;
+//     height: 10px;
+//     width: 10px;
+//     border-radius: 50%;
+//     background-color: $accent;
+// }
+
+.tag-button {
+    transition: all $duration ease;
+    text-transform: uppercase;
+    margin: 5px 10px;
+    padding: 6px;
+    border-radius: $radius;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tag-text {
+    display: inline-block;
+}
+
+$show-all-color: $sec-type;
+$show-all-color-light: $ter-type;
+
+$websites-color: hsl(236, 72%, 75%);
+$websites-color-light: hsl(236, 72%, 88%);
+
+$data-viz-color: hsl(286, 72%, 75%);
+$data-viz-color-light: hsl(286, 72%, 88%);
+
+$experiments-color: hsl(0, 72%, 75%);
+$experiments-color-light: hsl(0, 72%, 75%);
+
+$ar-vr-color: hsl(94, 72%, 75%);
+$ar-vr-color-light: hsl(94, 72%, 88%);
+
+$big-projects-color: hsl(47, 72%, 75%);
+$big-projects-color-light: hsl(47, 72%, 88%);
+
+.websites {
+    border: 1px solid $websites-color;
+}
+
+.show-all {
+    border: 1px solid $show-all-color;
+}
+
+.data-viz {
+    border: 1px solid $data-viz-color;
+}
+
+.experiments {
+    border: 1px solid $experiments-color;
+}
+
+.ar-vr {
+    border: 1px solid $ar-vr-color;
+}
+
+.big-projects {
+    border: 1px solid $big-projects-color;
+}

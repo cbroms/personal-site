@@ -37,7 +37,7 @@ class Navbar extends React.Component {
                     {this.state.shorter ? "CB" : "Christian Broms"}
                 </Link>
                 <div className="nav-links">
-                    <Link to="/projects" className="nav-link">
+                    <Link to="/" className="nav-link">
                         Projects
                     </Link>
                     <Link to="/about" className="nav-link">
