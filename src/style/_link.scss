@@ -1,7 +1,7 @@
 .project-link-container {
     max-width: 900px;
     width: 90%;
-    margin: 40px auto;
+    margin: 20px auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -16,7 +16,7 @@
     border-radius: $radius;
     box-shadow: $shadow;
     object-fit: cover;
-    margin: 30px auto;
+    margin: 0 auto;
     transition: all $duration ease;
 }
 

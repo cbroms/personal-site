@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { graphql } from "gatsby";
+import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
-import "../style/main.scss";
-
-import { graphql } from "gatsby";
+import Footer from "../components/Footer";
 import PostLink from "../components/PostLink";
+
+import "../style/main.scss";
 
 const uuidv4 = require("uuid/v4");
 
@@ -15,7 +17,7 @@ const Index = ({
 }) => {
     const [loadedTags, setLoadedTags] = useState(false);
     const [tags, setTags] = useState(["everything"]);
-    const [activeTags, setActiveTags] = useState([]);
+    const [activeTags, setActiveTags] = useState("");
 
     if (!loadedTags) {
         let allTags = tags;
@@ -26,12 +28,15 @@ const Index = ({
             allTags = allTags.concat(newTags);
             return false;
         });
+
         setTags(allTags);
         setLoadedTags(true);
-        setActiveTags("everything");
+        if (typeof window !== "undefined") {
+            window.setTimeout(() => {
+                setActiveTags("everything");
+            }, 50);
+        }
     }
-
-    console.log(activeTags);
 
     const tagButtons = tags.map(tag => {
         // filtering and activation for multiple tags at a time
@@ -61,22 +66,33 @@ const Index = ({
         return includedTags.includes(true);
     });
 
-    const posts = edges
-        .filter(
-            edge =>
+    const posts = edges.map((edge, index) => (
+        <PostLink
+            key={edge.node.id}
+            post={edge.node}
+            pos={index}
+            visible={
                 activeTags.includes("everything") || goodEdges.includes(edge)
-        )
-        .map((edge, index) => (
-            <PostLink key={edge.node.id} post={edge.node} pos={index} />
-        ));
+            }
+        />
+    ));
 
     return (
         <div>
             <Navbar />
-            <div className="project-container">
-                {tagButtons}
-                {posts}
+            <div style={{ minHeight: "100vh" }}>
+                <Fade bottom distance="0px">
+                    <div className="project-list-head">
+                        <h1 className="project-list-head">
+                            I design and develop websites, visualize data, and
+                            create interactive environments.
+                        </h1>
+                        {tagButtons}
+                    </div>
+                </Fade>
+                <div className="project-list">{posts}</div>
             </div>
+            <Footer />
         </div>
     );
 };
@@ -91,9 +107,7 @@ export const pageQuery = graphql`
             edges {
                 node {
                     id
-                    excerpt(pruneLength: 250)
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
                         path
                         title
                         subtitle

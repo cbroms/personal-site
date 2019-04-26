@@ -6,6 +6,7 @@ body {
     font-family: $font;
     color: $main-type;
     font-size: 110%;
+    // overflow-x: hidden;
 }
 
 html {
@@ -38,9 +39,12 @@ img {
 
 #___gatsby {
     width: 100vw;
+    overflow-x: hidden;
     height: auto;
     left: 0;
     top: 0;
     background-color: $body;
     position: absolute;
 }
+
+

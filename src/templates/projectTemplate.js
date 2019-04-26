@@ -8,6 +8,7 @@ import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
 import Tags from "../components/Tags";
+import Footer from "../components/Footer";
 
 import "../style/main.scss";
 
@@ -83,6 +84,39 @@ class Template extends React.Component {
         </AnchorLink>
       ));
 
+      const timeframe = (
+        <div className="project-details-content">
+          <div className="details-title">
+            {frontmatter.timeframe !== "" ? "Timeframe" : ""}
+          </div>
+          <div className="details-text">{frontmatter.timeframe}</div>
+        </div>
+      );
+
+      const projectType = (
+        <div className="project-details-content" key={uuidv4()}>
+          <div className="details-title">
+            {frontmatter.project_type !== "" ? "Project Type" : ""}
+          </div>
+          <div className="details-text">{frontmatter.project_type}</div>
+        </div>
+      );
+
+      const toolsList = frontmatter.tools.map((value, index) => (
+        <span key={uuidv4()}>{`${value}${
+          index !== frontmatter.tools.length - 1 ? "," : ""
+        } `}</span>
+      ));
+
+      const tools = (
+        <div className="project-details-content">
+          <div className="details-title">
+            {frontmatter.tools.length > 0 ? "Tools" : ""}
+          </div>
+          <div className="details-text">{toolsList}</div>
+        </div>
+      );
+
       content = (
         <div className="project-container">
           <div className="project-post">
@@ -99,7 +133,22 @@ class Template extends React.Component {
                   />
                 </div>
 
-                {sections}
+                <div className="project-details-container">
+                  {tools}
+                  {timeframe}
+                  {projectType}
+                  <div
+                    className="project-details-content"
+                    style={{ maxWidth: 390 }}
+                  >
+                    <div className="details-title">Synopsis</div>
+                    <div className="details-text">{frontmatter.synopsis}</div>
+                  </div>
+                  <div className="project-details-content">
+                    <div className="details-title">Sections</div>
+                    <div className="details-text">{sections}</div>
+                  </div>
+                </div>
               </div>
             </Fade>
 
@@ -112,6 +161,7 @@ class Template extends React.Component {
       <div>
         <Navbar />
         {content}
+        <Footer />
       </div>
     );
   }
@@ -124,11 +174,14 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         title
         tags
         subtitle
+        synopsis
+        timeframe
+        project_type
+        tools
         image {
           childImageSharp {
             fluid(maxWidth: 400) {

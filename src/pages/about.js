@@ -26,12 +26,28 @@ const About = props => (
                         My work involves creating technology that probes how we
                         interpret text and digital spaces. I design and develop
                         websites, visualize data, and create 3D interactive
-                        environments. Recently, I've been exploring machine
+                        environments. Recently, I've also been exploring machine
                         learning and AR/VR with Unreal Engine and Unity.
                         <br />
                         <br />
                         Find more of my work on{" "}
                         <a href="https://github.com/CBR0MS">GitHub</a>.
+                        <br />
+                        <br />
+                        Check out some of my other websites:
+                        <ul>
+                            <li>
+                                <a href="https://flygeni.us">FlyGenius</a>, a
+                                flight time prediction service
+                            </li>
+                            <li>
+                                <a href="https://api.flygeni.us/docs">
+                                    FlyGenius API
+                                </a>
+                                , an API for airport, airline, and route
+                                statistics
+                            </li>
+                        </ul>
                         <h2>Contact</h2>
                         <a href="mailto:hello@broms.cc">hello@broms.cc</a>
                     </div>

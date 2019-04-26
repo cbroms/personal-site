@@ -32,7 +32,13 @@ const PostLink = props => {
     const position = props.pos % 2 === 0;
 
     return (
-        <Fade left={position} right={!position} distance="100px">
+        <Fade
+            left={position}
+            right={!position}
+            distance="100px"
+            when={props.visible}
+            collapse
+        >
             <div
                 className="project-link-container"
                 onClick={() => navigate(post.frontmatter.path)}
