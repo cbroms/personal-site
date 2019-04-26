@@ -2,17 +2,17 @@
 path: /projects/gaze
 title: Space Between
 subtitle: Visualizing the space between two characters engaged in conversation
-synopsis: " A visualization of the space where the gaze of two characters in conversation meet. As the characters look at or away from one another, a shape is created between them that grows over the course of a scene."
+synopsis: ' A visualization of the space where the gaze of two characters in conversation meet. As the characters look at or away from one another, a shape is created between them that grows over the course of a scene.'
 tags:
-    - Experiments
-    - Data Viz
+  - experiments
+  - data viz
 image: images/gaze.jpg
 timeframe: 2 Weeks (October 2018)
 project_type: Made in 60-212 Interactivity and Computation at CMU
 tools:
-    - p5.js
-    - PoseNet
-    - ml5.js
+  - p5.js
+  - PoseNet
+  - ml5.js
 disp_order: 3
 ---
 
