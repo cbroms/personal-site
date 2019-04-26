@@ -3,7 +3,7 @@ backend:
   repo: CBR0MS/personal-site
 
 media_folder: projects/images
-public_folder: projects
+public_folder: images
 
 collections:
   - name: projects
