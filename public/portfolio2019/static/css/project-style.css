@@ -1,0 +1,160 @@
+body {
+    background-color: #202020;
+    color: #2B2B2B;
+    font-family: ibm-plex-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-family: ibm-plex-sans, sans-serif;
+    padding-top: 1vh;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+::selection {
+  background: #F0CF00; 
+  color: #FAF9F8;
+}
+::-moz-selection {
+  background: #F0CF00; 
+  color: #FAF9F8;
+}
+
+.arrow {
+    margin-top: 25vh;
+    font-size: 2rem;
+}
+
+.body-text {
+    position: absolute;
+    top: 115vh;
+    /*left: 50%;
+    transform: translateX(-50%);*/
+    width: 96vw;
+   /* max-width: 750px;*/
+}
+
+.title {
+    z-index: 1000;
+    padding: 20px;
+    background-color: #FAF9F8;
+    position: absolute;
+    left: 5vw;
+    top: 2vh;
+    opacity: 0;
+    max-width: 345px;
+}
+
+h3 {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul {
+    padding-left: 8%;
+}
+
+.highlight {
+    background-color: #535353;
+    border-radius: 5px;
+}
+
+.hero-image {
+    display: none;
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 0vw;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    float: left;
+}
+
+.img-fluid {
+    max-height: 80vh;
+    /*padding-bottom: 20vh;*/
+}
+
+.col-sm-12 {
+    padding-bottom: 3vh;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 500px;
+}
+
+@media (min-width: 768px) { 
+    .hero-image {
+        display: block;
+    }
+    .col-sm-12 {
+        padding-bottom: 15vh;
+    }
+    .title {
+        position: absolute;
+        left: 40vw;
+        max-width: 365px;
+    }
+    .body-text {
+        padding: 2vw;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .title {
+        left: 60vw;
+    }
+}
+
+.container-main {
+    max-width:96vw;
+    background-color: #FAF9F8;
+    margin: 2vw;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5vh;
+    height: 115vh;
+    -webkit-box-shadow: -1px 33px 83px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 33px 83px -10px rgba(0,0,0,0.75);
+    box-shadow: -1px 33px 83px -10px rgba(0,0,0,0.75);
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+.content {
+    opacity: 0;
+}
+
+.content-wrapper{
+    padding: 20px;
+}
+
+h3 {
+    max-width: 550px;
+}
+
+.big {
+    margin-bottom: 5vh;
+    margin-top: 8vh;
+}
+
+iframe {
+    height: 40vw;
+    width: 80vw; 
+    min-width: 320px;
+    min-height: 200px;
+}

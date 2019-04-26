@@ -15,6 +15,10 @@ const Index = ({
         allMarkdownRemark: { edges }
     }
 }) => {
+    if (typeof document !== "undefined") {
+        document.title = "Projects - Christian Broms";
+    }
+
     const [loadedTags, setLoadedTags] = useState(false);
     const [tags, setTags] = useState(["everything"]);
     const [activeTags, setActiveTags] = useState("");
@@ -82,12 +86,12 @@ const Index = ({
             <Navbar />
             <div style={{ minHeight: "100vh" }}>
                 <Fade bottom distance="0px">
-                    <div className="project-list-head">
+                    <div className="project-list-head outer">
                         <h1 className="project-list-head">
                             I design and develop websites, visualize data, and
                             create interactive environments.
                         </h1>
-                        {tagButtons}
+                        <div className="project-head-tags">{tagButtons}</div>
                     </div>
                 </Fade>
                 <div className="project-list">{posts}</div>

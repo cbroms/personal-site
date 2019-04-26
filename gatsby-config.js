@@ -35,6 +35,21 @@ module.exports = {
                     `gatsby-remark-static-images`
                 ]
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-favicon`,
+            options: {
+                logo: "./src/favicon.png",
+
+                appName: null,
+                appDescription: null,
+                lang: "en-US",
+                background: "#ededed",
+                theme_color: "#104eb1",
+                display: "standalone",
+                start_url: "/"
+            }
+        },
+        `gatsby-plugin-offline`
     ]
 };

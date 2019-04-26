@@ -23,7 +23,11 @@ class Template extends React.Component {
 
   componentDidMount() {
     const { markdownRemark } = this.props.data;
-    const { html } = markdownRemark;
+    const { html, frontmatter } = markdownRemark;
+
+    if (typeof document !== "undefined") {
+      document.title = `${frontmatter.title} - Christian Broms`;
+    }
 
     const root = parse(html);
 
@@ -68,9 +72,10 @@ class Template extends React.Component {
 
     if (this.state.trees) {
       const sectionTrees = this.state.trees.map(value => (
-        <Fade bottom distance="100px" key={uuidv4()}>
-          <div dangerouslySetInnerHTML={{ __html: value.toString() }} />
-        </Fade>
+        <div
+          key={uuidv4()}
+          dangerouslySetInnerHTML={{ __html: value.toString() }}
+        />
       ));
 
       const sections = this.state.sections.map(value => (

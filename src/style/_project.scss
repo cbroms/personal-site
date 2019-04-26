@@ -85,13 +85,28 @@ p.page-head {
     float: left;
 }
 
+$head-width: 94%;
+
 .project-list-head {
-    width: 100vw;
+    width: $head-width;
     background-color: $body;
-    margin: $nav-height + 30px auto;
-    margin-bottom: 50px;
+    margin: 30px auto;
+    margin-top: $nav-height + 30px;
     text-align: center;
     max-width: 800px;
+}
+
+.project-head-tags {
+    margin: 0 auto;
+    width: $head-width;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.project-list-head.outer {
+    margin-bottom: 70px;
 }
 
 .project-list {
@@ -103,4 +118,15 @@ h1.project-list-head {
     font-size: 2.5rem;
     font-weight: 400;
     text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    max-width: 650px;
+    margin: 20px auto;
 }
