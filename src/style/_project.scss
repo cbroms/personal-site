@@ -130,3 +130,17 @@ p {
     max-width: 650px;
     margin: 20px auto;
 }
+
+.gatsby-resp-image-figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 90%;
+    color: $ter-type;
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.gatsby-resp-image-background-image {
+    border-radius: $radius;
+}

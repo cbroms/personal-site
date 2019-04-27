@@ -1,7 +1,6 @@
 body {
     margin: 0;
     height: 100vh;
-    width: 100vw;
     background-color: $body;
     font-family: $font;
     color: $main-type;
@@ -38,7 +37,7 @@ img {
 }
 
 #___gatsby {
-    width: 100vw;
+    width: calc(100vw - 17px);
     overflow-x: hidden;
     height: auto;
     left: 0;

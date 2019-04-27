@@ -2,8 +2,8 @@ backend:
   name: github
   repo: CBR0MS/personal-site
 
-media_folder: projects/images
-public_folder: images
+media_folder: static/uploads
+public_folder: /uploads
 
 collections:
   - name: projects

@@ -10,7 +10,7 @@ tags:
   - websites
   - experiments
   - data viz
-image: images/snip.png
+image: /uploads/snip.png
 timeframe: 1 Week (April 2019)
 project_type: Made in 60-280 Contextual Practice at CMU
 tools:
@@ -20,6 +20,7 @@ tools:
   - MongoDB
 disp_order: 1
 ---
+
 # The Idea
 
 This project asks users to select what they find to be the meaningful portion of a snippet of text. Users' selections are aggregated to create a mapping between each word and the proportion of people that found it meaningful. The original text is redrawn to reflect this proportion, resulting in a new passage organized in a sort of hierarchy of meaning. As intersubjective agreement increases, letters in words come together, become darker, and grow larger. In areas with less agreement, letters shrink, become lighter, and spread apart.
@@ -40,7 +41,7 @@ With this constraint, I could get a more accurate representation of what people 
 
 A snippet of text from _Crime and Punishment_ looks like this:
 
-![](images/snip2.png)
+![](/uploads/snip2.png " ")
 
 It was also very important that the UI was as simple and easy to use as possible, as this survey would be distributed to a population with an unknown level of technical expertise. I minimized the number of possible actions on each page to just the essential ones, and designed a simple user flow between survey to results, and then back to a new survey.
 
@@ -48,8 +49,7 @@ Another interesting characteristic of this website is that a homepage is not nec
 
 Finally, the primary action: highlighting. The most intuitive way of selection a portion of text on a computer is to run the cursor over it and highlight it. I figured there was no reason to make the selection process any fancier than that.
 
-Considering all these components, the user interface for the survey looks like this:
-![](images/snip3.png)
+![](/uploads/snip3.png "UI for the survey")
 
 ## Build
 
@@ -65,14 +65,14 @@ Take one of the surveys at [snippet.rainfla.me](https://snippet.rainfla.me/rando
 
 Some of the visualizations of agreement created by highlighting the text can be quite revealing. For example, sometimes there are snippets with less agreement (<40% coherence):
 
-![](images/snip6.png)
+![](/uploads/snip6.png " ")
 
 Other times, the meaningful portion of the snippet seems quite clear (>90% coherence):
 
-![](images/snip5.png)
+![](/uploads/snip5.png " ")
 
 Similar trends can be found in the passage visualizations:
 
-![](images/snip7.png)
+![](/uploads/snip7.png " ")
 
-![](images/snip8.png)
+![](/uploads/snip8.png " ")

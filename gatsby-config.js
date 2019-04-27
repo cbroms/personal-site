@@ -3,7 +3,13 @@ const path = require(`path`);
 module.exports = {
     plugins: [
         `gatsby-plugin-sass`,
-        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                path: `${__dirname}/static/uploads`,
+                name: "uploads"
+            }
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -12,8 +18,6 @@ module.exports = {
             }
         },
         `gatsby-transformer-remark`,
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-transformer-remark`,
             options: {
@@ -25,17 +29,26 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: "gatsby-remark-relative-images",
+                        options: {
+                            name: "uploads"
+                        }
+                    },
+                    {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 800,
-                            linkImagesToOriginal: false,
-                            backgroundColor: "transparent"
+                            backgroundColor: "transparent",
+                            wrapperStyle: "border-radius: 10px;",
+                            showCaptions: true
                         }
                     },
                     `gatsby-remark-static-images`
                 ]
             }
         },
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-favicon`,
             options: {
@@ -50,6 +63,7 @@ module.exports = {
                 start_url: "/"
             }
         },
-        `gatsby-plugin-offline`
+        `gatsby-plugin-offline`,
+        `gatsby-plugin-netlify-cms`
     ]
 };

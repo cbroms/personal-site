@@ -1,7 +1,7 @@
 .project-link-container {
     max-width: 900px;
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -51,4 +51,5 @@
     color: $sec-type;
     font-style: italic;
     padding: 0 20px 20px 20px;
+    margin: 0;
 }
