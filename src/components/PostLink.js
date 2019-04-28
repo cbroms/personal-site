@@ -32,21 +32,23 @@ const PostLink = props => {
     const position = props.pos % 2 === 0;
 
     return (
-        <Fade
-            left={position}
-            right={!position}
-            distance="100px"
-            when={props.visible}
-            collapse
-        >
-            <div
-                className="project-link-container"
-                onClick={() => navigate(post.frontmatter.path)}
+        <div style={{ width: "100vw" }}>
+            <Fade
+                left={position}
+                right={!position}
+                distance="100px"
+                when={props.visible}
+                collapse
             >
-                {position ? text : image}
-                {position ? image : text}
-            </div>
-        </Fade>
+                <div
+                    className="project-link-container"
+                    onClick={() => navigate(post.frontmatter.path)}
+                >
+                    {position ? text : image}
+                    {position ? image : text}
+                </div>
+            </Fade>
+        </div>
     );
 };
 

@@ -13,7 +13,7 @@ const Tags = props => {
         </span>
     ));
 
-    return <div>{tags}</div>;
+    return <div style={{ padding: "0 20px" }}>{tags}</div>;
 };
 
 export default Tags;

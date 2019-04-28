@@ -27,16 +27,21 @@
     min-height: 100px;
 }
 
+.page-head {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 h1.page-head {
     font-size: 3.5rem;
     font-weight: 600;
 }
 
 p.page-head {
+    padding: 20px;
     color: $sec-type;
     font-size: 1.4rem;
     font-style: italic;
-    padding: 0 20px 20px 20px;
 }
 
 .project-image-container {
@@ -143,4 +148,8 @@ p {
 
 .gatsby-resp-image-background-image {
     border-radius: $radius;
+}
+
+.gatsby-resp-image-figure {
+    margin: 0;
 }

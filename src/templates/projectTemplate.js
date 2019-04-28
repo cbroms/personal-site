@@ -129,7 +129,10 @@ class Template extends React.Component {
               <div className="project-head">
                 <h1 className="page-head">{frontmatter.title}</h1>
                 <p className="page-head">{frontmatter.subtitle}</p>
-                <Tags tags={frontmatter.tags} />
+                <div className="page-head">
+                  <Tags tags={frontmatter.tags} />
+                </div>
+
                 <div style={{ padding: 20 }}>
                   <Img
                     className="project-image-container"
