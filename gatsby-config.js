@@ -1,6 +1,21 @@
 const path = require(`path`);
 
 module.exports = {
+    siteMetadata: {
+        title: `Christian Broms - Portfolio`,
+        author: `Christian Broms`,
+        siteUrl: `https://christianbroms.com`,
+        description: `Portfolio of Christian Broms. I design and develop websites, visualize data, and create interactive environments.`,
+        defaultImage: "/uploads/default.png",
+        keywords: [
+            `Philosophy`,
+            `Psychology`,
+            `Neuroscience`,
+            `Data Visualization`,
+            `Cognitive Science`,
+            `Human Computer Interation`
+        ]
+    },
     plugins: [
         `gatsby-plugin-sass`,
         {
@@ -47,6 +62,7 @@ module.exports = {
                 ]
             }
         },
+        `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {

@@ -1,5 +1,5 @@
 ---
-path: /projects/flygenius
+path: /project/flygenius
 title: FlyGenius
 subtitle: Domestic flight departure and air time prediction website
 synopsis: >-

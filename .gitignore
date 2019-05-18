@@ -1,7 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
-
+public/
 .cache
 
 .DS_Store

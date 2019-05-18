@@ -1,5 +1,5 @@
 ---
-path: /projects/gaze
+path: /project/gaze
 title: Space Between
 subtitle: Visualizing the space between two characters engaged in conversation
 synopsis: " A visualization of the space where the gaze of two characters in conversation meet. As the characters look at or away from one another, a shape is created between them that grows over the course of a scene."

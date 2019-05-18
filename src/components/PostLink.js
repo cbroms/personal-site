@@ -44,8 +44,8 @@ const PostLink = props => {
                     className="project-link-container"
                     onClick={() => navigate(post.frontmatter.path)}
                 >
-                    {position ? text : image}
-                    {position ? image : text}
+                    {text}
+                    {image}
                 </div>
             </Fade>
         </div>

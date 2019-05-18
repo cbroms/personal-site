@@ -33,16 +33,18 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className="nav">
-                <Link to="/" className="nav-link nav-logo">
-                    {this.state.shorter ? "CB" : "Christian Broms"}
-                </Link>
-                <div className="nav-links">
-                    <Link to="/" className="nav-link">
-                        Projects
+                <div className="nav-wrapper">
+                    <Link to="/" className="nav-link nav-logo">
+                        {this.state.shorter ? "CB" : "Christian Broms"}
                     </Link>
-                    <Link to="/about" className="nav-link">
-                        About & Contact
-                    </Link>
+                    <div className="nav-links">
+                        <Link to="/" className="nav-link">
+                            Projects
+                        </Link>
+                        <Link to="/about" className="nav-link">
+                            About & Contact
+                        </Link>
+                    </div>
                 </div>
             </div>
         );

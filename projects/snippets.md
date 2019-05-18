@@ -1,5 +1,5 @@
 ---
-path: /projects/snippets
+path: /project/snippets
 title: Snippets
 subtitle: Reformatting snippets of text to reflect crowdsourced heiarchies of meaning
 synopsis: >-

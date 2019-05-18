@@ -6,6 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Img from "gatsby-image";
 import Fade from "react-reveal/Fade";
 
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Tags from "../components/Tags";
 import Footer from "../components/Footer";
@@ -23,11 +24,7 @@ class Template extends React.Component {
 
   componentDidMount() {
     const { markdownRemark } = this.props.data;
-    const { html, frontmatter } = markdownRemark;
-
-    if (typeof document !== "undefined") {
-      document.title = `${frontmatter.title} - Christian Broms`;
-    }
+    const { html } = markdownRemark;
 
     const root = parse(html);
 
@@ -167,6 +164,11 @@ class Template extends React.Component {
     }
     return (
       <div>
+        <SEO
+          title={`${frontmatter.title} - CB`}
+          description={frontmatter.synopsis}
+          image={frontmatter.image.childImageSharp.fluid}
+        />
         <Navbar />
         {content}
         <Footer />

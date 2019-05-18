@@ -2,15 +2,13 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
+import SEO from "../components/SEO";
 import "../style/main.scss";
 
 const About = props => {
-    if (typeof document !== "undefined") {
-        document.title = "About - Christian Broms";
-    }
-
     return (
         <div>
+            <SEO title={`About - CB`} />
             <Navbar />
             <Fade bottom distance="100px">
                 <div className="project-container">
@@ -53,6 +51,12 @@ const About = props => {
                             <p>
                                 Check out some of my other websites:
                                 <ul>
+                                    <li>
+                                        <a href="https://qualis.red">
+                                            Qualis Red
+                                        </a>
+                                        , where I occasionally write
+                                    </li>
                                     <li>
                                         <a href="https://flygeni.us">
                                             FlyGenius
