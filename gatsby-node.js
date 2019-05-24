@@ -10,7 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___disp_order] }
+        sort: { order: ASC, fields: [frontmatter___disp_order] }
         limit: 1000
       ) {
         edges {
@@ -27,11 +27,17 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const projects = result.data.allMarkdownRemark.edges;
+    projects.forEach(({ node }, index) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
+        context: {
+          next:
+            index === projects.length - 1
+              ? projects[0].node.frontmatter.path
+              : projects[index + 1].node.frontmatter.path
+        } // additional data can be passed via context
       });
     });
   });

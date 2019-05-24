@@ -12,8 +12,8 @@ function SEO({ description, meta, image: metaImage, title }) {
               author
               description
               siteUrl
-              defaultImage
               keywords
+              image
             }
           }
         }
@@ -25,7 +25,7 @@ function SEO({ description, meta, image: metaImage, title }) {
           metaImage && metaImage.src
             ? `${data.site.siteMetadata.siteUrl}${metaImage.src}`
             : `${data.site.siteMetadata.siteUrl}${
-                data.site.siteMetadata.defaultImage
+                data.site.siteMetadata.image
               }`;
         return (
           <Helmet
@@ -84,6 +84,10 @@ function SEO({ description, meta, image: metaImage, title }) {
                       }
                     ]
                   : [
+                      {
+                        property: "og:image",
+                        content: image
+                      },
                       {
                         name: "twitter:card",
                         content: "summary"

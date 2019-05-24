@@ -10,6 +10,7 @@ import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Tags from "../components/Tags";
 import Footer from "../components/Footer";
+import PostLink from "../components/PostLink";
 
 import "../style/main.scss";
 
@@ -23,9 +24,7 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-    const { markdownRemark } = this.props.data;
-    const { html } = markdownRemark;
-
+    const { html } = this.props.data.thisPage;
     const root = parse(html);
 
     let sectionTrees = [];
@@ -62,8 +61,8 @@ class Template extends React.Component {
   }
 
   render() {
-    const { markdownRemark } = this.props.data;
-    const { frontmatter } = markdownRemark;
+    const { frontmatter } = this.props.data.thisPage;
+    const nextPage = this.props.data.nextPage;
 
     let content = <div />;
 
@@ -158,6 +157,10 @@ class Template extends React.Component {
             </Fade>
 
             <div className="project-post-content">{sectionTrees}</div>
+            <div style={{ marginTop: 150, marginBottom: 50 }}>
+              <h1>Next Project:</h1>
+              <PostLink post={nextPage} pos={0} visible={true} />
+            </div>
           </div>
         </div>
       );
@@ -180,8 +183,8 @@ class Template extends React.Component {
 export default Template;
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($path: String!, $next: String!) {
+    thisPage: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         path
@@ -192,6 +195,22 @@ export const pageQuery = graphql`
         timeframe
         project_type
         tools
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    # query the next page's frontmatter data used to display the post link
+    nextPage: markdownRemark(frontmatter: { path: { eq: $next } }) {
+      frontmatter {
+        path
+        title
+        subtitle
+        tags
         image {
           childImageSharp {
             fluid(maxWidth: 400) {

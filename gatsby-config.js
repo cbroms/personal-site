@@ -6,7 +6,7 @@ module.exports = {
         author: `Christian Broms`,
         siteUrl: `https://christianbroms.com`,
         description: `Portfolio of Christian Broms. I design and develop websites, visualize data, and create interactive environments.`,
-        defaultImage: "/uploads/default.png",
+        image: "/default.png",
         keywords: [
             `Philosophy`,
             `Psychology`,
