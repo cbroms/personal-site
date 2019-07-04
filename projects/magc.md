@@ -78,10 +78,6 @@ Another major concern was performance. Each point on the map could contain as ma
 
 ![](/uploads/magcpreload.gif)
 
-## Preserving state
-
-To complement the tagging system, MAGC wanted to make it easy to send a link of a certain version of the map and have all users that open the link see the same map. I used query components to ensure that the current state of the map is preserved and can be accessed by anyone with the link. Features such as tours also use query components for the same reason.
-
 ## Open-source
 
 All the code for this project is open-source and can be found [on GitHub](https://github.com/CBR0MS/magcInteractiveMap). The map can be found at [interactive.magc.org](https://interactive.magc.org)

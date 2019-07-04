@@ -20,7 +20,7 @@ const Footer = props => (
             </Link>
         </span>
         <span className="footer-text">
-            <a href="https://github.com/CBR0MS" className="footer-link">
+            <a href="https://github.com/cbroms" className="footer-link">
                 GitHub
             </a>
         </span>

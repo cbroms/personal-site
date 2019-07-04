@@ -45,7 +45,7 @@ const About = props => {
 
                             <p>
                                 Find more of my work on{" "}
-                                <a href="https://github.com/CBR0MS">GitHub</a>.
+                                <a href="https://github.com/cbroms">GitHub</a>.
                             </p>
 
                             <p>

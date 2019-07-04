@@ -79,7 +79,7 @@ const Index = ({
     ));
 
     return (
-        <div>
+        <div style={{ overflow: "hidden" }}>
             <SEO title={`Projects - CB`} />
             <Navbar />
             <div style={{ minHeight: "100vh" }}>
