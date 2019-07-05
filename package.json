@@ -12,25 +12,25 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.3.16",
-    "gatsby-image": "^2.0.39",
+    "gatsby": "^2.13.3",
+    "gatsby-image": "^2.2.4",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-netlify-cms": "^3.0.18",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.35",
-    "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-sharp": "^2.2.2",
+    "gatsby-remark-copy-linked-files": "^2.1.0",
     "gatsby-remark-figure-caption": "^2.0.0",
-    "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-images": "^3.1.2",
     "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-remark-static-images": "^1.1.0",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.1.18",
-    "netlify-cms": "^2.9.1",
-    "node-html-parser": "^1.1.15",
-    "node-sass": "^4.11.0",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-remark": "^2.6.0",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "netlify-cms": "^2.9.5",
+    "node-html-parser": "^1.1.16",
+    "node-sass": "^4.12.0",
     "package.json": "^2.0.1",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -41,7 +41,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
