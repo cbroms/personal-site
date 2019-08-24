@@ -55,7 +55,7 @@ p.page-head {
 .project-link {
     display: inline-block;
     margin: 0 15px 0 0;
-    width: 100px;
+    min-width: 100%;
 }
 
 .project-details-container {
@@ -71,6 +71,8 @@ p.page-head {
 
 .project-details-content {
     max-width: 170px;
+    min-width: 90px;
+    min-height: 50px;
     margin: 10px 0;
     display: inline-block;
     margin-bottom: 20px;
@@ -86,6 +88,7 @@ p.page-head {
 
 .details-text {
     text-align: left;
+    min-width: 100%;
     display: inline-block;
     float: left;
 }
@@ -131,7 +134,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+dl {
     max-width: 650px;
     margin: 20px auto;
 }
@@ -153,4 +158,3 @@ p {
 .gatsby-resp-image-figure {
     margin: 0;
 }
-

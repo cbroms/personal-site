@@ -3,8 +3,5 @@ _site
 .jekyll-metadata
 public/
 .cache
-
 .DS_Store
 node_modules/
-
-public/static/
