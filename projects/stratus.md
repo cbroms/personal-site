@@ -7,7 +7,7 @@ tags:
     - big projects
     - data viz
     - ar/vr
-image: /uploads/stratus1.png
+image: /uploads/stratus5.png
 timeframe: 8 Weeks (Summer 2019)
 project_type: Project completed while interning at Booz Allen Hamilton
 tools:
@@ -41,16 +41,25 @@ For the augmented reality environment, it was important that _just_ that data th
 
 By building on people's pre-existing understanding of what weather looks like physically, we could create something that was _instantaneously understandable_ without any additional training.
 
-![](/uploads/stratus.gif)
+![ ](/uploads/stratus.gif)
 
 It was also important to consider how people would interact with the AR environment. We were sure to provide a number of obvious interaction methods, such as panning around and scaling.
 
 ## The 2D UI
 
-However, it was also clear that there are some aspects of the weather report where a visualization would not provide enough information. One example is pressure, where pilots use the pressure provided by a METAR to calibrate their alitimeter. It would be important to provide these values in addition to the visualization, to provide additional clarity when needed.
+However, it was also clear that there are some aspects of the weather report where a visualization would not provide enough information. One example is pressure, as pilots use the pressure provided by a METAR to calibrate their alitimeter. It would be important to have these values in addition to the visualization, to provide additional clarity when needed.
 
-I designed a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen.
+I designed and implemented a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen.
 
 ![](/uploads/stratus1.png)
 
 ![](/uploads/stratus2.png)
+
+A few more screenshots from the app:
+
+![](/uploads/stratus3.png)
+
+![](/uploads/stratus4.png)
+
+![](/uploads/stratus5.png)
+
