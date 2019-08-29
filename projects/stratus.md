@@ -7,7 +7,7 @@ tags:
     - big projects
     - data viz
     - ar/vr
-image: /uploads/stratus5.png
+image: /uploads/stratus.png
 timeframe: 8 Weeks (Summer 2019)
 project_type: Project completed while interning at Booz Allen Hamilton
 tools:
@@ -28,7 +28,7 @@ Over the summer, I and a team of other interns ([Luke Fleck](http://lrfleck.com/
 We used Unity to create an augmented reality app to present realtime weather data in a form that can be instantaneously understood. This involved:
 
 -   Fetching and decoding realtime weather reports provided by all airports in the United States ([METARs](https://aviationweather.gov/metar)).
--   Generating an AR environment that adapts to the current decoded report, displaying cloud levels, air pressure, wind speed and direction, and other elements from the reports.
+-   Generating an AR environment that adapts to the current decoded report, displaying cloud levels, air pressure, wind speed and direction, and other elements.
 -   Creating an app to easily facilitate entering airports and visualizing their AR environments.
 
 # My Role
@@ -43,7 +43,7 @@ By building on people's pre-existing understanding of what weather looks like ph
 
 ![ ](/uploads/stratus.gif)
 
-It was also important to consider how people would interact with the AR environment. We were sure to provide a number of obvious interaction methods, such as panning around and scaling.
+It was also important to consider how people would interact with the AR environment. We were sure to provide a number of obvious interaction methods, such as panning, scaling and tapping. 
 
 ## The 2D UI
 
@@ -55,7 +55,7 @@ I designed and implemented a UI to present the fields from the METAR in their or
 
 ![](/uploads/stratus2.png)
 
-A few more screenshots from the app:
+There are a variety of other components of the app besides just the display of data. Here's a few more screenshots:
 
 ![](/uploads/stratus3.png)
 

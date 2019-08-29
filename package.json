@@ -23,7 +23,7 @@
     "gatsby-remark-copy-linked-files": "^2.1.0",
     "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-remark-images": "^3.1.2",
-    "gatsby-remark-relative-images": "^0.2.2",
+    "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-static-images": "^1.1.0",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-remark": "^2.6.0",
