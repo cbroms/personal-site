@@ -51,12 +51,12 @@ However, it was also clear that there are some aspects of the weather report whe
 
 I designed and implemented a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen.
 
-![](/uploads/stratus1.png)
+![ ](/uploads/stratus1.png)
 
-![](/uploads/stratus2.png)
+![ ](/uploads/stratus2.png)
 
 ## The Final Product
 
 Our final iOS and Android app integrates a number of realtime data sources to create one simple visualization of the weather at any airport in the United States, to promote instantaneous interpretation of the current conditions.
 
-![](/uploads/stratus.png)
+![ ](/uploads/stratus.png)
