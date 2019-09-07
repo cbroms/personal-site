@@ -1,6 +1,6 @@
 .project-container {
     // width: 100vw;
-    background-color: $body;
+    background-color: var(--body);
     margin: $nav-height + 20px auto;
     text-align: center;
 }
@@ -12,11 +12,11 @@
 }
 
 .project-post-section {
-    color: $sec-type;
+    color: var(--sec-type);
     padding: 20px;
-    background-color: $content;
-    border-radius: $radius;
-    box-shadow: $shadow;
+    background-color: var(--content);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     margin: 10px auto;
     width: 85%;
     min-width: 335px;
@@ -39,15 +39,15 @@ h1.page-head {
 
 p.page-head {
     padding: 20px;
-    color: $sec-type;
+    color: var(--sec-type);
     font-size: 1.4rem;
     font-style: italic;
 }
 
 .project-image-container {
     max-width: 600px;
-    border-radius: $radius;
-    box-shadow: $shadow;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     object-fit: cover;
     margin: 10px auto;
 }
@@ -83,7 +83,7 @@ p.page-head {
     text-transform: uppercase;
     font-size: 80%;
     float: left;
-    color: $ter-type;
+    color: var(--ter-type);
 }
 
 .details-text {
@@ -93,11 +93,9 @@ p.page-head {
     float: left;
 }
 
-$head-width: 94%;
-
 .project-list-head {
     width: $head-width;
-    background-color: $body;
+    background-color: var(--body);
     margin: 30px auto;
     margin-top: $nav-height + 30px;
     text-align: center;
@@ -145,14 +143,14 @@ dl {
     text-align: center;
     font-style: italic;
     font-size: 90%;
-    color: $ter-type;
+    color: var(--ter-type);
     padding: 10px 0;
     margin: 0 auto;
     max-width: 650px;
 }
 
 .gatsby-resp-image-background-image {
-    border-radius: $radius;
+    border-radius: var(--radius);
 }
 
 .gatsby-resp-image-figure {

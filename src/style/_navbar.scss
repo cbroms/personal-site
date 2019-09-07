@@ -5,14 +5,14 @@
     font-size: 120%;
     padding-left: 40px;
     padding-right: 0 !important;
-    transition: all $duration ease;
+    transition: all var(--duration) ease;
 }
 .nav-wrapper {
     max-width: 1600px;
     margin: 0 auto;
 }
 .nav-logo:hover {
-    text-shadow: 1px 1px $accent-light, 2px 2px $accent-light;
+    text-shadow: 1px 1px var(--accent-light), 2px 2px var(--accent-light);
 }
 
 .nav-links {
@@ -22,13 +22,13 @@
 }
 
 .nav-link {
-    color: $sec-type;
+    color: var(--sec-type);
     text-decoration: none;
     padding-right: 40px;
 }
 
 .nav-link:hover {
-    color: $main-type;
+    color: var(--main-type);
 }
 
 .nav {
@@ -37,6 +37,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: $body;
+    background-color: var(--body);
     padding: 30px 0;
 }

@@ -3,28 +3,28 @@
     font-size: 80%;
     margin: 5px 10px;
     // padding: 6px;
-    color: $ter-type;
-    // border: 1px solid $accent-light;
-    border-radius: $radius;
+    color: var(--ter-type);
+    // border: 1px solid var(--accent-light;
+    border-radius: var(--radius);
     display: inline-block;
 }
 
 .tag-button {
-    transition: all $duration ease;
+    transition: all var(--duration) ease;
     text-transform: uppercase;
     margin: 5px 10px;
     padding: 8px;
     font-size: 80%;
-    border-radius: $radius;
+    border-radius: var(--radius);
     display: inline-block;
     cursor: pointer;
-    border: 1px solid $accent;
-    color: $sec-type;
+    border: 1px solid var(--accent);
+    color: var(--sec-type);
 }
 .tag-button:hover,
 .tag-button.enabled {
-    background-color: $accent-light;
-    color: $main-type;
+    background-color: var(--accent-light);
+    color: var(--main-type);
 }
 
 .tag-text {

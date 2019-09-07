@@ -7,22 +7,22 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all $duration ease;
-    border-radius: $radius;
+    transition: all var(--duration) ease;
+    border-radius: var(--radius);
 }
 
 .project-image-link-container {
     max-width: 600px;
-    border-radius: $radius;
-    box-shadow: $shadow;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     object-fit: cover;
     margin: 0 auto;
-    transition: all $duration ease;
+    transition: all var(--duration) ease;
 }
 
 .project-link-container:hover {
-    background-color: $content;
-    box-shadow: $shadow;
+    background-color: var(--content);
+    box-shadow: var(--shadow);
 
     .project-image-link-container {
         box-shadow: none;
@@ -45,10 +45,11 @@
 
 .link-title {
     font-weight: 400;
+    margin: 0px auto 20px auto;
 }
 
 .link-subtitle {
-    color: $sec-type;
+    color: var(--sec-type);
     font-style: italic;
     padding: 0 20px 20px 20px;
     margin: 0;
