@@ -23,20 +23,20 @@ $break-small: 380px;
 $head-width: 94%;
 
 // for dark mode
-@media (prefers-color-scheme: dark) {
-    :root {
-        --body: hsl(0, 0%, 8%);
-        --content: hsl(0, 0%, 13%);
-        --main-type: hsl(217, 15%, 90%);
-        --sec-type: hsl(217, 15%, 70%);
-        --ter-type: hsl(217, 15%, 50%);
-        --qad-type: hsl(217, 15%, 80%);
-        --accent: hsl(217, 83%, 70%);
-        --accent-light: hsl(217, 83%, 50%);
-        --shadow: 0 10px 36px hsl(0, 0%, 0%);
-    }
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --body: hsl(0, 0%, 8%);
+//         --content: hsl(0, 0%, 13%);
+//         --main-type: hsl(217, 15%, 90%);
+//         --sec-type: hsl(217, 15%, 70%);
+//         --ter-type: hsl(217, 15%, 50%);
+//         --qad-type: hsl(217, 15%, 80%);
+//         --accent: hsl(217, 83%, 70%);
+//         --accent-light: hsl(217, 83%, 50%);
+//         --shadow: 0 10px 36px hsl(0, 0%, 0%);
+//     }
 
-    img:not([src*=".svg"]) {
-        filter: grayscale(10%);
-    }
-}
+//     img:not([src*=".svg"]) {
+//         filter: grayscale(10%);
+//     }
+// }
