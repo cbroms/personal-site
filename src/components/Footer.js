@@ -15,6 +15,14 @@ const Footer = props => (
             </Link>
         </span>
         <span className="footer-text">
+            <a
+                href="https://archive.christianbroms.com"
+                className="footer-link"
+            >
+                Archived Projects
+            </a>
+        </span>
+        <span className="footer-text">
             <Link to="/about" className="footer-link">
                 About & Contact
             </Link>

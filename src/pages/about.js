@@ -29,7 +29,7 @@ const About = props => {
                                 </a>
                                 , with an additional Major in{" "}
                                 <a href="https://hcii.cmu.edu/academics/hci-undergraduate">
-                                    Human Computer Interaction
+                                    Human-Computer Interaction
                                 </a>
                                 .
                             </p>
@@ -39,8 +39,8 @@ const About = props => {
                                 how we interpret text and digital spaces. I
                                 design and develop websites, visualize data, and
                                 create 3D interactive environments. Recently,
-                                I've also been exploring machine learning and
-                                AR/VR with Unreal Engine and Unity.
+                                I've also been exploring machine learning as
+                                well as AR/VR with Unreal Engine and Unity.
                             </p>
 
                             <p>
@@ -49,26 +49,20 @@ const About = props => {
                             </p>
 
                             <p>
-                                Check out some of my other websites:
+                                Also check out my other websites:
                                 <ul>
+                                    <li>
+                                        <a href="https://archive.christianbroms.com">
+                                            My Archive
+                                        </a>
+                                        , where I keep all the projects I've
+                                        worked on
+                                    </li>
                                     <li>
                                         <a href="https://qualis.red">
                                             Qualis Red
                                         </a>
-                                        , where I occasionally write
-                                    </li>
-                                    <li>
-                                        <a href="https://flygeni.us">
-                                            FlyGenius
-                                        </a>
-                                        , a flight time prediction service
-                                    </li>
-                                    <li>
-                                        <a href="https://api.flygeni.us/docs">
-                                            FlyGenius API
-                                        </a>
-                                        , an API for airport, airline, and route
-                                        statistics
+                                        , where I post things I've written
                                     </li>
                                 </ul>
                             </p>

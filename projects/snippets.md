@@ -18,7 +18,7 @@ tools:
   - Express
   - Node
   - MongoDB
-disp_order: 1
+disp_order: 2
 ---
 
 # The Idea
@@ -60,8 +60,6 @@ For the text highlighting portion of the survey, I elected to use a pre-made com
 This project's repository can be [found on GitHub](https://github.com/CBR0MS/a-perfect-tree).
 
 # Results
-
-Take one of the surveys at [snippet.rainfla.me](https://snippet.rainfla.me/random). Visualizations can be found for excerpts from [_Crime and Punishment_](https://snippet.rainflame.com/game-results/e6cd3f5a-86c4-4e17-898e-87483267b20c), [_Brave New World_](https://snippet.rainflame.com/game-results/ac11b53d-17fa-44e9-b584-dfe2f82cad7d), and [_1984_](https://snippet.rainflame.com/game-results/a8c9ae6b-1a47-4bb8-94cc-4321a6425a0b).
 
 Some of the visualizations of agreement created by highlighting the text can be quite revealing. For example, sometimes there are snippets with less agreement (<40% coherence):
 
