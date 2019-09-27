@@ -33,7 +33,7 @@ I'm not much of a machine learning expert, so this part was quite a bit of new e
 
 I started by switching out the regression model for a classifier. To see the full process, check out [the Jupyter notebook I wrote detailing the change](https://github.com/CBR0MS/flight-time-model-data/blob/master/visualization/v2/v2Modeling.md).
 
-I started by adding a few new features to each row, including likelihood of ontime departure, both for the relevant airline and airport. These data are calculated by taking the mean departure time across all flights for a given location, airline, and time.
+I added a few new features to each row, including likelihood of ontime departure, both for the relevant airline and airport. These data are calculated by taking the mean departure time across all flights for a given location, airline, and time.
 
 For classification, I created two categories: _late_ and _not late_, with a cutoff of 10 minutes for a flight to be classified as late. I assigned the appropriate class to all the training data and ran it through the model. The classifier was able to achieve 90.79% accuracy on test data. I was fairly pleased at the \~20% improvement in accuracy over the previous method.
 
