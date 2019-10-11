@@ -1,6 +1,6 @@
 const path = require(`path`);
 
-module.exports = {
+const cfg = {
     siteMetadata: {
         title: `Christian Broms - Portfolio`,
         author: `Christian Broms`,
@@ -83,3 +83,14 @@ module.exports = {
         `gatsby-plugin-netlify-cms`
     ]
 };
+
+if (process.env.context === "production") {
+    const analyticsCfg = {
+        resolve: "gatsby-plugin-google-analytics",
+        options: {
+            trackingId: "UA-82288001-1"
+        }
+    };
+    cfg.plugins.push(analyticsCfg);
+}
+module.exports = cfg;
