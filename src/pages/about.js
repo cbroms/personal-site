@@ -37,10 +37,16 @@ const About = props => {
                             <p>
                                 My work involves creating technology that probes
                                 how we interpret text and digital spaces. I
-                                design and develop websites, visualize data, and
-                                create 3D interactive environments. Recently,
-                                I've also been exploring machine learning as
-                                well as AR/VR with Unreal Engine and Unity.
+                                enjoy the full process of designing,
+                                prototyping, and interating. Much of what I do
+                                is centered around interaction design,
+                                information architecture, and building clean
+                                user interfaces. I don't stop there, though, as
+                                I love to do a little bit of everything through
+                                a wide range of diverse kinds of projects.
+                                Recently, I've also been exploring machine
+                                learning as well as AR/VR with Unreal Engine and
+                                Unity.
                             </p>
 
                             <p>
