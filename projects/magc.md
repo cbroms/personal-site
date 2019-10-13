@@ -1,7 +1,7 @@
 ---
 path: /project/magc
 title: MAGC Interactive Map
-subtitle: A web app showcasing historic gardens for visitors
+subtitle: An interactive map and guided tour showcasing historic gardens for visitors
 synopsis: >-
     A website I designed and developed to present the history and features of the Marin Art and Garden Center, an arts and conservation organization.
 tags:
@@ -9,7 +9,7 @@ tags:
     - big projects
 image: /uploads/magc1.png
 timeframe: 2 Months (July-August 2018)
-project_type: Professional Project
+project_type: Professional project done for MAGC
 tools:
     - Django
     - Javascript
@@ -18,11 +18,9 @@ disp_order: 4
 
 # Background
 
-This is a project I began in the summer of 2018 for the non-profit [Marin Art and Garden Center](https://magc.org) (MAGC) in Ross, California. MAGC is an eleven acre site containing historic gardens and buildings, as well as gallery and retail spaces. The organization hosts a variety of programs in the arts, gardens, and conservation.
+This is a project I began in the summer of 2018 for the non-profit [Marin Art and Garden Center](https://magc.org) (MAGC) in Ross, California. MAGC is an eleven-acre site containing historic gardens and buildings, as well as gallery and retail spaces. The organization hosts a variety of programs in the arts, gardens, and conservation.
 
 I was tasked with designing and implementing a digital version of a map of the grounds that would contain information about historical features on the site. MAGC found many visitors to be unaware of the history behind many of the gardens and buildings, which before could only be learned from a guided tour. MAGC wished to make this information available to a larger audience both online and onsite.
-
-![](/uploads/magcfront.gif)
 
 # Design
 
@@ -32,7 +30,7 @@ The first challenge I undertook was designing a system that would fulfill the vi
 
 Early ideas concentrated on a tagging system for the points, where locations of historic significance could be distinguished from ordinary locations through a simple change in color. This way the map could include all notable points on the grounds, such as newer gardens and spaces, while still providing the historic information the organization originally wanted to convey.
 
-Initial user studies found that visitors to MAGC are often not interested in the entire site, but rather something specific. Some come to see the gardens, while others are mainly interested in the history of the site. The ability for the user to toggle points based on their own personal interests would facilitate a better experience for those with particular goals in their visit.
+Initial user research found that visitors to MAGC are often not interested in the entire site, but rather something specific. Some come to see the gardens, while others are mainly interested in the history of the site. The ability for the user to toggle points based on their own personal interests would facilitate a better experience for those with particular goals in their visit.
 
 ![](/uploads/magcfilter.gif "Enabling and disabling which points are shown through the tagging system")
 
@@ -62,9 +60,9 @@ For colors, MAGC also has a convention. I went with lightened versions of these 
 
 # Development
 
-The main challenge for this project was finding a medium between hardcoding the content and allowing MAGC to input new content. I decided to opt for allowing the organization to control more of the backend.
+The main challenge for this project was finding a medium between hardcoding the content and allowing MAGC to input new content. I decided to opt for allowing the organization to control more of the content.
 
-For this reason, I decided to use Django. I wanted to create a robust system of models that would allow for easy future customization. Django's admin system also provides an excellent interface for the content managers.
+For this reason, I decided to use Django as the web framework. I wanted to create a robust system of models that would allow for easy future customization. Django's admin system also provides an excellent interface for the content managers.
 
 ## Placing the points on the map
 
@@ -72,12 +70,8 @@ Since the points would be added by the organization, I needed to find a way to p
 
 All that needs to be done to add a new point is to retrieve the longitude and latitude of the location from a mapping application and the point will be accurately placed on the online map. Though using latitude and longitude might seem a bit overkill for a project of this size, it preserves the possibility of easily of adding useful features, such as a guided tour through the gardens from a phone's geolocation (which is delivered using geographic coordinates).
 
-## Performance
-
-Another major concern was performance. Each point on the map could contain as many as ten images. With around 25 points, that would be far too many images to load all at once when the user first visits the site. For this reason, each point is loaded individually when clicked. After clicking the point once, clicking the point again will result in a very quick load:
-
-![](/uploads/magcpreload.gif)
-
 ## Open-source
 
 All the code for this project is open-source and can be found [on GitHub](https://github.com/CBR0MS/magcInteractiveMap). The map can be found at [interactive.magc.org](https://interactive.magc.org)
+
+![](/uploads/magcfront.gif)

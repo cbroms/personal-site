@@ -11,7 +11,7 @@ tags:
     - machine learning
 image: /uploads/fg1.png
 timeframe: 3 Months (January-April 2019)
-project_type: Personal Project
+project_type: Personal project
 tools:
     - React
     - Tensorflow
@@ -29,37 +29,45 @@ This project had three main parts: a redesign of the machine learning model maki
 
 ## The Machine Learning Model
 
-I'm not much of a machine learning expert, so this part was quite a bit of new exploration for me.
+To see the full process, check out [the Jupyter notebook I wrote detailing the change](https://github.com/CBR0MS/flight-time-model-data/blob/master/visualization/v2/v2Modeling.md).
 
-I started by switching out the regression model for a classifier. To see the full process, check out [the Jupyter notebook I wrote detailing the change](https://github.com/CBR0MS/flight-time-model-data/blob/master/visualization/v2/v2Modeling.md).
+## The Information Architecture
 
-I added a few new features to each row, including likelihood of ontime departure, both for the relevant airline and airport. These data are calculated by taking the mean departure time across all flights for a given location, airline, and time.
+Having added some features to the classifier, I had to reexamine the information architecture of the input and output pages.
 
-For classification, I created two categories: _late_ and _not late_, with a cutoff of 10 minutes for a flight to be classified as late. I assigned the appropriate class to all the training data and ran it through the model. The classifier was able to achieve 90.79% accuracy on test data. I was fairly pleased at the \~20% improvement in accuracy over the previous method.
+I started by sketching out the kinds of information being entered and received by the user. It was clear that the output could easily get overwhelming if the information was not properly grouped into easily interpretable chunks.
 
-## The Information Architecture and Interface
+![](/uploads/flow.png "A sketch of the kind of information that is entered and received")
 
-One of the main things I liked about my previous design is the scarcity of extraneous information. Everything that's displayed is there for a reason.
+To solve this problem, I created a hierarchy of information with the output ranked by how essential the data is to the user, whose goal is to find the most dependable flight for a given route and date. There are three levels of data, with each providing additional information that builds on the previous level.
 
-The goal of the website is very simple, so I kept the UI as clean as possible. I added a few new features, such as ability to compare multiple airlines for a given route, as well as support for non-direct flights. The inputs for these new features were worked into the old input section.
+1. The route and the ranking of the airlines. Here the goal is to make the best-performing airline immediately visible, with the route also clearly defined.
+2. Details about the route and airlines. Each of the airlines and the route has a fair amount of information associated that could be useful, such as the duration and likelihood of ontime departure and arrival.
+3. The airport details. Each of the airports has additional information that could be useful for a traveler when choosing between two.
+
+![](/uploads/archi.png "A sketch of the levels of information and a crude representation of how they might look")
+
+## The Interface
+
+I took this information architecture and translated it into an interface. Having already built an interface for the first iteration, I kept the same visual language and refined the input and output pages with the new IA.
+
+The output page is made up of a series of panels. When the panels are closed, information from level 1 is visible. The optimal airline is revealed through a change in color:
+
+![](/uploads/fg2.png "Closed panels")
+
+Clicking on each section reveals more information about the route, airport, or flight and a small visualization of the probabilities of on-time departure and arrival, accounting for levels 2 and 3. By default the panels for the best airline and the route are open, facilitating easy access to information at level 2.
+
+![](/uploads/fg6.png "Open panels")
+
+For the input section, I kept the design quite similar to the first iteration. The order of the inputs was cleaned up a bit, and I added the option to have a connecting flight and explicitly specify an airline.
 
 ![](/uploads/fg4.png "Revised information input UI")
 
-I also did some experimentation with the background of the site, to add some visual interest. I added a gradient that gently animates around the edge of the screen, as well as a background that shifts color and imagery based on the time of day. The colors in the gradient change over the course of the day, so there is a very natural shift from the brighter background and colors during the day to the "dark mode" at night.
+I also did some experimentation with the background of the site, to add some visual interest. I added a background that shifts color and imagery based on the time of day. The colors in the gradient change over the course of the day, so there is a very natural shift from the brighter background and colors during the day to the "dark mode" at night.
 
 ![](/uploads/fg1.png "The new frontpage during the day")
 
 ![](/uploads/fg5.png "The new frontpage at night")
-
-The final change was to the display of the prediction and statistical information. Each piece of data is grouped under a relevant header, with information about the route and airports on the left and a comparison of airlines on the right.
-
-It was important that when the sections are collapsed information is still conveyed to the user. For this reason, each airline's section is ordered from best to worst, and the predicted chance of ontime arrival is displayed. There's a clear hierarchy of airlines, running from the top to the bottom of the page.
-
-![](/uploads/fg2.png "Closed panels")
-
-Clicking on each section reveals more information about the route, airport, or flight and a small visualization of the probabilities of on-time departure and arrival.
-
-![](/uploads/fg6.png "Open panels")
 
 This project's repository can be [found on GitHub](https://github.com/CBR0MS/flight-time-model).
 
