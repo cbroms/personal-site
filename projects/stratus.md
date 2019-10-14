@@ -53,7 +53,13 @@ It was also important to consider how people would interact with the AR environm
 
 However, it was also clear that there are some aspects of the weather report where a visualization would not provide enough information. One example is pressure, as pilots use the pressure provided by a METAR to calibrate their altimeter. It would be important to include these values in addition to the visualization, to provide additional clarity when needed.
 
-I designed and implemented a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen.
+I designed and implemented a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen. After some initial sketches, I created some simple wireframes of the main screen:
+
+![ ](/uploads/wire1.png "A simple wirefame of the UI with the panel closed")
+
+![ ](/uploads/wire2.png "With the panel open")
+
+After some modification and additional iterations, I developed the final visual design of the app's UI:
 
 ![ ](/uploads/stratus1.png "A screenshot of the app showing the VR visualization of rainy weather at an airport")
 
