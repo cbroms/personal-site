@@ -88,7 +88,7 @@ if (process.env.context === "production") {
     const analyticsCfg = {
         resolve: "gatsby-plugin-google-analytics",
         options: {
-            trackingId: "UA-82288001-1"
+            trackingId: "UA-150097814-1"
         }
     };
     cfg.plugins.push(analyticsCfg);
