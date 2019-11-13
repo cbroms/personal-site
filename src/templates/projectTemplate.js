@@ -54,6 +54,13 @@ class Template extends React.Component {
         currentTree.push(
           parse(`<div class='project-post-section' id='${slug}'></div>`)
         );
+      } else if (
+        root.childNodes[i].tagName &&
+        root.childNodes[i].tagName === "p" &&
+        root.childNodes[i].firstChild.tagName === "img"
+      ) {
+        // remove img gifs from their p parents
+        root.childNodes[i] = root.childNodes[i].firstChild;
       }
       currentTree[index].firstChild.appendChild(root.childNodes[i]);
     }
