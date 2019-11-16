@@ -2,8 +2,9 @@
 
 :root {
     // for light mode
-    --body: hsl(0, 0%, 93%);
-    --content: hsl(0, 0%, 98%);
+    --body: hsl(0, 0%, 97%);
+    --content-light: hsl(0, 0%, 99%);
+    --content: hsl(0, 0%, 97%);
     --main-type: hsl(217, 15%, 17%);
     --sec-type: hsl(217, 15%, 35%);
     --ter-type: hsl(217, 15%, 60%);
@@ -26,7 +27,8 @@ $head-width: 94%;
 // @media (prefers-color-scheme: dark) {
 //     :root {
 //         --body: hsl(0, 0%, 8%);
-//         --content: hsl(0, 0%, 13%);
+//         --content: hsl(0, 0%, 8%);
+//         --content-light: hsl(0, 0%, 10%);
 //         --main-type: hsl(217, 15%, 90%);
 //         --sec-type: hsl(217, 15%, 70%);
 //         --ter-type: hsl(217, 15%, 50%);

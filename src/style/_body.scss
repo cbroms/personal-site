@@ -4,7 +4,7 @@ body {
     background-color: var(--body);
     font-family: var(--font);
     color: var(--main-type);
-    font-size: 110%;
+    font-size: 120%;
     // overflow-x: hidden;
 }
 
@@ -25,7 +25,7 @@ a:hover {
 
 img {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     display: block;
     border-radius: var(--radius);

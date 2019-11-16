@@ -52,7 +52,7 @@ const cfg = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 800,
+                            maxWidth: 1000,
                             backgroundColor: "transparent",
                             wrapperStyle: "border-radius: 10px;",
                             showCaptions: true
