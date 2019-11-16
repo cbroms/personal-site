@@ -8,7 +8,7 @@ synopsis: >-
 tags:
     - websites
     - big projects
-    - machine learning
+    - ML
 image: /uploads/fg1.png
 timeframe: 3 Months (January-April 2019)
 project_type: Personal project
@@ -16,6 +16,7 @@ tools:
     - React
     - Tensorflow
     - Django
+    - Adobe XD
 disp_order: 1
 ---
 
@@ -55,6 +56,8 @@ To solve this problem, I created a hierarchy of information with the output rank
 
 # The Interface
 
+## Rapidly Generating Possibilities
+
 I took this information architecture and translated it into an interface. Having already built an interface for the first iteration, I kept the same visual language and refined the input and output pages with the new IA.
 
 I started by making some quick wireframe-like mockups of the display screen. I made a lot of very fast iterations, focusing on different methods of relating flights, locations, and routes, as well as the information that's available on each. I referenced my IA to determine what to show without interaction and what to add later after a user has interacted with the interface.
@@ -67,13 +70,15 @@ I started by making some quick wireframe-like mockups of the display screen. I m
 
 ![](/uploads/fgwire5.png "Another view of the separated scheme, with an open entry showing level 2 information")
 
+## The Final Design
+
 The final output page is made up of a series of panels. When the panels are closed, information from level 1 is visible. The optimal airline is revealed through a change in color:
 
 ![](/uploads/fg2.png "Closed panels")
 
 Clicking on each section reveals more information about the route, airport, or flight and a small visualization of the probabilities of on-time departure and arrival, accounting for levels 2 and 3. By default the panels for the best airline and the route are open, facilitating easy access to information at level 2.
 
-<!-- ![](/uploads/fg.gif) -->
+![](/uploads/fg.gif)
 
 ![](/uploads/fg6.png "Open panels")
 
