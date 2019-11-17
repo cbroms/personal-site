@@ -86,8 +86,8 @@ const Index = ({
                 <Fade bottom distance="0px">
                     <div className="project-list-head outer">
                         <h1 className="project-list-head">
-                            I design and develop websites, visualize data, and
-                            create interactive environments.
+                            I design and develop websites, visualize
+                            information, and create interactive environments.
                         </h1>
                         <div className="project-head-tags">{tagButtons}</div>
                     </div>

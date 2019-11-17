@@ -42,11 +42,21 @@ const About = props => {
                                 is centered around interaction design,
                                 information architecture, and building clean
                                 user interfaces. I don't stop there, though, as
-                                I love to do a little bit of everything through
-                                a wide range of diverse kinds of projects.
-                                Recently, I've also been exploring machine
-                                learning as well as AR/VR with Unreal Engine and
-                                Unity.
+                                I love to explore a little bit of everything
+                                through a wide range of diverse kinds of
+                                projects, from{" "}
+                                <a href="https://archive.christianbroms.com/project/encyc-of-phil/">
+                                    generative text
+                                </a>{" "}
+                                to{" "}
+                                <a href="https://archive.christianbroms.com/project/colma-st/">
+                                    photography
+                                </a>{" "}
+                                to building{" "}
+                                <a href="https://archive.christianbroms.com/project/pizza-oven/">
+                                    useful brick arches
+                                </a>
+                                .
                             </p>
 
                             <p>
