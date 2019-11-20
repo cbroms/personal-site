@@ -32,7 +32,7 @@ To see the full process, check out [the Jupyter notebook I wrote detailing the c
 
 For the input, it was clear that the kinds of information entered by the user to the model would have to be easily at hand, like the date and destinations. This contrasts with the kinds of data available in the dataset that I used to build the model, which are detailed and definitely _not_ the kind of information an average user would have.
 
-![](/uploads/data.png "A piece of the dataset, showing the kinds of data used in building the classifier.")
+![](/uploads/data.png "A piece of the dataset, showing the kind of data used in building the classifier.")
 
 However, some of this information is necessary for creating an accurate prediction. To solve this problem, I built an API to serve data based on a user's chosen origin and destination. This way, the user enters the data they know, the website gets the complicated information that they wouldn't know from the API, and the combination is fed into the classifier.
 

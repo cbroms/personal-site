@@ -30,7 +30,7 @@ We used Unity to create an augmented reality app to present realtime weather dat
 
 -   Fetching and decoding realtime weather reports provided by all airports in the United States ([METARs](https://aviationweather.gov/metar)).
 -   Generating an AR environment that adapts to the current decoded report, displaying cloud levels, air pressure, wind speed and direction, and other elements.
--   Creating an app to easily facilitate entering airports and visualizing their AR environments.
+-   Creating an app to easily facilitate entering airports and interacting with their AR environments.
 
 # Building it
 
@@ -48,7 +48,13 @@ Our design process involved extensive brainstorming sessions that included every
 
 In our initial exploration of the data, it was clear that there are some aspects of the weather report where a visualization would not provide enough information. One example is pressure, as pilots use the pressure provided by a METAR to calibrate their altimeter. It would be important to include these values in addition to the visualization, to provide additional clarity when needed.
 
-I designed and implemented a UI to present the fields from the METAR in their original numeric form, available with a swipe up from the bottom of the screen. After some initial sketches, I created some mockups of the main screen:
+### Interaction Design
+
+When creating a UI, my first consideration was the form of the device. Since the centerpiece of the experience would be the AR environment, it was important to design the UI such that it felt natural to overlay on the rectangular window used to look at and interact with the environment. There needed to be a clear distinction between how to interact with the environment and how to interact with the 2D UI above. I began to make many sketches considering the way that the window would be held and the most natural ways of interacting with it.
+
+![ ](/uploads/stratSketches.jpg "Some of the exploratory sketches I made around the interaction with the interface and AR environment")
+
+The information architecture that we'd developed included quite a bit of additional information that would need to be accessed. I worked on developing ways to hide and reveal this information though a quick and intuitive gesture. In the end I decided on a swipe up from the bottom to reveal a panel below. This lower panel included all of the fields from the original METAR in their decoded format.
 
 ![ ](/uploads/wire1.png "A simple mockup of the UI with the panel closed")
 
@@ -70,12 +76,20 @@ For the augmented reality environment, it was important that just that data that
 
 By building on people's pre-existing understanding of what weather looks like physically, we could create something that was _instantaneously understandable_ without any additional training.
 
-![ ](/uploads/stratus.gif)
+We created many versions of each of the three visualizations and tested them out with users. We iterated on each and gradually improved how fast and how well they could be interpreted.
+
+![ ](/uploads/pressure.gif)
+
+A key part of the visualizations was ensuring that they were realistic enough to convey the right amount of information. This meant maintaining a consistent level of quality through all possible weather conditions, which was challenging given the procedural generation of each of the environments. This video demonstrates a few of the weather events that can be found in the app:
+
+<div style="padding:75% 0 0 0;position:relative;max-width: 1000px;margin:0 auto;"><iframe src="https://player.vimeo.com/video/374321979" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 It was also important to consider how people would interact with the AR environment. We were sure to provide interaction methods such as panning, scaling and tapping, which we developed after testing a number of methods. This area in particular was quite a challenge, as we were working in a space where there aren't many assumptions about how interaction works, and there aren't any implicit controls in and AR visualization. To address this, we provided some explicit instructions during the placement process that encouraged the user to try tapping and panning around the scene.
 
-## The Final Product
+## The Final Prototype
+
+![ ](/uploads/stratus.gif)
 
 Our final iOS and Android app integrates a number of realtime data sources to create one simple visualization of the weather at any airport in the United States, to promote instantaneous interpretation of the current conditions.
 
-![ ](/uploads/stratus.png)
+
