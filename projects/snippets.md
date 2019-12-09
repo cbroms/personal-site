@@ -8,7 +8,7 @@ synopsis: >-
   text, revealing areas of inter-subjective agreement
 tags:
   - websites
-  - experiments
+  - research
   - data viz
 image: /uploads/snip.png
 timeframe: 1 Week (April 2019)

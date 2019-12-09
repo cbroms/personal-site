@@ -44,6 +44,12 @@ p.page-head {
     font-style: italic;
 }
 
+strong {
+    font-weight: 400;
+    color: var(--main-type);
+    background-color: var(--accent-very-light);
+}
+
 .project-image-container {
     max-width: 650px;
     border-radius: var(--radius);

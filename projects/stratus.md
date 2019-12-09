@@ -4,7 +4,7 @@ title: Stratus
 subtitle: Realtime weather visualization in augmented reality
 synopsis: "An app that reads encoded weather data and presents it in augmented reality so pilots are able to instantaneously understand the current conditions."
 tags:
-    - big projects
+    - prototypes
     - data viz
     - ar/vr
 image: /uploads/stratus6.png
