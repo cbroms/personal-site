@@ -55,9 +55,7 @@ Perhaps the most intuitive way of selecting a portion of text on a computer is t
 
 ![](/uploads/snip3.png "UI for the survey")
 
-The process of using the survey is captured in this walk-through:
-
-<div style="padding:56.25% 0 0 0;position:relative;max-width: 1000px;margin:0 auto;"><iframe src="https://player.vimeo.com/video/373635715?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+The process of using the survey is captured in [this walk-through](https://player.vimeo.com/video/373635715)
 
 <!-- ## Build
 

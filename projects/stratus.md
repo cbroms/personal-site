@@ -80,9 +80,7 @@ We created many versions of each of the three visualizations and tested them out
 
 ![ ](/uploads/pressure.gif)
 
-A key part of the visualizations was ensuring that they were realistic enough to convey the right amount of information. This meant maintaining a consistent level of quality through all possible weather conditions, which was challenging given the procedural generation of each of the environments. This video demonstrates a few of the weather events that can be found in the app:
-
-<div style="padding:75% 0 0 0;position:relative;max-width: 1000px;margin:0 auto;"><iframe src="https://player.vimeo.com/video/374321979" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+A key part of the visualizations was ensuring that they were realistic enough to convey the right amount of information. This meant maintaining a consistent level of quality through all possible weather conditions, which was challenging given the procedural generation of each of the environments. [This video](https://player.vimeo.com/video/374321979) demonstrates a few of the weather events that can be found in the app.
 
 It was also important to consider how people would interact with the AR environment. We were sure to provide interaction methods such as panning, scaling and tapping, which we developed after testing a number of methods. This area in particular was quite a challenge, as we were working in a space where there aren't many assumptions about how interaction works, and there aren't any implicit controls in and AR visualization. To address this, we provided some explicit instructions during the placement process that encouraged the user to try tapping and panning around the scene.
 

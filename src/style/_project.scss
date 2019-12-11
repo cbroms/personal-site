@@ -50,6 +50,11 @@ strong {
     background-color: var(--accent-very-light);
 }
 
+blockquote {
+    padding-left: 40px;
+    font-style: italic;
+}
+
 .project-image-container {
     max-width: 650px;
     border-radius: var(--radius);
@@ -166,8 +171,18 @@ li {
 
 .gatsby-resp-image-figure {
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 50px auto;
+}
+
+@media only screen and (max-width: 1440px) {
+    .gatsby-resp-image-figure {
+        max-width: 750px;
+    }
+
+    img {
+        max-width: 750px;
+    }
 }
 
 .gatsby-resp-image-link {
