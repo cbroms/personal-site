@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: var(--body);
+    background-color: var(--accent);
     font-family: var(--font);
     color: var(--main-type);
     font-size: 120%;
@@ -29,6 +29,14 @@ img {
     margin: 0 auto;
     display: block;
     border-radius: var(--radius);
+}
+
+strong {
+    font-weight: 400;
+    color: var(--main-type);
+    background-color: var(--accent-very-light);
+    padding-right: 3px;
+    padding-left: 3px;
 }
 
 ::selection {

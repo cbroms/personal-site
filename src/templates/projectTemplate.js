@@ -165,7 +165,7 @@ class Template extends React.Component {
 
             <div className="project-post-content">{sectionTrees}</div>
             <div style={{ marginTop: 150, marginBottom: 50 }}>
-              <h1>Next Project:</h1>
+              <h1>Next Project&mdash;</h1>
               <PostLink post={nextPage} pos={0} visible={true} />
             </div>
           </div>

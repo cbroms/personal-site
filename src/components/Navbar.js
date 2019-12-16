@@ -31,6 +31,7 @@ class Navbar extends React.Component {
     }
 
     render() {
+        console.log(window.location.pathname);
         return (
             <div className="nav">
                 <div className="nav-wrapper">
@@ -39,10 +40,18 @@ class Navbar extends React.Component {
                     </Link>
                     <div className="nav-links">
                         <Link to="/" className="nav-link">
-                            Projects
+                            {window.location.pathname === "/" ? (
+                                <strong>Projects</strong>
+                            ) : (
+                                "Projects"
+                            )}
                         </Link>
                         <Link to="/about" className="nav-link">
-                            About & Contact
+                            {window.location.pathname === "/about" ? (
+                                <strong>About & Contact</strong>
+                            ) : (
+                                "About & Contact"
+                            )}
                         </Link>
                     </div>
                 </div>

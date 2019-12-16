@@ -2,6 +2,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import "../style/main.scss";
 
@@ -92,6 +93,7 @@ const About = props => {
                     </div>
                 </div>
             </Fade>
+            <Footer />
         </div>
     );
 };

@@ -92,7 +92,20 @@ const Index = ({
                         <div className="project-head-tags">{tagButtons}</div>
                     </div>
                 </Fade>
-                <div className="project-list">{posts}</div>
+                <div className="project-list">
+                    {posts}
+                    <div
+                        className="project-link-container"
+                        onClick={() =>
+                            (window.location =
+                                "https://archive.christianbroms.com")
+                        }
+                    >
+                        <p className="link-subtitle" style={{ paddingTop: 20 }}>
+                            See archived projects
+                        </p>
+                    </div>
+                </div>
             </div>
             <Footer />
         </div>
