@@ -31,6 +31,9 @@ class Navbar extends React.Component {
     }
 
     render() {
+        const dir =
+            typeof window !== "undefined" ? window.location.pathname : "";
+
         return (
             <div className="nav">
                 <div className="nav-wrapper">
@@ -39,14 +42,14 @@ class Navbar extends React.Component {
                     </Link>
                     <div className="nav-links">
                         <Link to="/" className="nav-link">
-                            {window.location.pathname === "/" ? (
+                            {dir === "/" ? (
                                 <strong>Projects</strong>
                             ) : (
                                 "Projects"
                             )}
                         </Link>
                         <Link to="/about" className="nav-link">
-                            {window.location.pathname === "/about" ? (
+                            {dir === "/about" ? (
                                 <strong>About & Contact</strong>
                             ) : (
                                 "About & Contact"

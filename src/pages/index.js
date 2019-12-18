@@ -87,7 +87,7 @@ const Index = ({
                     <div className="project-list-head outer">
                         <h1 className="project-list-head">
                             I design and develop websites, visualize
-                            information, and create interactive environments.
+                            information, and create thoughtful user experiences.
                         </h1>
                         <div className="project-head-tags">{tagButtons}</div>
                     </div>
@@ -97,8 +97,10 @@ const Index = ({
                     <div
                         className="project-link-container"
                         onClick={() =>
-                            (window.location =
-                                "https://archive.christianbroms.com")
+                            typeof window !== "undefined"
+                                ? (window.location =
+                                      "https://archive.christianbroms.com")
+                                : ""
                         }
                     >
                         <p className="link-subtitle" style={{ paddingTop: 20 }}>

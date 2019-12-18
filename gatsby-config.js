@@ -5,7 +5,7 @@ const cfg = {
         title: `Christian Broms - Portfolio`,
         author: `Christian Broms`,
         siteUrl: `https://christianbroms.com`,
-        description: `Portfolio of Christian Broms. I design and develop websites, visualize data, and create interactive environments.`,
+        description: `Portfolio of Christian Broms. I design and develop websites, visualize information, and create thoughtful user experiences.`,
         image: "/default.png",
         keywords: [
             `Philosophy`,
