@@ -31,7 +31,6 @@ class Navbar extends React.Component {
     }
 
     render() {
-        console.log(window.location.pathname);
         return (
             <div className="nav">
                 <div className="nav-wrapper">

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { parse } from "node-html-parser";
 
-import AnchorLink from "react-anchor-link-smooth-scroll";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
 import Img from "gatsby-image";
 import Fade from "react-reveal/Fade";
 
@@ -20,7 +20,11 @@ const uuidv4 = require("uuid/v4");
 class Template extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      timeButtons: [false, false, true],
+      spansSet: false,
+      currentView: 2
+    };
   }
 
   componentDidMount() {
@@ -47,7 +51,6 @@ class Template extends React.Component {
           sections.push({ title: root.childNodes[i].text, slug: slug });
         }
         if (currentTree.length > 0) {
-          //fullTree.firstChild.appendChild(currentTree[index]);
           sectionTrees.push(currentTree[index]);
           index += 1;
         }
@@ -64,7 +67,54 @@ class Template extends React.Component {
       }
       currentTree[index].firstChild.appendChild(root.childNodes[i]);
     }
-    this.setState({ sections: sections, trees: sectionTrees });
+
+    const style = document.createElement("style");
+    document.body.appendChild(style);
+
+    this.setState({ style: style, sections: sections, trees: sectionTrees });
+  }
+
+  componentDidUpdate() {
+    if (!this.state.spansSet) {
+      // collect the spans that mark sections to hide
+      let spans = Array.from(document.getElementsByTagName("span"));
+      spans = spans.filter(elt => {
+        return elt.className.includes("five") || elt.className.includes("ten");
+      });
+
+      // get the element just before the span
+      for (const span of spans) {
+        let eltToWrap = span.previousSibling ? span.previousSibling : span;
+
+        // conditions where the element before is actually the parent
+        if (
+          eltToWrap.parentElement.tagName === "LI" ||
+          (eltToWrap.parentElement.firstElementChild &&
+            ["A", "STRONG", "EM"].includes(
+              eltToWrap.parentElement.firstElementChild.tagName
+            ))
+        ) {
+          eltToWrap = eltToWrap.parentElement;
+        }
+
+        const wrapper = document.createElement("span");
+        wrapper.className = span.className;
+
+        eltToWrap.parentNode.insertBefore(wrapper, eltToWrap);
+        wrapper.appendChild(eltToWrap);
+      }
+      this.setState({ spansSet: true });
+    }
+  }
+
+  adjustTime(num, actual) {
+    if (num === "one") {
+      this.setState({ timeButtons: [true, false, false], currentView: 0 });
+    } else if (num === "five") {
+      this.setState({ timeButtons: [false, true, false], currentView: 1 });
+    } else if (num === "ten") {
+      this.setState({ timeButtons: [false, false, true], currentView: 2 });
+    }
   }
 
   render() {
@@ -73,105 +123,144 @@ class Template extends React.Component {
 
     let content = <div />;
 
-    if (this.state.trees) {
-      const sectionTrees = this.state.trees.map(value => (
-        <div
-          key={uuidv4()}
-          dangerouslySetInnerHTML={{ __html: value.toString() }}
-        />
-      ));
+    // get content length
+    const len = this.state.trees
+      ? this.state.trees[this.state.currentView].text
+          .split(" ")
+          .filter(val => val !== "").length
+      : 0;
 
-      const sections = this.state.sections.map(value => (
-        <AnchorLink
-          className="project-link"
-          offset="120"
-          href={`#${value.slug}`}
-          key={uuidv4()}
-        >
-          {value.title}
-        </AnchorLink>
-      ));
-
-      const timeframe = (
-        <div className="project-details-content">
-          <div className="details-title">
-            {frontmatter.timeframe !== "" ? "Timeframe" : ""}
-          </div>
-          <div className="details-text">{frontmatter.timeframe}</div>
+    const timeframe = (
+      <div className="project-details-content">
+        <div className="details-title">
+          {frontmatter.timeframe !== "" ? "Timeframe" : ""}
         </div>
-      );
+        <div className="details-text">{frontmatter.timeframe}</div>
+      </div>
+    );
 
-      const projectType = (
-        <div className="project-details-content" key={uuidv4()}>
-          <div className="details-title">
-            {frontmatter.project_type !== "" ? "Project Type" : ""}
-          </div>
-          <div className="details-text">{frontmatter.project_type}</div>
+    const projectType = (
+      <div className="project-details-content" key={uuidv4()}>
+        <div className="details-title">
+          {frontmatter.project_type !== "" ? "Project Type" : ""}
         </div>
-      );
+        <div className="details-text">{frontmatter.project_type}</div>
+      </div>
+    );
 
-      const toolsList = frontmatter.tools.map((value, index) => (
-        <span key={uuidv4()}>{`${value}${
-          index !== frontmatter.tools.length - 1 ? "," : ""
-        } `}</span>
-      ));
+    const toolsList = frontmatter.tools.map((value, index) => (
+      <span key={uuidv4()}>{`${value}${
+        index !== frontmatter.tools.length - 1 ? "," : ""
+      } `}</span>
+    ));
 
-      const tools = (
-        <div className="project-details-content">
-          <div className="details-title">
-            {frontmatter.tools.length > 0 ? "Tools" : ""}
-          </div>
-          <div className="details-text">{toolsList}</div>
+    const tools = (
+      <div className="project-details-content">
+        <div className="details-title">
+          {frontmatter.tools.length > 0 ? "Tools" : ""}
         </div>
-      );
+        <div className="details-text">{toolsList}</div>
+      </div>
+    );
 
-      content = (
-        <div className="project-container">
-          <div className="project-post">
-            <Fade bottom distance="100px">
-              <div className="project-head">
-                <h1 className="page-head">{frontmatter.title}</h1>
-                <p className="page-head">{frontmatter.subtitle}</p>
-                <div className="page-head">
-                  <Tags tags={frontmatter.tags} />
+    const readingTime = (
+      <div className="project-details-content">
+        <div className="details-title">Adjust Reading Time</div>
+        <div className="details-text">
+          <span
+            className={`tag-button ${
+              this.state.timeButtons[0] ? "enabled" : ""
+            }`}
+            key={uuidv4()}
+            onClick={() => {
+              this.adjustTime("one", frontmatter.times[0]);
+            }}
+          >
+            {`${frontmatter.times[0]} MIN`}
+          </span>
+          <span
+            className={`tag-button ${
+              this.state.timeButtons[1] ? "enabled" : ""
+            }`}
+            key={uuidv4()}
+            onClick={() => {
+              this.adjustTime("five", frontmatter.times[1]);
+            }}
+          >
+            {`${frontmatter.times[1]} MIN`}
+          </span>
+          <span
+            className={`tag-button ${
+              this.state.timeButtons[2] ? "enabled" : ""
+            }`}
+            key={uuidv4()}
+            onClick={() => {
+              this.adjustTime("ten", frontmatter.times[2]);
+            }}
+          >
+            {`${frontmatter.times[2]} MIN`}
+          </span>
+          <div className="post-length">{`${len} words`}</div>
+        </div>
+      </div>
+    );
+
+    content = (
+      <div className="project-container">
+        <div className="project-post">
+          <Fade bottom distance="100px">
+            <div className="project-head">
+              <h1 className="page-head">{frontmatter.title}</h1>
+              <p className="page-head">{frontmatter.subtitle}</p>
+              <div className="page-head">
+                <Tags tags={frontmatter.tags} />
+              </div>
+
+              <div style={{ padding: 20 }}>
+                <Img
+                  className="project-image-container"
+                  fluid={frontmatter.image.childImageSharp.fluid}
+                  alt=""
+                />
+              </div>
+
+              <div className="project-details-container">
+                {tools}
+                {timeframe}
+                {projectType}
+                <div
+                  className="project-details-content"
+                  style={{ maxWidth: 390 }}
+                >
+                  <div className="details-title">Synopsis</div>
+                  <div className="details-text">{frontmatter.synopsis}</div>
                 </div>
 
-                <div style={{ padding: 20 }}>
-                  <Img
-                    className="project-image-container"
-                    fluid={frontmatter.image.childImageSharp.fluid}
-                    alt=""
-                  />
-                </div>
-
-                <div className="project-details-container">
-                  {tools}
-                  {timeframe}
-                  {projectType}
-                  <div
-                    className="project-details-content"
-                    style={{ maxWidth: 390 }}
-                  >
-                    <div className="details-title">Synopsis</div>
-                    <div className="details-text">{frontmatter.synopsis}</div>
-                  </div>
-                  <div className="project-details-content">
+                {/*  <div className="project-details-content">
                     <div className="details-title">Sections</div>
                     <div className="details-text">{sections}</div>
-                  </div>
-                </div>
+                  </div>*/}
+                {readingTime}
               </div>
-            </Fade>
-
-            <div className="project-post-content">{sectionTrees}</div>
-            <div style={{ marginTop: 150, marginBottom: 50 }}>
-              <h1>Next Project&mdash;</h1>
-              <PostLink post={nextPage} pos={0} visible={true} />
             </div>
+          </Fade>
+
+          <div
+            className="project-post-content"
+            dangerouslySetInnerHTML={{
+              __html: this.state.trees
+                ? this.state.trees[this.state.currentView]
+                : ""
+            }}
+          ></div>
+          <div style={{ marginTop: 150, marginBottom: 50 }}>
+            <h1>Next Project&mdash;</h1>
+            <PostLink post={nextPage} pos={0} visible={true} />
           </div>
         </div>
-      );
-    }
+      </div>
+    );
+
     return (
       <div>
         <SEO
@@ -202,6 +291,7 @@ export const pageQuery = graphql`
         timeframe
         project_type
         tools
+        times
         image {
           childImageSharp {
             fluid(maxWidth: 650) {
