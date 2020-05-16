@@ -1,7 +1,9 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: var(--accent);
+    background-color: var(--body);
+    transition: background-color var(--duration) ease-in;
+    color: background-color var(--duration) ease-in;
     font-family: var(--font);
     color: var(--main-type);
     font-size: 120%;
@@ -9,7 +11,7 @@ body {
 }
 
 html {
-    background-color: var(--accent);
+    background-color: var(--body);
 }
 
 a {
@@ -45,6 +47,7 @@ strong {
 }
 
 #___gatsby {
+    transition: background-color var(--duration) ease-in;
     width: 100%;
     overflow-x: hidden;
     height: auto;

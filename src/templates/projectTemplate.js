@@ -23,7 +23,7 @@ class Template extends React.Component {
     this.state = {
       timeButtons: [false, false, true],
       spansSet: false,
-      currentView: 2
+      currentView: 2,
     };
   }
 
@@ -78,7 +78,7 @@ class Template extends React.Component {
     if (!this.state.spansSet) {
       // collect the spans that mark sections to hide
       let spans = Array.from(document.getElementsByTagName("span"));
-      spans = spans.filter(elt => {
+      spans = spans.filter((elt) => {
         return elt.className.includes("five") || elt.className.includes("ten");
       });
 
@@ -108,6 +108,19 @@ class Template extends React.Component {
   }
 
   adjustTime(num, actual) {
+    const content = document.getElementsByClassName("project-post-content")[0];
+
+    content.style.opacity = 0;
+
+    // document.documentElement.style.setProperty("--body", "var(--accent)");
+    window.setTimeout(function() {
+      content.style.transition = "opacity var(--duration) ease-in";
+      content.style.opacity = 1;
+      window.setTimeout(function() {
+        content.style.transition = "none";
+      }, 600);
+    }, 50);
+
     if (num === "one") {
       this.setState({ timeButtons: [true, false, false], currentView: 0 });
     } else if (num === "five") {
@@ -127,7 +140,7 @@ class Template extends React.Component {
     const len = this.state.trees
       ? this.state.trees[this.state.currentView].text
           .split(" ")
-          .filter(val => val !== "").length
+          .filter((val) => val !== "").length
       : 0;
 
     const timeframe = (
@@ -250,7 +263,7 @@ class Template extends React.Component {
             dangerouslySetInnerHTML={{
               __html: this.state.trees
                 ? this.state.trees[this.state.currentView]
-                : ""
+                : "",
             }}
           ></div>
           <div style={{ marginTop: 150, marginBottom: 50 }}>

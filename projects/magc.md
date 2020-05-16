@@ -5,7 +5,6 @@ subtitle: An interactive map and guided tour showcasing historic gardens for vis
 synopsis: >-
     A website I designed and developed to present the history and features of the Marin Art and Garden Center, an arts and conservation organization.
 tags:
-    - products
     - websites
 image: /uploads/magc1.png
 timeframe: 2 Months (July-August 2018)

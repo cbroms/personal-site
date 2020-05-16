@@ -1,6 +1,7 @@
 .project-container {
     // width: 100vw;
-    background-color: var(--content);
+    background-color: var(--body);
+    transition: background-color var(--duration) ease-in;
     margin: $nav-height + 20px auto;
     text-align: center;
 }
@@ -13,6 +14,7 @@
 
 .project-post-section {
     color: var(--sec-type);
+    transition: background-color var(--duration) ease-in;
     padding: 20px;
     background-color: var(--body);
     // border-radius: var(--radius);
@@ -122,6 +124,7 @@ blockquote {
 
 .project-list-head {
     width: $head-width;
+    transition: background-color var(--duration) ease-in;
     background-color: var(--body);
     margin: 30px auto;
     margin-top: $nav-height + 30px;
@@ -134,7 +137,7 @@ blockquote {
     width: $head-width;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-start;
 }
 
@@ -164,6 +167,15 @@ ol,
 dl {
     max-width: 650px;
     margin: 20px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-type);
 }
 
 li {

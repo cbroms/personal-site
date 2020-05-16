@@ -6,7 +6,6 @@ synopsis: >-
     A website that provides flight departure and arrival time predictions using a
     model trained on a dataset from the U.S. Department of Transportation.
 tags:
-    - products
     - ml
     - websites
 image: /uploads/fg1.png

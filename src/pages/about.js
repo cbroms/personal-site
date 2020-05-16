@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import "../style/main.scss";
 
-const About = props => {
+const About = (props) => {
     return (
         <div>
             <SEO title={`About - CB`} />
@@ -76,8 +76,8 @@ const About = props => {
                                         worked on
                                     </li>
                                     <li>
-                                        <a href="https://qualis.red">
-                                            Qualis Red
+                                        <a href="https://thoughts.christianbroms.com">
+                                            Thoughts
                                         </a>
                                         , where I post things I've written
                                     </li>
