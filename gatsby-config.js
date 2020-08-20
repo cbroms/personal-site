@@ -72,7 +72,6 @@ const cfg = {
             },
         },
         `gatsby-plugin-offline`,
-        `gatsby-plugin-netlify-cms`,
     ],
 };
 
