@@ -6,26 +6,25 @@ import Tags from "./Tags";
 
 import "../style/main.scss";
 
-const PostLink = props => {
+const PostLink = (props) => {
     const { post } = props;
 
     const text = (
-        <div className="project-link-flex first">
+        <div className="project-link-flex second">
             <h1 className="link-title">{post.frontmatter.title}</h1>
             <p className="link-subtitle">{post.frontmatter.subtitle}</p>
             <Tags tags={post.frontmatter.tags} />
+            <p className="project-link-pointer">Read case study &rarr;</p>
         </div>
     );
 
     const image = (
-        <div className="project-link-flex second">
-            <div style={{ padding: 20 }}>
-                <Img
-                    className="project-image-link-container"
-                    fluid={post.frontmatter.image.childImageSharp.fluid}
-                    alt=""
-                />
-            </div>
+        <div className="project-link-flex first">
+            <Img
+                className="project-image-link-container"
+                fluid={post.frontmatter.image.childImageSharp.fluid}
+                alt=""
+            />
         </div>
     );
 
@@ -44,8 +43,8 @@ const PostLink = props => {
                     className="project-link-container"
                     onClick={() => navigate(post.frontmatter.path)}
                 >
-                    {text}
                     {image}
+                    {text}
                 </div>
             </Fade>
         </div>

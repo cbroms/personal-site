@@ -13,7 +13,10 @@ const About = (props) => {
             <Navbar />
             <Fade bottom distance="100px">
                 <div className="project-container">
-                    <div className="project-post">
+                    <div
+                        className="project-post"
+                        style={{ minHeight: "100vh" }}
+                    >
                         <div
                             className="project-post-content"
                             style={{ padding: 20, maxWidth: 800 }}

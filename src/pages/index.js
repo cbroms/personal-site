@@ -13,8 +13,8 @@ const uuidv4 = require("uuid/v4");
 
 const Index = ({
     data: {
-        allMarkdownRemark: { edges }
-    }
+        allMarkdownRemark: { edges },
+    },
 }) => {
     const [loadedTags, setLoadedTags] = useState(false);
     const [tags, setTags] = useState(["everything"]);
@@ -22,8 +22,8 @@ const Index = ({
 
     if (!loadedTags) {
         let allTags = tags;
-        edges.map(edge => {
-            const newTags = edge.node.frontmatter.tags.filter(tag => {
+        edges.map((edge) => {
+            const newTags = edge.node.frontmatter.tags.filter((tag) => {
                 return !allTags.includes(tag);
             });
             allTags = allTags.concat(newTags);
@@ -39,7 +39,7 @@ const Index = ({
         }
     }
 
-    const tagButtons = tags.map(tag => {
+    const tagButtons = tags.map((tag) => {
         // filtering and activation for multiple tags at a time
         // const setActive = tag =>
         //     setActiveTags(activeTags.filter(value => value !== tag));
@@ -60,8 +60,8 @@ const Index = ({
         );
     });
 
-    const goodEdges = edges.filter(edge => {
-        const includedTags = edge.node.frontmatter.tags.map(tag => {
+    const goodEdges = edges.filter((edge) => {
+        const includedTags = edge.node.frontmatter.tags.map((tag) => {
             return activeTags.includes(tag);
         });
         return includedTags.includes(true);
@@ -80,7 +80,7 @@ const Index = ({
 
     return (
         <div style={{ overflow: "hidden" }}>
-            <SEO title={`Projects - CB`} />
+            <SEO title={`Projects - Christian Broms`} />
             <Navbar />
             <div style={{ minHeight: "100vh" }}>
                 <Fade bottom distance="0px">
@@ -94,19 +94,18 @@ const Index = ({
                 </Fade>
                 <div className="project-list">
                     {posts}
-                    <div
-                        className="project-link-container"
-                        onClick={() =>
-                            typeof window !== "undefined"
-                                ? (window.location =
-                                      "https://archive.christianbroms.com")
-                                : ""
-                        }
+
+                    <a
+                        style={{
+                            paddingTop: 20,
+                            margin: "0 auto",
+                            display: "block",
+                            maxWidth: "800px",
+                        }}
+                        href="https://archive.christianbroms.com"
                     >
-                        <p className="link-subtitle" style={{ paddingTop: 20 }}>
-                            See archived projects
-                        </p>
-                    </div>
+                        See archived projects
+                    </a>
                 </div>
             </div>
             <Footer />

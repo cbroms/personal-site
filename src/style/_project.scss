@@ -3,7 +3,6 @@
     background-color: var(--body);
     transition: background-color var(--duration) ease-in;
     margin: $nav-height + 20px auto;
-    text-align: center;
 }
 
 .project-post-content {
@@ -57,8 +56,8 @@
 }
 
 h1.page-head {
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 p.page-head {
@@ -74,17 +73,12 @@ blockquote {
 }
 
 .project-image-container {
+    border: var(--border);
     max-width: 650px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     object-fit: cover;
     margin: 10px auto;
-}
-
-.project-link {
-    display: inline-block;
-    margin: 0 15px 0 0;
-    min-width: 100%;
 }
 
 .project-details-container {
@@ -127,6 +121,7 @@ blockquote {
     transition: background-color var(--duration) ease-in;
     background-color: var(--body);
     margin: 30px auto;
+    padding: 0;
     margin-top: $nav-height + 30px;
     text-align: center;
     max-width: 800px;
@@ -134,6 +129,7 @@ blockquote {
 
 .project-head-tags {
     margin: 0 auto;
+    padding: 0;
     width: $head-width;
     display: flex;
     flex-flow: row wrap;
@@ -143,16 +139,25 @@ blockquote {
 
 .project-list-head.outer {
     margin-bottom: 70px;
+    padding: 0 10px;
 }
 
 .project-list {
-    text-align: center;
+    // text-align: center;
     margin-bottom: 80px;
+}
+
+.next-project {
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    padding-left: 10px;
 }
 
 h1.project-list-head {
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 800;
     text-align: left;
 }
 
@@ -202,6 +207,10 @@ li {
     margin: 50px auto;
 }
 
+.gatsby-resp-image-wrapper {
+    border: var(--border);
+}
+
 @media only screen and (max-width: 1440px) {
     .gatsby-resp-image-figure {
         max-width: 750px;
@@ -221,6 +230,7 @@ img[src*=".gif"] {
     margin: 50px auto;
     box-shadow: var(--shadow);
     border-radius: var(--radius);
+    border: var(--border);
 }
 
 // .gatsby-resp-image-wrapper {

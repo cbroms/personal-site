@@ -7,14 +7,6 @@ const cfg = {
         siteUrl: `https://christianbroms.com`,
         description: `Portfolio of Christian Broms. I design and develop websites, visualize information, and create thoughtful user experiences.`,
         image: "/default.png",
-        keywords: [
-            `Philosophy`,
-            `Psychology`,
-            `Neuroscience`,
-            `Data Visualization`,
-            `Cognitive Science`,
-            `Human Computer Interation`
-        ]
     },
     plugins: [
         `gatsby-plugin-sass`,
@@ -22,22 +14,22 @@ const cfg = {
             resolve: "gatsby-source-filesystem",
             options: {
                 path: `${__dirname}/static/uploads`,
-                name: "uploads"
-            }
+                name: "uploads",
+            },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/projects`,
-                name: "markdown-pages"
-            }
+                name: "markdown-pages",
+            },
         },
         `gatsby-transformer-remark`,
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-                plugins: ["gatsby-remark-copy-linked-files"]
-            }
+                plugins: ["gatsby-remark-copy-linked-files"],
+            },
         },
         {
             resolve: `gatsby-transformer-remark`,
@@ -46,8 +38,8 @@ const cfg = {
                     {
                         resolve: "gatsby-remark-relative-images",
                         options: {
-                            name: "uploads"
-                        }
+                            name: "uploads",
+                        },
                     },
                     {
                         resolve: `gatsby-remark-images`,
@@ -55,12 +47,12 @@ const cfg = {
                             maxWidth: 1000,
                             backgroundColor: "transparent",
                             wrapperStyle: "border-radius: 10px;",
-                            showCaptions: true
-                        }
+                            showCaptions: true,
+                        },
                     },
-                    `gatsby-remark-static-images`
-                ]
-            }
+                    `gatsby-remark-static-images`,
+                ],
+            },
         },
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
@@ -76,20 +68,20 @@ const cfg = {
                 background: "#ededed",
                 theme_color: "#104eb1",
                 display: "standalone",
-                start_url: "/"
-            }
+                start_url: "/",
+            },
         },
         `gatsby-plugin-offline`,
-        `gatsby-plugin-netlify-cms`
-    ]
+        `gatsby-plugin-netlify-cms`,
+    ],
 };
 
 if (process.env.context === "production") {
     const analyticsCfg = {
         resolve: "gatsby-plugin-google-analytics",
         options: {
-            trackingId: "UA-150097814-1"
-        }
+            trackingId: "UA-150097814-1",
+        },
     };
     cfg.plugins.push(analyticsCfg);
 }

@@ -266,10 +266,10 @@ class Template extends React.Component {
                 : "",
             }}
           ></div>
-          <div style={{ marginTop: 150, marginBottom: 50 }}>
-            <h1>Next Project&mdash;</h1>
-            <PostLink post={nextPage} pos={0} visible={true} />
+          <div className="next-project">
+            <h1>Next Project</h1>
           </div>
+          <PostLink post={nextPage} pos={0} visible={true} />
         </div>
       </div>
     );

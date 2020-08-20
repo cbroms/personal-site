@@ -12,34 +12,35 @@
     --accent: hsl(217, 83%, 38%);
     --accent-light: hsl(217, 83%, 80%);
     --accent-very-light: hsl(217, 83%, 95%);
-    --shadow: 0 10px 36px var(--qad-type);
+    --shadow: none;
+    --border: 1px solid var(--accent);
 
     // assorted vars
     --font: "ibm-plex-sans";
     --duration: 0.6s;
-    --radius: 10px;
+    --radius: 0px;
 }
 
 $nav-height: 100px;
 $break-small: 380px;
-$head-width: 94%;
+$head-width: 100%;
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --body: hsl(217, 15%, 8%);
-        --content: hsl(217, 15%, 8%);
-        --content-light: hsl(217, 15%, 12%);
-        --main-type: hsl(217, 15%, 90%);
-        --sec-type: hsl(217, 15%, 70%);
-        --ter-type: hsl(217, 15%, 50%);
-        --qad-type: hsl(217, 15%, 80%);
-        --accent: hsl(217, 83%, 70%);
-        --accent-light: hsl(217, 83%, 50%);
-        --accent-very-light: hsl(217, 83%, 20%);
-        --shadow: 0 10px 36px hsl(217, 15%, 1%);
-    }
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --body: hsl(217, 15%, 8%);
+//         --content: hsl(217, 15%, 8%);
+//         --content-light: hsl(217, 15%, 12%);
+//         --main-type: hsl(217, 15%, 90%);
+//         --sec-type: hsl(217, 15%, 70%);
+//         --ter-type: hsl(217, 15%, 50%);
+//         --qad-type: hsl(217, 15%, 80%);
+//         --accent: hsl(217, 83%, 70%);
+//         --accent-light: hsl(217, 83%, 50%);
+//         --accent-very-light: hsl(217, 83%, 20%);
+//         --shadow: 0 10px 36px hsl(217, 15%, 1%);
+//     }
 
-    img:not([src*=".svg"]) {
-        filter: grayscale(10%);
-    }
-}
+//     img:not([src*=".svg"]) {
+//         filter: grayscale(10%);
+//     }
+// }

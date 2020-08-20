@@ -1,56 +1,97 @@
 .project-link-container {
-    max-width: 900px;
-    width: 90%;
+    max-width: 800px;
     margin: 20px auto;
+    padding: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     cursor: pointer;
-    transition: all var(--duration) ease;
+    // transition: all var(--duration) ease;
     border-radius: var(--radius);
 }
 
 .project-image-link-container {
-    max-width: 600px;
+    height: 300px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    object-fit: cover;
+    object-fit: contain;
+    object-position: 0 0;
     margin: 0 auto;
-    transition: all var(--duration) ease;
+    background-color: var(--accent-light);
+    transition: background-color var(--duration) ease;
+}
+
+.project-link-pointer {
+    opacity: 0;
+    color: var(--sec-type);
+    padding-top: 25px;
+    transition: opacity var(--duration) ease;
+}
+
+.project-link {
+    display: inline-block;
+    margin: 0 15px 0 0;
+    min-width: 100%;
+}
+
+.project-image-link-container img {
+    mix-blend-mode: multiply;
 }
 
 .project-link-container:hover {
-    background-color: var(--content-light);
-    box-shadow: var(--shadow);
-
     .project-image-link-container {
-        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .project-link-pointer {
+        opacity: 1;
     }
 }
 
 .project-link-flex {
     width: 400px;
     margin: 0 auto;
+    border-top: 1px solid var(--accent);
+    padding-top: 20px;
+}
+
+.second {
+    width: 350px;
+    padding-left: 50px;
 }
 
 @media only screen and (max-width: 888px) {
+    .project-link-pointer {
+        opacity: 1;
+        padding-top: 0;
+    }
+
+    .project-link-flex {
+        padding: 0 20px 20px 20px;
+        border-left: 5px solid var(--accent);
+        border-top: none;
+    }
+    .project-image-link-container {
+        height: 150px;
+    }
+
     .first {
-        order: 1;
+        order: 2;
+        padding-left: 20px;
     }
     .second {
-        order: 2;
+        order: 1;
+        padding-left: 20px;
     }
 }
 
 .link-title {
     font-weight: 400;
-    margin: 0px auto 20px auto;
+    margin-top: 0;
 }
 
 .link-subtitle {
     color: var(--sec-type);
     font-style: italic;
-    padding: 0 20px 20px 20px;
-    margin: 0;
 }

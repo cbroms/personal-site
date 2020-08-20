@@ -4,10 +4,10 @@ import { Link } from "gatsby";
 
 import "../style/main.scss";
 
-const Footer = props => (
+const Footer = (props) => (
     <div className="footer">
         <span className="footer-text">
-            Copyright &copy; {new Date().getFullYear()} Christian Broms
+            Copyright &copy; 2017-{new Date().getFullYear()} Christian Broms
         </span>
         <span className="footer-text">
             <Link to="/" className="footer-link">

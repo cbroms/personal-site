@@ -12,86 +12,79 @@ function SEO({ description, meta, image: metaImage, title }) {
               author
               description
               siteUrl
-              keywords
               image
             }
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description;
         const image =
           metaImage && metaImage.src
             ? `${data.site.siteMetadata.siteUrl}${metaImage.src}`
-            : `${data.site.siteMetadata.siteUrl}${
-                data.site.siteMetadata.image
-              }`;
+            : `${data.site.siteMetadata.siteUrl}${data.site.siteMetadata.image}`;
         return (
           <Helmet
             htmlAttributes={{
-              lang: "en"
+              lang: "en",
             }}
             title={title}
             meta={[
               {
                 name: "description",
-                content: metaDescription
-              },
-              {
-                name: "keywords",
-                content: data.site.siteMetadata.keywords.join(",")
+                content: metaDescription,
               },
               {
                 property: "og:title",
-                content: title
+                content: title,
               },
               {
                 property: "og:description",
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 name: "twitter:creator",
-                content: data.site.siteMetadata.author
+                content: data.site.siteMetadata.author,
               },
               {
                 name: "twitter:title",
-                content: title
+                content: title,
               },
               {
                 name: "twitter:description",
-                content: metaDescription
-              }
+                content: metaDescription,
+              },
             ]
               .concat(
                 metaImage
                   ? [
                       {
                         property: "og:image",
-                        content: image
+                        content: image,
                       },
                       {
                         property: "og:image:width",
-                        content: metaImage.width
+                        content: metaImage.width,
                       },
                       {
                         property: "og:image:height",
-                        content: metaImage.height
+                        content: metaImage.height,
                       },
                       {
                         name: "twitter:card",
-                        content: "summary_large_image"
-                      }
+                        content: "summary_large_image",
+                      },
                     ]
                   : [
                       {
                         property: "og:image",
-                        content: image
+                        content: image,
                       },
                       {
                         name: "twitter:card",
-                        content: "summary"
-                      }
+                        content: "summary",
+                      },
                     ]
               )
               .concat(meta)}
@@ -105,5 +98,5 @@ function SEO({ description, meta, image: metaImage, title }) {
 export default SEO;
 
 SEO.defaultProps = {
-  meta: []
+  meta: [],
 };
