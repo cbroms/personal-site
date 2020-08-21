@@ -63,7 +63,7 @@ const About = (props) => {
                                 </a>
                                 ,{" "}
                                 <a href="https://archive.christianbroms.com/project/zoom-morsels/">
-                                    exectution
+                                    execution
                                 </a>{" "}
                                 and{" "}
                                 <a href="https://archive.christianbroms.com/project/flygenius-v2/">
