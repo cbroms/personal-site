@@ -176,7 +176,7 @@ class Template extends React.Component {
       </div>
     );
 
-    const readingTime = (
+    const readingTime = frontmatter.times ? (
       <div className="project-details-content">
         <div className="details-title">Adjust Reading Time</div>
         <div className="details-text">
@@ -234,7 +234,7 @@ class Template extends React.Component {
           <div className="post-length">{`${len} words`}</div>
         </div>
       </div>
-    );
+    ) : null;
 
     content = (
       <div className="project-container">

@@ -23,7 +23,7 @@ const About = (props) => {
                         >
                             <h2>About</h2>
                             <p>
-                                I'm a student at{" "}
+                                I'm an an undergraduate student at{" "}
                                 <a href="https://cmu.edu">
                                     Carnegie Mellon University
                                 </a>{" "}
@@ -39,48 +39,85 @@ const About = (props) => {
                             </p>
 
                             <p>
-                                My work involves creating technology that probes
-                                how we interpret text and digital spaces. I
-                                enjoy the full process of designing,
-                                prototyping, and interating. Much of what I do
-                                is centered around interaction design,
-                                information architecture, and building clean
-                                user interfaces. I don't stop there, though, as
-                                I love to explore a little bit of everything
-                                through a wide range of diverse kinds of
-                                projects, from{" "}
-                                <a href="https://archive.christianbroms.com/project/encyc-of-phil/">
-                                    generative text
+                                My work involves creating both{" "}
+                                <a href="https://archive.christianbroms.com/project/wikiviz/">
+                                    digital spaces
                                 </a>{" "}
-                                to{" "}
-                                <a href="https://archive.christianbroms.com/project/colma-st/">
-                                    photography
+                                and{" "}
+                                <a href="https://archive.christianbroms.com/project/gaze-narratives/">
+                                    technology that probes how we interpret
+                                    digital spaces
+                                </a>
+                                . I'm a designer and a developer, and enjoy
+                                working on many parts of a project from{" "}
+                                <a href="https://christianbroms.com/project/eggs">
+                                    research
+                                </a>
+                                ,{" "}
+                                <a href="https://christianbroms.com/project/snippets">
+                                    ideation
+                                </a>
+                                ,{" "}
+                                <a href="https://archive.christianbroms.com/project/pith-rainflame-pages/">
+                                    design
+                                </a>
+                                ,{" "}
+                                <a href="https://archive.christianbroms.com/project/zoom-morsels/">
+                                    exectution
                                 </a>{" "}
-                                to building{" "}
-                                <a href="https://archive.christianbroms.com/project/pizza-oven/">
-                                    useful brick arches
+                                and{" "}
+                                <a href="https://archive.christianbroms.com/project/flygenius-v2/">
+                                    iteration
+                                </a>
+                                . I've worked on projects that are{" "}
+                                <a href="https://archive.christianbroms.com/project/v4js/">
+                                    pure code
+                                </a>{" "}
+                                or{" "}
+                                <a href="https://archive.christianbroms.com/project/storytelling/">
+                                    purely visual
+                                </a>
+                                , but generally my work falls{" "}
+                                <a href="https://archive.christianbroms.com/project/whispers/">
+                                    somewhere
+                                </a>{" "}
+                                <a href="https://archive.christianbroms.com/project/dark-patterns/">
+                                    in
+                                </a>{" "}
+                                <a href="https://christianbroms.com/project/stratus">
+                                    between
+                                </a>
+                                , generally designing experiences and building
+                                the technology to create them. You can find a
+                                more exaustive list of my projects on{" "}
+                                <a href="https://archive.christianbroms.com">
+                                    my archive
+                                </a>{" "}
+                                and on{" "}
+                                <a href="https://github.com/cbroms">
+                                    my GitHub
                                 </a>
                                 .
                             </p>
 
                             <p>
-                                Find more of my work on{" "}
-                                <a href="https://github.com/cbroms">GitHub</a>.
-                            </p>
-
-                            <p>
-                                Also check out my other websites:
+                                Some of my other websites:
                                 <ul>
                                     <li>
-                                        <a href="https://archive.christianbroms.com">
-                                            My Archive
+                                        <a href="https://github.com/cbroms">
+                                            github.com/cbroms
                                         </a>
-                                        , where I keep all the projects I've
-                                        worked on
+                                        , where I keep all my projects' code
+                                    </li>
+                                    <li>
+                                        <a href="https://archive.christianbroms.com">
+                                            archive.christianbroms.com
+                                        </a>
+                                        , where I keep all my projects
                                     </li>
                                     <li>
                                         <a href="https://thoughts.christianbroms.com">
-                                            Thoughts
+                                            thoughts.christianbroms.com
                                         </a>
                                         , where I post things I've written
                                     </li>

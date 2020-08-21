@@ -16,9 +16,9 @@ html {
 
 a {
     color: var(--accent);
-    text-decoration: none;
-    text-underline: none;
-    transition: all var(--duration) ease;
+    // text-decoration: none;
+    // text-underline: none;
+    transition: color var(--duration) ease;
 }
 
 a:hover {
