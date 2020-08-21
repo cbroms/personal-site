@@ -46,7 +46,9 @@ const Index = ({
         // const setInactive = tag => setActiveTags(activeTags.concat(tag));
 
         return (
-            <span
+            <div
+                role="button"
+                tabindex="0"
                 className={`tag-button ${
                     activeTags.includes(tag) ? "enabled" : ""
                 }`}
@@ -54,9 +56,12 @@ const Index = ({
                 onClick={() => {
                     setActiveTags(tag);
                 }}
+                onKeyPress={(e) => {
+                    if (e.key === "Enter") setActiveTags(tag);
+                }}
             >
                 {tag}
-            </span>
+            </div>
         );
     });
 
@@ -96,12 +101,7 @@ const Index = ({
                     {posts}
 
                     <a
-                        style={{
-                            paddingTop: 20,
-                            margin: "0 auto",
-                            display: "block",
-                            maxWidth: "800px",
-                        }}
+                        className="archived-projects"
                         href="https://archive.christianbroms.com"
                     >
                         See archived projects

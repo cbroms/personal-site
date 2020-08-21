@@ -5,12 +5,12 @@ const uuidv4 = require("uuid/v4");
 
 const Tags = (props) => {
 	const tags = props.tags.map((value) => (
-		<span
+		<div
 			className={`tags ${value.toLowerCase().replace(" ", "-")}`}
 			key={uuidv4()}
 		>
 			<div className="tag-text">{value}</div>
-		</span>
+		</div>
 	));
 
 	return <div>{tags}</div>;

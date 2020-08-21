@@ -1,7 +1,7 @@
 .project-link-container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -61,15 +61,26 @@
     padding-left: 50px;
 }
 
+.archived-projects {
+    padding-top: 20;
+    margin: 0 auto;
+    display: block;
+    max-width: 800px;
+}
+
 @media only screen and (max-width: 888px) {
     .project-link-pointer {
         opacity: 1;
         padding-top: 0;
     }
 
+    .archived-projects {
+        padding-left: 20px;
+    }
+
     .project-link-flex {
         padding: 0 20px 20px 20px;
-        border-left: 5px solid var(--accent);
+        border-left: 1px solid var(--accent);
         border-top: none;
     }
     .project-image-link-container {

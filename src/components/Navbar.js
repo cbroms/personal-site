@@ -26,7 +26,7 @@ class Navbar extends React.Component {
     updateDimensions() {
         this.setState({
             shorter:
-                typeof window !== "undefined" ? window.innerWidth <= 480 : true
+                typeof window !== "undefined" ? window.innerWidth <= 480 : true,
         });
     }
 
@@ -35,7 +35,7 @@ class Navbar extends React.Component {
             typeof window !== "undefined" ? window.location.pathname : "";
 
         return (
-            <div className="nav">
+            <nav className="nav">
                 <div className="nav-wrapper">
                     <Link to="/" className="nav-link nav-logo">
                         {this.state.shorter ? "CB" : "Christian Broms"}
@@ -57,7 +57,7 @@ class Navbar extends React.Component {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </nav>
         );
     }
 }

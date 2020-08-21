@@ -40,8 +40,13 @@ const PostLink = (props) => {
                 collapse
             >
                 <div
+                    role="button"
+                    tabindex="0"
                     className="project-link-container"
                     onClick={() => navigate(post.frontmatter.path)}
+                    onKeyPress={(e) => {
+                        if (e.key === "Enter") navigate(post.frontmatter.path);
+                    }}
                 >
                     {image}
                     {text}

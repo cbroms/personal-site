@@ -3,8 +3,8 @@
     font-style: italic;
     float: left;
     font-size: 120%;
-    padding-left: 20px;
-    padding-right: 0 !important;
+    margin-left: 20px;
+    margin-right: 0 !important;
     transition: all var(--duration) ease;
 }
 .nav-wrapper {
@@ -24,7 +24,7 @@
 .nav-link {
     color: var(--sec-type);
     text-decoration: none;
-    padding-right: 40px;
+    margin-right: 40px;
 }
 
 .nav-link:hover {

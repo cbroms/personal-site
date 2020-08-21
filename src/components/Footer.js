@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import "../style/main.scss";
 
 const Footer = (props) => (
-    <div className="footer">
+    <footer className="footer">
         <span className="footer-text">
             Copyright &copy; 2017-{new Date().getFullYear()} Christian Broms
         </span>
@@ -32,7 +32,7 @@ const Footer = (props) => (
                 GitHub
             </a>
         </span>
-    </div>
+    </footer>
 );
 
 export default Footer;

@@ -55,7 +55,7 @@ class Template extends React.Component {
           index += 1;
         }
         currentTree.push(
-          parse(`<div class='project-post-section' id='${slug}'></div>`)
+          parse(`<section class='project-post-section' id='${slug}'></section>`)
         );
       } else if (
         root.childNodes[i].tagName &&
@@ -180,7 +180,9 @@ class Template extends React.Component {
       <div className="project-details-content">
         <div className="details-title">Adjust Reading Time</div>
         <div className="details-text">
-          <span
+          <div
+            role="button"
+            tabindex="0"
             className={`tag-button ${
               this.state.timeButtons[0] ? "enabled" : ""
             }`}
@@ -188,10 +190,16 @@ class Template extends React.Component {
             onClick={() => {
               this.adjustTime("one", frontmatter.times[0]);
             }}
+            onKeyPress={(e) => {
+              if (e.key === "Enter")
+                this.adjustTime("one", frontmatter.times[0]);
+            }}
           >
             {`${frontmatter.times[0]} MIN`}
-          </span>
-          <span
+          </div>
+          <div
+            role="button"
+            tabindex="0"
             className={`tag-button ${
               this.state.timeButtons[1] ? "enabled" : ""
             }`}
@@ -199,10 +207,16 @@ class Template extends React.Component {
             onClick={() => {
               this.adjustTime("five", frontmatter.times[1]);
             }}
+            onKeyPress={(e) => {
+              if (e.key === "Enter")
+                this.adjustTime("five", frontmatter.times[0]);
+            }}
           >
             {`${frontmatter.times[1]} MIN`}
-          </span>
-          <span
+          </div>
+          <div
+            role="button"
+            tabindex="0"
             className={`tag-button ${
               this.state.timeButtons[2] ? "enabled" : ""
             }`}
@@ -210,9 +224,13 @@ class Template extends React.Component {
             onClick={() => {
               this.adjustTime("ten", frontmatter.times[2]);
             }}
+            onKeyPress={(e) => {
+              if (e.key === "Enter")
+                this.adjustTime("ten", frontmatter.times[0]);
+            }}
           >
             {`${frontmatter.times[2]} MIN`}
-          </span>
+          </div>
           <div className="post-length">{`${len} words`}</div>
         </div>
       </div>
@@ -220,9 +238,9 @@ class Template extends React.Component {
 
     content = (
       <div className="project-container">
-        <div className="project-post">
+        <article className="project-post">
           <Fade bottom distance="100px">
-            <div className="project-head">
+            <header className="project-head">
               <h1 className="page-head">{frontmatter.title}</h1>
               <p className="page-head">{frontmatter.subtitle}</p>
               <div className="page-head">
@@ -255,7 +273,7 @@ class Template extends React.Component {
                   </div>*/}
                 {readingTime}
               </div>
-            </div>
+            </header>
           </Fade>
 
           <div
@@ -270,7 +288,7 @@ class Template extends React.Component {
             <h1>Next Project</h1>
           </div>
           <PostLink post={nextPage} pos={0} visible={true} />
-        </div>
+        </article>
       </div>
     );
 

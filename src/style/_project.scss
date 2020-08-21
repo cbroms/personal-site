@@ -53,6 +53,7 @@
 .page-head {
     max-width: 650px;
     margin: 0 auto;
+    padding: 10px 20px;
 }
 
 h1.page-head {
@@ -61,7 +62,6 @@ h1.page-head {
 }
 
 p.page-head {
-    padding: 20px;
     color: var(--sec-type);
     font-size: 1.4rem;
     font-style: italic;
@@ -117,7 +117,6 @@ blockquote {
 }
 
 .project-list-head {
-    width: $head-width;
     transition: background-color var(--duration) ease-in;
     background-color: var(--body);
     margin: 30px auto;
@@ -139,7 +138,7 @@ blockquote {
 
 .project-list-head.outer {
     margin-bottom: 70px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .project-list {
