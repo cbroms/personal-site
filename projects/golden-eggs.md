@@ -3,16 +3,15 @@ path: /project/eggs
 title: Golden Eggs
 subtitle: Drawing in new audiences to Pittsburgh's public art
 synopsis: >-
-  A research project around the public art space in Pittsburgh that involved user research and synthesis to create a mid-fidelity prototype of a new experience.
+    A research project around the public art space in Pittsburgh that involved user research and synthesis to create a mid-fidelity prototype of a new experience.
 tags:
-  - research
-  - prototypes
+    - research
 image: /uploads/eggs.jpg
 timeframe: 2 Months (Fall 2019)
 project_type: Class project done at CMU for User-Centered Research and Evaluation
 tools:
-  - Figma
-  - InDesign
+    - Figma
+    - InDesign
 disp_order: 1.5
 times:
     - 3
@@ -20,14 +19,13 @@ times:
     - 9
 ---
 
-
-# Short Version 
+# Short Version
 
 ## Background
 
 This was a project that I completed for the class User-Centered Research and Evaluation at CMU in Fall 2019, with team members Kyle Barron, [Jessica Timczyk](https://www.jessicatimczyk.com/), [Rituparna Roy](https://www.rituparnaroy.com/), and [Lauren Wittingham](https://laurenwhittingham.com/).
 
-In this project, we were interested in exploring people's experience around and perception of public art in Pittsburgh and identifying pain points to address. **Our goal was to improve the interaction between viewers and public art, to pull in more people that don't usually engage with art, and to create new connections between the public and artists.** 
+In this project, we were interested in exploring people's experience around and perception of public art in Pittsburgh and identifying pain points to address. **Our goal was to improve the interaction between viewers and public art, to pull in more people that don't usually engage with art, and to create new connections between the public and artists.**
 
 ## Process
 
@@ -39,14 +37,14 @@ To begin to explore this area, we set out to understand how people engage with p
 
 #### Observe and intercept interviews & affinity diagramming: people like art and have questions about it
 
-We visited a number of public art pieces around Pittsburgh and approached people that were interacting with them in some way, such as taking a picture or walking up to observe. 
+We visited a number of public art pieces around Pittsburgh and approached people that were interacting with them in some way, such as taking a picture or walking up to observe.
 
 ![Creating our affinity diagram from our interviews with the public](/uploads/affinity.jpg)
 
 We gathered a few main insights from this phase of research:
 
-- Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
-- People have questions about public art that would be well-suited for the artist to answer.
+-   Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
+-   People have questions about public art that would be well-suited for the artist to answer.
 
 #### Think-aloud protocol: people don't have access to quality information about public art
 
@@ -54,7 +52,7 @@ We next were interested in understanding how people searched for information abo
 
 #### Semi-structured interviews with artists: they want to help answer questions
 
-Having spent time understanding people's perceptions of public art, we turned to artists so that we could better understand their process when creating public art and what dialogue (if any) exists with the public during that process and after. 
+Having spent time understanding people's perceptions of public art, we turned to artists so that we could better understand their process when creating public art and what dialogue (if any) exists with the public during that process and after.
 
 **We found that people's perception of artists were generally different than the reality; our artist interviewees were more than willing to discuss their work with members of the public.**
 
@@ -66,7 +64,7 @@ It became clear from the speed-dating sessions that **the favorite among our par
 
 #### Creating low and mid fidelity prototypes: an egg scavenger hunt
 
-One idea that had particularly good responses from our participants was a solution that involved a token that could be collected from an art piece containing a piece of information about the art. 
+One idea that had particularly good responses from our participants was a solution that involved a token that could be collected from an art piece containing a piece of information about the art.
 
 Our earlier research suggested the kinds of questions that people might like answers to about the public art, so we created a list of answers to questions about a particular piece and printed them on strips of paper. We put these strips in plastic golden eggs then placed the eggs in front of Agnes Katz Plaza in downtown Pittsburgh.
 
@@ -76,16 +74,13 @@ After a couple hours, all 50 of the eggs we put out were gone. We talked to peop
 
 ![The egg prototype in action](/uploads/eggsClose.jpg)
 
-
-
-
-# Medium Version 
+# Medium Version
 
 ## Background
 
 This was a project that I completed for the class User-Centered Research and Evaluation at CMU in Fall 2019, with team members Kyle Barron, [Jessica Timczyk](https://www.jessicatimczyk.com/), [Rituparna Roy](https://www.rituparnaroy.com/), and [Lauren Wittingham](https://laurenwhittingham.com/).
 
-In this project, we were interested in exploring people's experience around and perception of public art in Pittsburgh and identifying pain points to address. **Our goal was to improve the interaction between viewers and public art, to pull in more people that don't usually engage with art, and to create new connections between the public and artists.** 
+In this project, we were interested in exploring people's experience around and perception of public art in Pittsburgh and identifying pain points to address. **Our goal was to improve the interaction between viewers and public art, to pull in more people that don't usually engage with art, and to create new connections between the public and artists.**
 
 ## Process
 
@@ -107,14 +102,13 @@ We visited a number of public art pieces around Pittsburgh and approached people
 
 We gathered a few main insights from this phase of research:
 
-- Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
-- People have questions about public art that would be well-suited for the artist to answer.
-- Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
+-   Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
+-   People have questions about public art that would be well-suited for the artist to answer.
+-   Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
 
 #### Think-aloud protocol: people don't have access to quality information about public art
 
 We next were interested in understanding how people searched for information about art, given some of the questions we'd heard. We conducted a think-aloud protocol on [Pittsburgh Art Places](http://www.pittsburghartplaces.org/tours/search), a website that gives information about Pittsburgh's public art and artists as well as a general internet search. We created a number of usability findings and found that **the main problem people faced was a lack of quality information that could adequately answer their questions.**
-
 
 #### Semi-structured interviews with artists: they want to help answer questions
 
@@ -130,11 +124,11 @@ The next phase of our project was to rapidly generate multiple possible directio
 
 To begin, we each quickly sketched eight ideas in eight minutes, ranging from safe to really out-there. There were five key needs that the ideas addressed:
 
-- Need for draw-in/on-site engagement at the art
-- Need for gamification of art experience
-- Need to contribute to public knowledge of art
-- Need for communication with the artist
-- Need for curated information about the art
+-   Need for draw-in/on-site engagement at the art
+-   Need for gamification of art experience
+-   Need to contribute to public knowledge of art
+-   Need for communication with the artist
+-   Need for curated information about the art
 
 We conducted speed-dating sessions with Pittsburgh locals, presenting each of the them with a storyboard one at a time and asking questions pertaining to the particular situation to establish if the scenario was realistic.
 
@@ -144,7 +138,7 @@ It became clear from the speed-dating sessions that **the favorite among our par
 
 #### Creating low and mid fidelity prototypes: an egg scavenger hunt
 
-One idea that had particularly good responses from our participants was a solution that involved a token that could be collected from an art piece containing a piece of information about the art. 
+One idea that had particularly good responses from our participants was a solution that involved a token that could be collected from an art piece containing a piece of information about the art.
 
 Our earlier research suggested the kinds of questions that people might like answers to about the public art, so we created a list of answers to questions about a particular piece and printed them on strips of paper. We put these strips in plastic golden eggs then placed the eggs in front of Agnes Katz Plaza in downtown Pittsburgh.
 
@@ -158,11 +152,7 @@ In the future, we'd like to incorporate the artist into this process by allowing
 
 ![The egg prototype in action](/uploads/eggsClose.jpg)
 
-
-
-
-
-# Long Version 
+# Long Version
 
 ## Summary
 
@@ -198,9 +188,9 @@ We visited a number of public art pieces around Pittsburgh and approached people
 
 We gathered a few main insights from this phase of research:
 
-- Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
-- People have questions about public art that would be well-suited for the artist to answer.
-- Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
+-   Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
+-   People have questions about public art that would be well-suited for the artist to answer.
+-   Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
 
 #### Think-aloud protocol: people don't have access to quality information about public art
 
@@ -224,11 +214,11 @@ The next phase of our project was to rapidly generate multiple possible directio
 
 To begin, we each quickly sketched eight ideas in eight minutes, ranging from safe to really out-there. We eventually settled on five directions to explore. There were five key needs that the ideas addressed:
 
-- Need for draw-in/on-site engagement at the art
-- Need for gamification of art experience
-- Need to contribute to public knowledge of art
-- Need for communication with the artist
-- Need for curated information about the art
+-   Need for draw-in/on-site engagement at the art
+-   Need for gamification of art experience
+-   Need to contribute to public knowledge of art
+-   Need for communication with the artist
+-   Need for curated information about the art
 
 Next, we created storyboards for each of these needs. The goal of each was to determine if the _need_ exists, rather than if a particular technological solution is correct. We conducted speed-dating sessions with Pittsburgh locals, presenting each of the them with a storyboard one at a time and asking questions pertaining to the particular situation to establish if the scenario was realistic.
 
