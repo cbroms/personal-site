@@ -6,12 +6,19 @@ body {
     color: background-color var(--duration) ease-in;
     font-family: var(--font);
     color: var(--main-type);
-    font-size: 120%;
+
     // overflow-x: hidden;
 }
 
 html {
     background-color: var(--body);
+    font-size: 110%;
+}
+
+@media only screen and (min-width: 1450px) {
+    html {
+        font-size: 130%;
+    }
 }
 
 a {

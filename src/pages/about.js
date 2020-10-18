@@ -115,11 +115,18 @@ const About = (props) => {
                                         </a>
                                         , where I keep all my projects
                                     </li>
+
                                     <li>
                                         <a href="https://thoughts.christianbroms.com">
                                             thoughts.christianbroms.com
                                         </a>
                                         , where I post things I've written
+                                    </li>
+                                    <li>
+                                        <a href="https://futureland.tv/christian">
+                                            futureland.tv/christian
+                                        </a>
+                                        , where my in-progress projects live
                                     </li>
                                 </ul>
                             </p>

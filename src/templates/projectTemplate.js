@@ -295,7 +295,7 @@ class Template extends React.Component {
     return (
       <div>
         <SEO
-          title={`${frontmatter.title} - CB`}
+          title={`${frontmatter.title} - Christian Broms`}
           description={frontmatter.synopsis}
           image={frontmatter.image.childImageSharp.fluid}
         />

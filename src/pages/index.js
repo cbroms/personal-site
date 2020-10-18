@@ -91,8 +91,8 @@ const Index = ({
                 <Fade bottom distance="0px">
                     <div className="project-list-head outer">
                         <h1 className="project-list-head">
-                            I design and develop websites, visualize
-                            information, and create thoughtful user experiences.
+                            I create digital spaces that aim to be
+                            understandable, well-structured, and resonant.
                         </h1>
                         <div className="project-head-tags">{tagButtons}</div>
                     </div>
