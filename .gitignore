@@ -1,7 +1,5 @@
-_site
-.sass-cache
-.jekyll-metadata
-public/
-.cache
 .DS_Store
-node_modules/
+__pycache__
+node_modules
+__sapper__/
+env/
