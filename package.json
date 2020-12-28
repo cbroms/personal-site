@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "personal-site",
+  "description": "Christian Broms' personal site",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

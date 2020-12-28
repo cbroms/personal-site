@@ -1,10 +1,18 @@
-<script></script>
+<script>
+  const description =
+    "I design and build digital spaces that aim to be understandable, well-structured, and resonant. I'm particularly interested in spaces for discussing, reading, reflecting, searching, exploring, and analyzing. Visit some of my past projects and other links";
+</script>
 
 <svelte:head>
   <title>Christian Broms</title>
+  <link rel="canonical" href="https://christianbroms.com" />
+  <meta property="og:url" content="https://christianbroms.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Christian Broms" />
+  <meta name="Description" content="{description}" />
+  <meta property="og:description" content="{description}" />
+  <meta property="og:image" content="/cb.png" />
 </svelte:head>
-
-<!-- <header /> -->
 
 <div class="content">
   <header>
