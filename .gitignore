@@ -3,3 +3,6 @@ __pycache__
 node_modules
 __sapper__/
 env/
+.cache
+server-prediction/
+public/

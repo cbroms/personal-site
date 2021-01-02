@@ -5,12 +5,37 @@
 
   <footer>
     <hr />
-    <!-- <a href="mailto:christian@rainflame.com">christian@rainflame.com</a> -->
-    <!-- <span> &copy; 2016-{new Date().getFullYear()} Christian Broms </span> -->
+    <span class="footer-thing">
+      &copy; 2016-{new Date().getFullYear()} Christian Broms
+    </span>
+    <span class="footer-thing">~ <a href="/">about</a></span>
+    <span class="footer-thing">
+      ~
+      <a
+        href="https://archive.christianbroms.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >archive</a
+      >
+    </span>
+    <span class="footer-thing">
+      ~
+      <a
+        href="https://github.com/cbroms"
+        target="_blank"
+        rel="noopener noreferrer"
+        >code</a
+      >
+    </span>
   </footer>
 </div>
 
 <style>
+  .footer-thing {
+    padding-right: 10px;
+    display: inline-block;
+  }
+
   .layout {
     margin: 40px;
   }

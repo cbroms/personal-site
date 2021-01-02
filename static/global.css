@@ -1,11 +1,12 @@
 body {
-  background-color: #efefef;
+  background-color: #282726;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1200px;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #e5e1e0;
 }
 
 p,
@@ -22,7 +23,7 @@ footer {
 }
 
 a {
-  color: black;
+  color: #e5e1e0;
 }
 
 a:visited {
