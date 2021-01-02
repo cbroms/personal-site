@@ -33,7 +33,12 @@
 <style>
   .footer-thing {
     padding-right: 10px;
+    padding-top: 10px;
     display: inline-block;
+  }
+
+  .footer-thing > a {
+    color: grey;
   }
 
   .layout {

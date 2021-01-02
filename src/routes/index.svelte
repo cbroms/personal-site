@@ -65,24 +65,20 @@
     </li>
   </ul>
 
-  <section>
-    <p>
-      I'm currently working on the
-      <a href="https://pith.is/" target="_blank" rel="noopener noreferrer"
-        >Pith</a
-      >
-      conversation space, an experimental system for branching online
-      discussions.
-    </p>
-    <p>
-      I'm also studying Cognitive Science, Art, and Human-Computer Interaction
-      at Carnegie Mellon University in Pittsburgh, Pennsylvania. I'll be
-      graduating in 2021.
-    </p>
-  </section>
-
-  <section>
-    Some other activities I enjoy include
+  <p>
+    I'm currently working on the
+    <a href="https://pith.is/" target="_blank" rel="noopener noreferrer"
+      >Pith</a
+    >
+    conversation space, an experimental system for branching online discussions.
+  </p>
+  <p>
+    I'm also studying Cognitive Science, Art, and Human-Computer Interaction at
+    Carnegie Mellon University in Pittsburgh, Pennsylvania. I'll be graduating
+    in 2021.
+  </p>
+  <p>
+    Some activities I enjoy include
     <a
       href="https://futureland.tv/christian/twelve-websites"
       target="_blank"
@@ -107,7 +103,7 @@
       rel="noopener noreferrer"
       >making bread</a
     >.
-  </section>
+  </p>
 </div>
 
 <style>
@@ -128,10 +124,9 @@
     padding: 5px 0;
   }
 
-
-  section {
+/*  section {
     margin: 55px 0;
-  }
+  }*/
 
   li {
     padding: 5px 0;
