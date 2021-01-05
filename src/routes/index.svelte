@@ -17,9 +17,6 @@
 <div class="content">
   <header>
     <span class="header-thing">Christian Broms</span>
-    <!--  <span class="header-thing email"
-      ><a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a></span
-    > -->
     <hr />
   </header>
 
@@ -31,7 +28,7 @@
   </p>
  -->
 
-  <p>Here are three spaces I've made you might peruse:</p>
+  <p>Here are three spaces I've made:</p>
   <ul>
     <li>
       <strong
@@ -80,10 +77,10 @@
   <p>
     Some activities I enjoy include
     <a
-      href="https://futureland.tv/christian/twelve-websites"
+      href="https://futureland.tv/christian/gaze-interface"
       target="_blank"
       rel="noopener noreferrer"
-      >making minimal websites</a
+      >creating interfaces that can be controlled with your eyes</a
     >,
     <a
       href="https://futureland.tv/christian/hyperfov"
@@ -92,10 +89,10 @@
       >exploring how the internet is explored</a
     >,
     <a
-      href="https://futureland.tv/christian/gaze-interface"
+      href="https://futureland.tv/christian/twelve-websites"
       target="_blank"
       rel="noopener noreferrer"
-      >creating interfaces that can be controlled with your eyes</a
+      >building minimal websites</a
     >, and
     <a
       href="https://futureland.tv/christian/breadmaking"
@@ -108,7 +105,7 @@
 
 <style>
   hr {
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   h1 {
@@ -124,12 +121,12 @@
     padding: 5px 0;
   }
 
-/*  section {
-    margin: 55px 0;
-  }*/
+  ul {
+    margin: 25px 0;
+  }
 
   li {
-    padding: 5px 0;
+    padding: 10px 0;
     padding-left: 5px;
   }
 </style>
