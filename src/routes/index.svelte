@@ -21,14 +21,8 @@
   </header>
 
   <h1>I design and build digital spaces.</h1>
-  <!--   <p>
-   I'm
-    particularly interested in spaces for discussing,
-    searching, exploring, and analyzing.
-  </p>
- -->
 
-  <p>Here are three spaces I've made:</p>
+  <p>Here are three I've made:</p>
   <ul>
     <li>
       <strong
@@ -63,7 +57,14 @@
   </ul>
 
   <p>
-    I'm currently working on the
+    I'm
+    <a
+      href="https://archive.christianbroms.com/project/pith"
+      target="_blank"
+      rel="noopener noreferrer"
+      >currently working</a
+    >
+    on the
     <a href="https://pith.is/" target="_blank" rel="noopener noreferrer"
       >Pith</a
     >
@@ -99,6 +100,11 @@
       target="_blank"
       rel="noopener noreferrer"
       >making bread</a
+    >.
+  </p>
+  <p>
+    I can be reached at
+    <code><a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a></code
     >.
   </p>
 </div>
