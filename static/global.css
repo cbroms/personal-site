@@ -27,12 +27,12 @@ a {
 }
 
 a:visited {
-  color: grey;
+  color: rgb(170, 170, 170);
 }
 
 hr {
   max-width: 640px;
   margin: 0;
   outline: none;
-  border: 1px solid grey;
+  border: 1px solid rgb(170, 170, 170);
 }

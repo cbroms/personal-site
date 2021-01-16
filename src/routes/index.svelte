@@ -9,8 +9,8 @@
   <meta property="og:url" content="https://christianbroms.com" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Christian Broms" />
-  <meta name="Description" content="{description}" />
-  <meta property="og:description" content="{description}" />
+  <meta name="Description" content={description} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="/cb.png" />
 </svelte:head>
 
@@ -29,8 +29,7 @@
         ><a
           href="https://archive.christianbroms.com/project/webet"
           target="_blank"
-          rel="noopener noreferrer"
-          >WebET</a
+          rel="noopener">WebET</a
         ></strong
       >: an eye tracking system for distributed usability testing.
     </li>
@@ -39,8 +38,7 @@
         ><a
           href="https://archive.christianbroms.com/project/wikiviz"
           target="_blank"
-          rel="noopener noreferrer"
-          >Wikiviz</a
+          rel="noopener">Wikiviz</a
         ></strong
       >: a hyperlink-based viewer for Wikipedia pages.
     </li>
@@ -49,8 +47,7 @@
         ><a
           href="https://archive.christianbroms.com/project/stratus"
           target="_blank"
-          rel="noopener noreferrer"
-          >Stratus</a
+          rel="noopener">Stratus</a
         ></strong
       >: an augmented reality app for weather visualization.
     </li>
@@ -61,13 +58,10 @@
     <a
       href="https://archive.christianbroms.com/project/pith"
       target="_blank"
-      rel="noopener noreferrer"
-      >currently working</a
+      rel="noopener">currently working</a
     >
     on the
-    <a href="https://pith.is/" target="_blank" rel="noopener noreferrer"
-      >Pith</a
-    >
+    <a href="https://pith.is/" target="_blank" rel="noopener">Pith</a>
     conversation space, an experimental system for branching online discussions.
   </p>
   <p>
@@ -80,26 +74,30 @@
     <a
       href="https://futureland.tv/christian/gaze-interface"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener"
       >creating interfaces that can be controlled with your eyes</a
     >,
     <a
       href="https://futureland.tv/christian/hyperfov"
       target="_blank"
-      rel="noopener noreferrer"
-      >exploring how the internet is explored</a
+      rel="noopener">exploring how the internet is explored</a
     >,
     <a
       href="https://futureland.tv/christian/twelve-websites"
       target="_blank"
-      rel="noopener noreferrer"
-      >building minimal websites</a
+      rel="noopener">building minimal websites</a
     >, and
     <a
       href="https://futureland.tv/christian/breadmaking"
       target="_blank"
-      rel="noopener noreferrer"
-      >making bread</a
+      rel="noopener">making bread</a
+    >.
+  </p>
+  <p>
+    You can find all of my past projects on <a
+      href="https://archive.christianbroms.com"
+      target="_blank"
+      rel="noopener">my archive</a
     >.
   </p>
   <p>

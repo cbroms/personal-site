@@ -1,6 +1,6 @@
 <div class="layout">
   <main>
-    <slot></slot>
+    <slot />
   </main>
 
   <footer>
@@ -14,17 +14,12 @@
       <a
         href="https://archive.christianbroms.com"
         target="_blank"
-        rel="noopener noreferrer"
-        >archive</a
+        rel="noopener">archive</a
       >
     </span>
     <span class="footer-thing">
       ~
-      <a
-        href="https://github.com/cbroms"
-        target="_blank"
-        rel="noopener noreferrer"
-        >code</a
+      <a href="https://github.com/cbroms" target="_blank" rel="noopener">code</a
       >
     </span>
   </footer>
@@ -38,7 +33,7 @@
   }
 
   .footer-thing > a {
-    color: grey;
+    color: rgb(170, 170, 170);
   }
 
   .layout {
@@ -51,7 +46,7 @@
   }
 
   footer {
-    color: grey;
+    color: rgb(170, 170, 170);
     font-size: 14px;
   }
 </style>
