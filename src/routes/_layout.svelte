@@ -1,7 +1,5 @@
 <div class="layout">
-  <main>
-    <slot />
-  </main>
+  <slot />
 
   <footer>
     <hr />
