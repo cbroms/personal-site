@@ -1,4 +1,5 @@
 <script>
+  import Header from "../components/Header.svelte";
   const description =
     "I design and build digital spaces that aim to be understandable, well-structured, and resonant. I'm particularly interested in spaces for discussing, reading, reflecting, searching, exploring, and analyzing. Visit some of my past projects and other links";
 </script>
@@ -15,21 +16,7 @@
 </svelte:head>
 
 <main class="content">
-  <header>
-    <span class="header-thing">Christian Broms</span>
-    <!--  -->
-    <span class="menu">
-      <div class="header-thing">
-        <a href="/">about</a>
-        <div class="circle" />
-      </div>
-      <div class="header-thing">
-        <a href="https://archive.christianbroms.com">projects</a>
-        <div class="circle invisible" />
-      </div>
-    </span>
-  </header>
-  <hr />
+  <Header page="index" />
 
   <h1>I design and build digital spaces.</h1>
 
@@ -102,7 +89,7 @@
       <a
         href="https://futureland.tv/christian/twelve-websites"
         target="_blank"
-        rel="noopener">follow my progress on Futureland</a
+        rel="noopener">follow my progress</a
       >.
     </p>
     <p>
@@ -113,39 +100,6 @@
 </main>
 
 <style>
-  .circle {
-    height: 20px;
-    width: 20px;
-    margin-left: 15px;
-    border-radius: 50%;
-    background-color: #e5e1e0;
-    display: inline-block;
-  }
-
-  .circle.invisible {
-    background-color: transparent;
-  }
-
-  .header-thing {
-    display: flex;
-    padding: 5px 0;
-  }
-
-  .header-thing > a {
-    width: 75px;
-    text-align: right;
-  }
-
-  header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    max-width: 640px;
-  }
-  hr {
-    margin: 30px 0;
-  }
-
   .big {
     font-size: 1.25rem;
     line-height: 1.75rem;

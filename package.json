@@ -1,6 +1,6 @@
 {
   "name": "personal-site",
-  "description": "Christian Broms' personal site",
+  "description": "Christian Broms' Personal Site",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
