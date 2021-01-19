@@ -22,11 +22,11 @@
   <title>{post.title} / Christian's Project Archive</title>
   <link
     rel="canonical"
-    href={`https://archive.christianbroms.com/project/${post.slug}`}
+    href={`https://christianbroms.com/projects/${post.slug}`}
   />
   <meta
     property="og:url"
-    content={`https://archive.christianbroms.com/project/${post.slug}`}
+    content={`https://christianbroms.com/projects/${post.slug}`}
   />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={post.title || post.title} />

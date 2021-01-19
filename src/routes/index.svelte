@@ -12,7 +12,7 @@
   <meta property="og:title" content="Christian Broms" />
   <meta name="Description" content={description} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="/cb.png" />
+  <meta property="og:image" content="cb.png" />
 </svelte:head>
 
 <main class="content">

@@ -3,19 +3,13 @@ body {
   --light: #e5e1e0;
 }
 
-@font-face {
-  font-family: Inter;
-  src: url(Inter.ttf);
-  font-display: swap;
-}
-
 body {
   background-color: var(--light);
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1200px;
   font-size: 18px;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--dark);
 }
 

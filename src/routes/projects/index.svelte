@@ -43,8 +43,8 @@
 
 <svelte:head>
   <title>Christian's Project Archive</title>
-  <link rel="canonical" href={`https://archive.christianbroms.com`} />
-  <meta property="og:url" content={`https://archive.christianbroms.com`} />
+  <link rel="canonical" href={`https://christianbroms.com/projects/`} />
+  <meta property="og:url" content={`https://christianbroms.com/projects/`} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Christian's Project Archive" />
   <meta name="Description" content={description} />
