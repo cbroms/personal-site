@@ -23,41 +23,25 @@
   <div class="big">
     <p>
       I'm
-      <a
-        href="https://archive.christianbroms.com/project/pith"
-        target="_blank"
-        rel="noopener">currently working</a
-      >
+      <a href="/projects/pith/">currently working</a>
       on the
       <a href="https://pith.is/" target="_blank" rel="noopener">Pith</a>
       conversation space, an experimental system for branching online discussions.
     </p>
     <p>
-      Last year I designed and implemented <a
-        href="https://archive.christianbroms.com/project/webet"
-        target="_blank"
-        rel="noopener">WebET</a
-      >, an end-to-end eye tracking system for distributed website usability
+      Last year I designed and implemented <a href="/projects/webet/">WebET</a>,
+      an end-to-end eye tracking system for distributed website usability
       testing while I was an Undergraduate Research Fellow at Carnegie Mellon.
     </p>
 
     <p>
       A few other projects I've finished up recently include <a
-        href="https://archive.christianbroms.com/project/wikiviz"
-        target="_blank"
-        rel="noopener">Wikiviz</a
+        href="/projects/wikiviz/">Wikiviz</a
       >, a hyperlink-based viewer for Wikipedia pages, and
-      <a
-        href="https://archive.christianbroms.com/project/stratus"
-        target="_blank"
-        rel="noopener">Stratus</a
-      >, an augmented reality app for weather visualization. You can find all
-      the projects I've worked on and contributed to on
-      <a
-        href="https://archive.christianbroms.com/"
-        target="_blank"
-        rel="noopener">my project archive</a
-      >.
+      <a href="/projects/stratus/">Stratus</a>, an augmented reality app for
+      weather visualization. You can find all the projects I've worked on and
+      contributed to on
+      <a href="/projects/">my project archive</a>.
     </p>
 
     <p>
