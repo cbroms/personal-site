@@ -1,5 +1,7 @@
 <script>
   import Header from "../components/Header.svelte";
+  import ProjectPreview from "../components/ProjectPreview.svelte";
+
   const description =
     "I design and build digital spaces that aim to be understandable, well-structured, and resonant. I'm particularly interested in spaces for discussing, reading, reflecting, searching, exploring, and analyzing. Visit some of my past projects and other links";
 </script>
@@ -31,24 +33,44 @@
     <p>
       Last year I designed and implemented <a href="/projects/webet/">WebET</a>,
       an end-to-end eye tracking system for distributed website usability
-      testing while I was an Undergraduate Research Fellow at Carnegie Mellon.
+      testing while I was a Porges Research Fellow at Carnegie Mellon's
+      Human-Computer Interaction Institute.
     </p>
+
+    <ProjectPreview
+      image="/static/images/webet/et-flow-trace-mid.jpg"
+      title="WebET"
+      subtitle="An end-to-end system for facilitating website usability testing using a novel approach to eye tracking for the web."
+      link="/projects/webet/"
+    />
 
     <p>
       A few other projects I've finished up recently include <a
         href="/projects/wikiviz/">Wikiviz</a
       >, a hyperlink-based viewer for Wikipedia pages, and
       <a href="/projects/stratus/">Stratus</a>, an augmented reality app for
-      weather visualization. You can find all the projects I've worked on and
-      contributed to on
-      <a href="/projects/">my project archive</a>.
+      weather visualization.
     </p>
+
+    <ProjectPreview
+      image="/static/images/stratus/wire2-mid.jpg"
+      title="Stratus"
+      subtitle="An augmented reality app that visualizes the latest METAR weather report from any airport in the United States."
+      link="/projects/stratus/"
+    />
 
     <p>
       I'm studying Cognitive Science, Art, and Human-Computer Interaction at
       Carnegie Mellon University in Pittsburgh, Pennsylvania. I'll be graduating
       in 2021.
     </p>
+
+    <ProjectPreview
+      image="/static/images/ux-19-20/chatbot.png"
+      title="Four UX Projects"
+      subtitle="A selection of four UX projects from my HCI coursework, fall '19 through spring '20."
+      link="/projects/ux-19-20/"
+    />
     <p>
       Some activities I enjoy include
       <a

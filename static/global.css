@@ -1,6 +1,6 @@
 body {
   --dark: #282726;
-  --light: #e5e1e0;
+  --light: #ebebeb;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   font-size: 18px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--dark);
 }
 
