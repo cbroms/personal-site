@@ -53,7 +53,7 @@
     </p>
 
     <ProjectPreview
-      image="/static/images/stratus/wire2-mid.jpg"
+      image="/static/images/stratus/interact-mid.jpg"
       title="Stratus"
       subtitle="An augmented reality app that visualizes the latest METAR weather report from any airport in the United States."
       link="/projects/stratus/"
@@ -66,7 +66,7 @@
     </p>
 
     <ProjectPreview
-      image="/static/images/ux-19-20/chatbot.png"
+      image="/static/images/ux-19-20/chatbot-mid.jpg"
       title="Four UX Projects"
       subtitle="A selection of four UX projects from my HCI coursework, fall '19 through spring '20."
       link="/projects/ux-19-20/"

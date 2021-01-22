@@ -22,7 +22,7 @@
     width: 20px;
     margin-left: 15px;
     border-radius: 50%;
-    background-color: var(--dark);
+    background-color: rgb(76, 112, 190);
     display: inline-block;
   }
 

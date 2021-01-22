@@ -21,10 +21,12 @@
     box-sizing: border-box;
   }
   img {
+    object-fit: cover;
     width: 100%;
     max-width: 300px;
     border: 2px solid var(--dark);
     margin: 0;
+    height: 170px;
   }
   .project-preview {
     width: 100%;
@@ -48,6 +50,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 170px;
   }
 
   .preview-text {
@@ -56,22 +59,31 @@
     font-size: 1rem;
     line-height: 1rem;
     max-width: 340px;
+    width: 100%;
     padding: 0 20px;
   }
 
   @media (max-width: 720px) {
     .preview-text {
-      padding-left: 0;
-      max-width: 300px;
+      max-width: 340px;
     }
 
     a {
       justify-content: center;
+      height: 340px;
     }
 
     a:hover > .preview-text {
       border: 2px solid transparent;
       border-left: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    img,
+    .preview-text {
+      padding-left: 0;
+      max-width: 100%;
     }
   }
 </style>
