@@ -13,7 +13,7 @@ How can we gain deeper insight into how people use the websites we design? There
 
 ![ ](/static/images/webet/methods-comparison.png "An informal comparison of analytics and interviews. Individual instances of each method will vary in each of the four categories, but generally there's a price+time/explanatory power trade-off.")
 
-**One method that has _potential_ to have some of the best qualities of existing methods is eye tracking.** Traditionally, eye tracking studies involve an eye tracker: a piece of hardware that determines where someone's eyes are in space to estimate where they're looking on a surface. What's unique about eye tracking is that it's quantitative _and_ descriptive; it can be used to make inferences about someone's intention and goals.
+**One method that has _potential_ to have some of the best qualities of existing methods is eye tracking.** Traditionally, eye tracking studies involve an eye tracker: a $1,000-$10,000 piece of hardware that determines where someone's eyes are in space to estimate where they're looking on a surface. What's unique about eye tracking is that it's quantitative _and_ descriptive; it can be used to make inferences about someone's intention and goals.
 
 However, the method has a number of drawbacks:
 
@@ -23,11 +23,11 @@ However, the method has a number of drawbacks:
 
 ![ ](/static/images/webet/methods-comparison-et.png "A comparison of the existing and preferred future states of eye tracking. How might we address eye tracking's weaknesses: cost, time, and physicality?")
 
-In the ideal case, we would remove the physical eye tracker from the equation entirely by simply using a webcam and eye tracking software, therefore reducing the expensive and physical qualities. This is a technical problem I planned to solve by using existing software. However, the question that still remained was how to simplify the process, which first meant understanding how eye tracking fits into the usability evaluation process in the first place.
+In the ideal case, we would remove the physical eye tracker from the equation entirely by simply using a webcam and eye tracking software, therefore reducing the expensive and physical qualities. This is a technical problem I planned to solve later. However, the question that still remained was how to simplify the process, which first meant understanding how eye tracking fits into the usability evaluation process in the first place.
 
 # Exploring how eye tracking has been used for UX research
 
-Before designing the system, I began by reseraching how eye tracking has been used for evaluating interfaces. There are very few case studies that utilize eye tracking methodology, and those that do exist involve evaluating already highly polished interfaces.
+Before designing the system, I began by researching how eye tracking has been used for evaluating interfaces. There are very few case studies that utilize eye tracking methodology, and those that do exist involve evaluating already highly polished interfaces. I sifted through about 50 reports, case studies, and other resources that utilized eye tracking to answer a usability question. 
 
 ![ ](/static/images/webet/et-background.png "A section of a collection of resources I compiled surrounding the use of eye tracking in UX evaluation")
 
@@ -51,7 +51,7 @@ In the same way that a designer might create a user flow diagram to show the typ
 
 For example, in one case, how could we use eye tracking to find out why this panel isn't being clicked on?
 
-![ ](/static/images/webet/et-flow-question.png "Dividing a page into AOIs and generating a reserach question from web analytics.")
+![ ](/static/images/webet/et-flow-question.png "Dividing a page into AOIs and generating a research question from web analytics.")
 
 Using the AOIs provided by researchers, we can prompt people to find something to read from the page and examine which elements they looked at. A _trace_ provides insight into their process and tells a story a bit like the fixation maps do.
 
@@ -67,20 +67,24 @@ This provides yet another insight: the content of the element is compelling enou
 
 The next step was to take these flows and create a system that would allow for a researcher or designer to quickly answer a usability question about an interface using eye tracking.
 
-# Designing a simple system
+# Designing a system as simply as possible
 
 Given the research flow outlined above, the next task was to create the basic parts of a system that would facilitate it. **Since I was working on a short timeframe, I would have to quickly design and develop a basic working prototype of the system in four weeks.**
 
-It was clear that the system could be broken up into two distinct sub-systems:
+It was clear that the system could be broken up into two distinct sub-systems, tied together with a common backend:
 
-1. A website that researchers could use to create new _studies_ (eye tracking sessions with users) for a prototype of an interface and easily view the resulting data in the form of visualizations.
-2. A website that a participant of a study could visit to facilitate the eye tracking process itself.
+1. A website that researchers could use to create new _studies_ (eye tracking sessions with users) for a prototype of an interface and easily view the resulting data in the form of visualizations (left box in the diagram below).
+2. A website that a participant of a study could visit to facilitate the eye tracking process itself (lower box in the diagram below).
+
+![ ](/static/images/webet/overview.png)
 
 I had two websites to design, each meant to be used by different stakeholder groups. For the sake of keeping the project on track, I allocated one week to design and build each website, one extra week to build the backend infrastructure to support tying together both, and one week to build the eye tracking software itself.
 
+**As a result, the work below is a bit rough; this project was about quickly iterating and getting a working system up. The websites' designs are extremely simple and I focused only on maintaining a clear information architecture and hierarchy.**
+
 ## The eye tracking software, briefly
 
-I don't have a lot of machine learning expertise, but I have been able to hack together [some ML projects](https://archive.christianbroms.com/project/flygenius-v2/) in the past. I built the eye tracker as a simple image classifier with tensorflow. There's a training phase where the AOIs defined by researchers are used to create a path for a fixation point, which users look at and images of their eyes are captured. These images are fed into the image classifier with the corresponding AOI labels, which trains on this data. The model is then used to infer AOIs using unlabeled images captured during the study. I was able to get this method to 86-94% accuracy, depending on the specific test conditions.
+I don't have a lot of machine learning expertise, but I have been able to hack together [some ML projects](https://christianbroms.com/projects/flygenius-v2/) in the past. I built the eye tracker as a simple image classifier with tensorflow. There's a training phase where the AOIs defined by researchers are used to create a path for a fixation point, which users look at and images of their eyes are captured. These images are fed into the image classifier with the corresponding AOI labels, which trains on this data. The model is then used to infer AOIs using unlabeled images captured during the study. I was able to get this method to 86-94% accuracy, depending on the specific test conditions.
 
 ## The participant website
 
@@ -94,6 +98,8 @@ The entire website was broken down into just four steps:
 4. Instructions for study and start study
 5. Confirm completion
 
+The copy for each of the instructional and informational steps including the consent to the study can be customized from the researcher side of the system. 
+
 ## The researcher website
 
 I introduced two main ideas to frame a user's mental model of the system:
@@ -101,17 +107,26 @@ I introduced two main ideas to frame a user's mental model of the system:
 1. _Studies_. Each research question is answered with a _study_, a collection of users that are all shown the same interface and given the same task.
 2. _Sessions_. Each study is composed of _sessions_, which are when a user joins and completes the eye tracking task. Session results can be aggregated in visualizations such as heatmaps.
 
-Then it was just a matter determining how each are created, modified, and destroyed. Studies are created by researchers from a prototype, sessions are created as users join the study, and that's about it. This results in a page to create a study, and a page to view a study's results.
+Then it was just a matter determining how each are created, modified, and destroyed. Studies are created by researchers from a prototype, sessions are created as users join the study. This results in a page to create a study, and a series of pages to view a study's results with increasing resolution.
 
-I created some quick wireframes, then implemented them with React. After a bit of work on the backend, I had a working prototype of the system.
+![ ](/static/images/webet/researcher.png)
 
-![ ](/static/images/webet/et-create-study.gif "Creating a study and selecting AOIs through the prototype interface")
+Each study has a page with all completed sessions and some information about each: 
 
-The system automatically generates heatmaps and traces using aggregate and individual session data.
+![ ](/static/images/webet/sessions.png)
+
+The system automatically generates heatmaps and traces using aggregate and individual session data. Each session has its own heatmap and trace:
 
 ![ ](/static/images/webet/et-heatmap.png)
 
 ![ ](/static/images/webet/et-trace.gif)
+
+Finally, I implemented the flow to create a new study:
+
+![ ](/static/images/webet/et-create-study.gif "Creating a study and selecting AOIs through the prototype interface")
+
+
+
 
 <!-- ## Dematerializing eye tracking
 
