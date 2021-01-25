@@ -7,7 +7,7 @@ featured: true
 excerpt: An augmented reality app that visualizes the latest METAR weather report from any airport in the United States.
 ---
 
-# The problem: it's difficult to visualize the conditions a stream of data describes
+# The problem: it's difficult to visualize what a stream of data is describing
 
 One of the major challenges faced when trying to analyze a realtime and continuous stream of data is how to structure and visualize it in a way that results in near-instantaneous understanding. There are methods of data visualization that can display particular aspects of a dataset, such as a chart or graph. The problem is that they are limited in terms of _what kind of data can be visualized_, as well as _the speed someone is able to understand_ the data being represented.
 

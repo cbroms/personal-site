@@ -67,7 +67,7 @@ This provides yet another insight: the content of the element is compelling enou
 
 The next step was to take these flows and create a system that would allow for a researcher or designer to quickly answer a usability question about an interface using eye tracking.
 
-# Designing a system as simply as possible
+# Designing a simple user flow for researchers and participants
 
 Given the research flow outlined above, the next task was to create the basic parts of a system that would facilitate it. **Since I was working on a short timeframe, I would have to quickly design and develop a basic working prototype of the system in four weeks.**
 
@@ -86,20 +86,6 @@ I had two websites to design, each meant to be used by different stakeholder gro
 
 I don't have a lot of machine learning expertise, but I have been able to hack together [some ML projects](https://christianbroms.com/projects/flygenius-v2/) in the past. I built the eye tracker as a simple image classifier with tensorflow. There's a training phase where the AOIs defined by researchers are used to create a path for a fixation point, which users look at and images of their eyes are captured. These images are fed into the image classifier with the corresponding AOI labels, which trains on this data. The model is then used to infer AOIs using unlabeled images captured during the study. I was able to get this method to 86-94% accuracy, depending on the specific test conditions.
 
-## The participant website
-
-The website I designed for the participants was primarily built around the constraints imposed by the eye tracking software. There had to be a calibration phase and a study phase, and the remainder was a matter of guiding the participant through the process. In particular, the study would require the use of their webcam, so before requesting access (which results in a browser pop-up) it would be important to make clear the nature of the study and _why_ we needed to use their camera.
-
-The entire website was broken down into just four steps:
-
-1. Welcome/introduction, explain needed permissions
-2. Show preview of collected info (around eyes), agree to terms of study
-3. Instructions for calibration and start calibration
-4. Instructions for study and start study
-5. Confirm completion
-
-The copy for each of the instructional and informational steps including the consent to the study can be customized from the researcher side of the system. 
-
 ## The researcher website
 
 I introduced two main ideas to frame a user's mental model of the system:
@@ -111,7 +97,7 @@ Then it was just a matter determining how each are created, modified, and destro
 
 ![ ](/static/images/webet/researcher.png)
 
-Each study has a page with all completed sessions and some information about each: 
+Each study has a page with all completed sessions and some information about each. Here the challenge was to establish a clear information hierarchy; I ended up moving information people looked for most on each session's page to the session preview on the study page.  
 
 ![ ](/static/images/webet/sessions.png)
 
@@ -125,8 +111,27 @@ Finally, I implemented the flow to create a new study:
 
 ![ ](/static/images/webet/et-create-study.gif "Creating a study and selecting AOIs through the prototype interface")
 
+## The participant website
 
+The website I designed for the participants was primarily built around the constraints imposed by the eye tracking software. There had to be a calibration phase and a study phase, and the remainder was a matter of guiding the participant through the process. In particular, the study would require the use of their webcam, so before requesting access (which results in a browser pop-up) it would be important to make clear the nature of the study and _why_ we needed to use their camera.
 
+After some testing, I found this flow was the clearest to people in terms of presenting information and instructions in an understandable order:
+
+1. Welcome/introduction, explain needed permissions
+2. Show preview of collected info (around eyes), agree to terms of study
+3. Instructions for calibration and start calibration
+4. Instructions for study and start study
+5. Confirm completion
+
+The copy for each of the instructional and informational steps including the consent to the study can be customized from the researcher side of the system. 
+
+# Takeaways 
+
+This project was a fantastic experience in designing very quickly, implementing, deploying, testing, and iterating, all on a one week cycle. The flow I was working with was inherently complicated due to the requirements around calibrating, giving instructions, ensuring privacy is maintained, and so on. The key was to find a way to simplify this for the people that would use the system, which meant trying out options and iterating as quickly as possible. Often the problems had simple solutions: for example people often forgot the study instructions when they were placed before the calibration phase, a problem easily fixed by switching the order of two screens during the study. By repeating this process across both websites, I ended up with user flows and information hierarchies that managed to create a simple interface for a very complex process. 
+
+# Acknowledgements 
+
+_This project was advised by Professor John Zimmerman and is the result of an Undergraduate Summer Research Fellowship awarded by Carnegie Mellon University, funded by the Porges Family Fund for Undergraduate Research._
 
 <!-- ## Dematerializing eye tracking
 
@@ -149,8 +154,6 @@ Despite providing a potentially compelling source of user feedback, eye tracking
 I worked on developing this project in summer 2020. More details and the full case study are upcoming.
 
 ![ ](/uploads/webet-heatmap.png "A mockup of the heatmap visualization")  -->
-
-_This project was advised by Professor John Zimmerman and is the result of an Undergraduate Summer Research Fellowship awarded by Carnegie Mellon University, funded by the Porges Family Fund for Undergraduate Research._
 
 <!-- ![](/static/images/webet/viz-draft.png)
 

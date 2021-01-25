@@ -33,9 +33,10 @@
         <p>
             Last year I designed and implemented <a href="/projects/webet/"
                 >WebET</a
-            >, an end-to-end eye tracking system for distributed website
-            usability testing while I was a Porges Research Fellow at Carnegie
-            Mellon's Human-Computer Interaction Institute.
+            >, an eye tracking system designed to provide a cheap, fast, and
+            quantitative solution to distributed website usability testing while
+            I was a Porges Research Fellow at Carnegie Mellon's Human-Computer
+            Interaction Institute.
         </p>
 
         <ProjectPreview
@@ -46,11 +47,10 @@
         />
 
         <p>
-            A few other projects I've finished up recently include <a
-                href="/projects/wikiviz/">Wikiviz</a
-            >, a hyperlink-based viewer for Wikipedia pages, and
-            <a href="/projects/stratus/">Stratus</a>, an augmented reality app
-            for weather visualization.
+            Before that, I worked on the design of <a href="/projects/stratus/"
+                >Stratus</a
+            >, a mobile app that visualizes realtime weather reports in
+            augmented reality.
         </p>
 
         <ProjectPreview
@@ -72,8 +72,22 @@
             subtitle="A selection of four UX projects from my HCI coursework, fall '19 through spring '20."
             link="/projects/ux-19-20/"
         />
+
         <p>
-            Some activities I enjoy include
+            I build and deploy quite a few websites in my spare time. One I
+            finished recently is WikiViz, an unusual interface for browsing
+            Wikipedia pages.
+        </p>
+
+        <ProjectPreview
+            image="/static/images/wikiviz/many-links-mid.jpg"
+            title="WikiViz: Parallel Browsing"
+            subtitle="A quick interactive prototype of an old and still unrealized way to traverse the internet built using the Wikipedia API and React."
+            link="/projects/wikiviz/"
+        />
+
+        <p>
+            Some other activities I enjoy include
             <a
                 href="https://futureland.tv/christian/gaze-interface"
                 target="_blank"

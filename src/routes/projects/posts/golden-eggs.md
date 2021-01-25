@@ -1,7 +1,8 @@
 ---
-title: "Golden Eggs"
+title: "PGH Public Art Engagement"
 date: 2019-11-15
 category: "Research"
+featured: true
 image: "/static/images/golden-eggs/eggs.jpg"
 excerpt: A research project that revealed opportunities from people's experience of public art in Pittsburgh and culminated in the evaluation of a prototype of a new system.
 ---
