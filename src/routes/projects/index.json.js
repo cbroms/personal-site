@@ -17,7 +17,7 @@ const contents = JSON.stringify(
       slug: post.slug,
      // smallImage: smallImage,
       category: post.category,
-      shortDate: post.shortDate,
+    //   shortDate: post.shortDate,
       printDate: post.printDate,
       featured: post.featured,
       excerpt: post.excerpt,

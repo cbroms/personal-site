@@ -24,7 +24,10 @@
 <script>
   import Header from "../../components/Header.svelte";
   // import ViewPicker from "../../components/ViewPicker.svelte";
-  import GridListItem from "../../components/GridListItem.svelte";
+  //   import GridListItem from "../../components/GridListItem.svelte";
+  import GridSquareItem from "../../components/GridSquareItem.svelte";
+  import ProjectPreview from "../../components/ProjectPreview.svelte";
+
   import GridListYearBreak from "../../components/GridListYearBreak.svelte";
 
   export let posts;
@@ -66,9 +69,34 @@
 
   <h2 class="project-section-header">Featured projects</h2>
   <div class="content">
-    {#each featured as post}
-      <GridListItem {post} {view} />
-    {/each}
+    <ProjectPreview
+      image="/static/images/webet/webet-heatmaps-combined-mid.jpg"
+      title="WebET"
+      subtitle="End-to-end system for facilitating website usability testing using a novel approach to eye tracking for the web."
+      link="/projects/webet"
+      smallMargin
+    />
+    <ProjectPreview
+      image="/static/images/stratus/interact-mid.jpg"
+      title="Stratus"
+      subtitle="Augmented reality app that visualizes the latest METAR weather report from any airport in the United States."
+      link="/projects/stratus"
+      smallMargin
+    />
+    <ProjectPreview
+      image="/static/images/golden-eggs/notes-mid.jpg"
+      title="PGH Public Art Engagement"
+      subtitle="UX research revealing opportunities from people's experience of public art in Pittsburgh and prototyping a new system."
+      link="/projects/golden-eggs"
+      smallMargin
+    />
+    <ProjectPreview
+      image="/static/images/wikiviz/many-links-mid.jpg"
+      title="WikiViz: Parallel Browsing"
+      subtitle="Interactive prototype of an old and still unrealized way to traverse the internet built using the Wikipedia API and React."
+      link="/projects/wikiviz"
+      smallMargin
+    />
   </div>
 
   <h2 class="project-section-header">All projects</h2>
@@ -80,7 +108,8 @@
           {view}
         />
       {/if}
-      <GridListItem {post} {view} />
+      <!-- <GridListItem {post} {view} /> -->
+      <GridSquareItem {post} />
       {#if nextYearBreakLookup[i]}
         <GridListYearBreak year={nextYearBreakLookup[i]} {view} />
       {/if}
@@ -95,9 +124,11 @@
   .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
     align-items: flex-start;
-    max-width: 940px;
+    /* max-width: 940px; */
+    max-width: 640px;
   }
 
   .title {

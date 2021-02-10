@@ -4,7 +4,7 @@ date: 2019-11-15
 category: "Research"
 featured: true
 image: "/static/images/golden-eggs/eggs.jpg"
-excerpt: A research project that revealed opportunities from people's experience of public art in Pittsburgh and culminated in the evaluation of a prototype of a new system.
+excerpt: UX research revealing opportunities from people's experience of public art in Pittsburgh and prototyping a new system.
 ---
 
 # Summary
@@ -43,9 +43,9 @@ We visited a number of public art pieces around Pittsburgh and approached people
 
 We gathered a few main insights from this phase of research:
 
--   Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
--   People have questions about public art that would be well-suited for the artist to answer.
--   Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
+- Both locals and visitors to Pittsburgh generally have a favorable view of public art and believe it improves the city and their experience.
+- People have questions about public art that would be well-suited for the artist to answer.
+- Locals are often very familiar with the public art, and often use it as a landmark for wayfinding or meeting up with others.
 
 ### Think-aloud protocol: people don't have access to quality information about public art
 
@@ -69,10 +69,10 @@ The next phase of our project was to rapidly generate multiple possible directio
 
 To begin, we each quickly sketched eight ideas in eight minutes, ranging from safe to really out-there. We eventually settled on five directions to explore. There were five key needs that the ideas addressed:
 
--   Need for draw-in/on-site engagement at the art
--   Need to contribute to public knowledge of art
--   Need for communication with the artist
--   Need for curated information about the art
+- Need for draw-in/on-site engagement at the art
+- Need to contribute to public knowledge of art
+- Need for communication with the artist
+- Need for curated information about the art
 
 Next, we created storyboards for each of these needs. The goal of each was to determine if the _need_ exists, rather than if a particular technological solution is correct. We conducted speed-dating sessions with Pittsburgh locals, presenting each of the them with a storyboard one at a time and asking questions pertaining to the particular situation to establish if the scenario was realistic.
 
