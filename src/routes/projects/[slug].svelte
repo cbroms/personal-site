@@ -52,13 +52,13 @@
 
 <style>
   .container {
-    padding-top: 30px;
+    padding-top: 10px;
     max-width: 640px;
   }
   .title {
     font-size: 3.5rem;
   }
   .excerpt {
-    padding-bottom: 10px;
+    font-size: 1.25rem;
   }
 </style>

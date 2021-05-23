@@ -59,7 +59,7 @@
 
 <main>
   <h1 class="title">My Project Archive</h1>
-  <p>
+  <p class="big">
     This is a repository of nearly all the projects I've worked on over the past
     few years, both small and large. It's a mix of websites, games, experiments,
     writing, and other assorted articles.
@@ -81,13 +81,6 @@
       title="Stratus"
       subtitle="Augmented reality app that visualizes the latest METAR weather report from any airport in the United States."
       link="/projects/stratus"
-      smallMargin
-    />
-    <ProjectPreview
-      image="/static/images/golden-eggs/notes-mid.jpg"
-      title="PGH Public Art Engagement"
-      subtitle="UX research revealing opportunities from people's experience of public art in Pittsburgh and prototyping a new system."
-      link="/projects/golden-eggs"
       smallMargin
     />
     <ProjectPreview

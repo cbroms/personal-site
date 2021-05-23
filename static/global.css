@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/static/inter.ttf") format("truetype");
+}
+
 body {
   --dark: #282726;
   --light: #ebebeb;
@@ -58,4 +63,9 @@ a:visited {
 code {
   background-color: #e0e0e0;
   padding: 0 5px;
+}
+
+.big {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }

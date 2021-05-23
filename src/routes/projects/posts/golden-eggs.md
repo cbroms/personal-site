@@ -2,7 +2,7 @@
 title: "PGH Public Art Engagement"
 date: 2019-11-15
 category: "Research"
-featured: true
+featured: false
 image: "/static/images/golden-eggs/eggs.jpg"
 excerpt: UX research revealing opportunities from people's experience of public art in Pittsburgh and prototyping a new system.
 ---

@@ -3,7 +3,7 @@
   import ProjectPreview from "../components/ProjectPreview.svelte";
 
   const description =
-    "I design and build digital spaces that aim to be understandable, well-structured, and resonant. I'm particularly interested in spaces for discussing, reading, reflecting, searching, exploring, and analyzing. Visit some of my past projects and other links";
+    "I design and build digital spaces. This year I'm building twelve small websites, one per month. I co-designed and built Pith, an experimental branching discussion space.";
 </script>
 
 <svelte:head>
@@ -23,110 +23,66 @@
   <h1>I design and build digital spaces.</h1>
 
   <div class="big">
+    <h4 class="section-header">Previously &mdash;</h4>
     <p>
-      I'm
-      <a href="/projects/pith/">currently working</a>
-      on the
-      <a href="https://pith.is/" target="_blank" rel="noopener">Pith</a>
-      conversation space, an experimental system for branching online discussions.
-    </p>
-    <p>
-      Last year I designed and implemented <a href="/projects/webet/">WebET</a>,
-      an eye tracking system designed to provide a cheap, fast, and quantitative
-      solution to distributed website usability testing while I was a Porges
-      Research Fellow at Carnegie Mellon's Human-Computer Interaction Institute.
+      I co-designed and built <a href="https://pith.is" target="_blank">Pith</a
+      >, an experimental branching discussion space.
     </p>
 
-    <ProjectPreview
-      image="/static/images/webet/webet-heatmaps-combined-mid.jpg"
-      title="WebET"
-      subtitle="End-to-end system for facilitating website usability testing using a novel approach to eye tracking for the web."
-      link="/projects/webet/"
-    />
-
     <p>
-      Before that, I worked on the design of <a href="/projects/stratus/"
-        >Stratus</a
-      >, a mobile app that visualizes realtime weather reports in augmented
-      reality.
+      This May I graduated from Carnegie Mellon University with a degree in
+      Cognitive Science and Art and an additional major in Human-Computer
+      Interaction.
     </p>
-
-    <ProjectPreview
-      image="/static/images/stratus/interact-mid.jpg"
-      title="Stratus"
-      subtitle="Augmented reality app that visualizes the latest METAR weather report from any airport in the United States."
-      link="/projects/stratus/"
-    />
-
     <p>
-      I'm studying Cognitive Science, Art, and Human-Computer Interaction at
-      Carnegie Mellon University in Pittsburgh, Pennsylvania. I'll be graduating
-      in 2021.
+      Last year I designed and implemented <a
+        href="/projects/webet"
+        target="_blank">WebET</a
+      >, an eye tracking system designed to provide a cheap, fast, and
+      quantitative solution to distributed website usability testing. I worked
+      on the project as a Porges Research Fellow at CMU.
     </p>
-
-    <ProjectPreview
-      image="/static/images/ux-19-20/chatbot-mid.jpg"
-      title="Four UX Projects"
-      subtitle="Selection of four UX projects from my HCI coursework, fall '19 through spring '20."
-      link="/projects/ux-19-20/"
-    />
-
+    <h4 class="section-header">Now &mdash;</h4>
     <p>
-      I build and deploy quite a few websites in my spare time. One I finished
-      recently is WikiViz, an unusual interface for browsing Wikipedia pages.
+      This year I'm building <a
+        href="https://twelvewebsites.com"
+        target="_blank">twelve small websites</a
+      >, one per month.
     </p>
-
-    <ProjectPreview
-      image="/static/images/wikiviz/many-links-mid.jpg"
-      title="WikiViz: Parallel Browsing"
-      subtitle="Interactive prototype of an old and still unrealized way to traverse the internet built using the Wikipedia API and React."
-      link="/projects/wikiviz/"
-    />
-
     <p>
-      Some other activities I enjoy include
-      <a
-        href="https://futureland.tv/christian/gaze-interface"
-        target="_blank"
-        rel="noopener">creating</a
+      I'll be joining <a href="https://www.10xgenomics.com/" target="_blank"
+        >10x Genomics</a
       >
-      interfaces that can be controlled with your eyes,
-      <a
-        href="https://futureland.tv/christian/hyperfov"
-        target="_blank"
-        rel="noopener">exploring</a
-      >
-      how the internet is explored, and
-      <a
-        href="https://futureland.tv/christian/breadmaking"
-        target="_blank"
-        rel="noopener">making</a
-      >
-      bread. This year I've also set a goal of building twelve (minimal) websites,
-      one per month. You can
-      <a
-        href="https://futureland.tv/christian/twelve-websites"
-        target="_blank"
-        rel="noopener">follow my progress</a
-      >.
+      as a product designer this July.
     </p>
+    <h4 class="section-header">Contact &mdash;</h4>
+
     <p>
       I can be reached at
       <a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a>.
+    </p>
+    <p>
+      You can find my day-to-day process on <a
+        href="https://futureland.tv/christian/"
+        target="_blank">Futureland</a
+      >, a space I'm helping build.
     </p>
   </div>
 </main>
 
 <style>
-  .big {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
   h1 {
     font-size: 3.5rem;
   }
 
   .content {
     margin: 0 auto;
+  }
+
+  .section-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 2.5rem;
   }
 </style>
