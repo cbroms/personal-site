@@ -1,5 +1,4 @@
 <script>
-
   const description =
     "I design and build digital spaces. This year I'm building twelve small websites, one per month. I co-designed and built Pith, an experimental branching discussion space.";
 </script>
@@ -20,18 +19,31 @@
     <div>Christian Broms</div>
     <div><em>I design and build websites.</em></div>
     <div class="indented">
-      <div>I'm a product designer at <a href="https://10xgenomics.com">10x Genomics</a></div>
-      <div>I like making little websites. A few you might check out are <a href="https://pith.is">pith</a>, <a href="https://classicinterfaces.com">classicinterfaces</a>, <a href="https://twelvewebsites.com">twelvewebsites</a>, and <a href="https://simplest.page">simplest.page</a>.</div>
-      <div>I recently graduated from <a href="https://cmu.edu">Carnegie Mellon University</a> having studied Cognitive Science, Art, and Human-Computer Interaction.</div>
-      <div><a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a></div>
-
+      <div>
+        I'm a product designer at <a href="https://10xgenomics.com"
+          >10x Genomics</a
+        >
+      </div>
+      <div>
+        I like making little websites. A few you might check out are <a
+          href="https://pith.is">pith</a
+        >, <a href="https://classicinterfaces.com">classicinterfaces</a>,
+        <a href="https://twelvewebsites.com">twelvewebsites</a>, and
+        <a href="https://simplest.page">simplest.page</a>.
+      </div>
+      <div>
+        I recently graduated from <a href="https://cmu.edu"
+          >Carnegie Mellon University</a
+        > having studied Cognitive Science, Art, and Human-Computer Interaction.
+      </div>
+      <div>
+        <a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a>
+      </div>
     </div>
   </div>
-
 </main>
 
 <style>
-
   :global(body) {
     margin: 0;
   }
@@ -40,14 +52,13 @@
     min-height: 100vh;
     min-width: 100vw;
     color: white;
-    background-color: #2D1A14;
+    background-color: #2d1a14;
     font-family: Times, serif;
     font-size: 18px;
   }
 
   .content {
-    padding: 50vh 20vw 80px 20vw;
-
+    padding: 32vh 20vw 40px 20vw;
   }
 
   .indented {
@@ -56,7 +67,7 @@
     padding-top: 50px;
   }
 
-   div {
+  div {
     padding: 12px 0;
   }
 
@@ -67,6 +78,4 @@
   a:visited {
     color: white;
   }
-
-
 </style>
