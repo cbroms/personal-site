@@ -1,6 +1,9 @@
-<div class="layout">
-  <slot />
+<svelte:head>
+  <link rel="stylesheet" href="global.css" />
+</svelte:head>
 
+<div class="layout">
+    <slot />
   <footer>
     <span class="footer-thing">
       &copy; 2016-{new Date().getFullYear()} Christian Broms
@@ -17,6 +20,8 @@
 </div>
 
 <style>
+
+  
   .footer-thing {
     padding-right: 10px;
     padding-top: 10px;

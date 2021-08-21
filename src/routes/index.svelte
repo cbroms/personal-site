@@ -1,6 +1,4 @@
 <script>
-  import Header from "../components/Header.svelte";
-  import ProjectPreview from "../components/ProjectPreview.svelte";
 
   const description =
     "I design and build digital spaces. This year I'm building twelve small websites, one per month. I co-designed and built Pith, an experimental branching discussion space.";
@@ -17,72 +15,58 @@
   <meta property="og:image" content="cb.png" />
 </svelte:head>
 
-<main class="content">
-  <Header page="index" />
+<main>
+  <div class="content">
+    <div>Christian Broms</div>
+    <div><em>I design and build websites.</em></div>
+    <div class="indented">
+      <div>I'm a product designer at <a href="https://10xgenomics.com">10x Genomics</a></div>
+      <div>I like making little websites. A few you might check out are <a href="https://pith.is">pith</a>, <a href="https://classicinterfaces.com">classicinterfaces</a>, <a href="https://twelvewebsites.com">twelvewebsites</a>, and <a href="https://simplest.page">simplest.page</a>.</div>
+      <div>I recently graduated from <a href="https://cmu.edu">Carnegie Mellon University</a> having studied Cognitive Science, Art, and Human-Computer Interaction.</div>
+      <div><a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a></div>
 
-  <h1>I design and build digital spaces.</h1>
-
-  <div class="big">
-    <h4 class="section-header">Previously &mdash;</h4>
-    <p>
-      I co-designed and built <a href="https://pith.is" target="_blank">Pith</a
-      >, an experimental branching discussion space.
-    </p>
-
-    <p>
-      This May I graduated from Carnegie Mellon University with a degree in
-      Cognitive Science and Art and an additional major in Human-Computer
-      Interaction.
-    </p>
-    <p>
-      Last year I designed and implemented <a
-        href="/projects/webet"
-        target="_blank">WebET</a
-      >, an eye tracking system designed to provide a cheap, fast, and
-      quantitative solution to distributed website usability testing. I worked
-      on the project as a Porges Research Fellow at CMU.
-    </p>
-    <h4 class="section-header">Now &mdash;</h4>
-    <p>
-      This year I'm building <a
-        href="https://twelvewebsites.com"
-        target="_blank">twelve small websites</a
-      >, one per month.
-    </p>
-    <p>
-      I'll be joining <a href="https://www.10xgenomics.com/" target="_blank"
-        >10x Genomics</a
-      >
-      as a product designer this July.
-    </p>
-    <h4 class="section-header">Contact &mdash;</h4>
-
-    <p>
-      I can be reached at
-      <a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a>.
-    </p>
-    <p>
-      You can find my day-to-day process on <a
-        href="https://futureland.tv/christian/"
-        target="_blank">Futureland</a
-      >, a space I'm helping build.
-    </p>
+    </div>
   </div>
+
 </main>
 
 <style>
-  h1 {
-    font-size: 3.5rem;
+
+  :global(body) {
+    margin: 0;
+  }
+
+  main {
+    min-height: 100vh;
+    min-width: 100vw;
+    color: white;
+    background-color: #2D1A14;
+    font-family: Times, serif;
+    font-size: 18px;
   }
 
   .content {
-    margin: 0 auto;
+    padding: 50vh 20vw 80px 20vw;
+
   }
 
-  .section-header {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    margin-top: 2.5rem;
+  .indented {
+    max-width: 312px;
+    padding-left: 119px;
+    padding-top: 50px;
   }
+
+   div {
+    padding: 12px 0;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+
 </style>
