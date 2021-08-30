@@ -63,7 +63,7 @@
 
   .indented {
     max-width: 312px;
-    padding-left: 119px;
+    /* padding-left: 119px; */
     padding-top: 50px;
   }
 
