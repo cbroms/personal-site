@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christian Broms</title>
+    <link rel="canonical" href="https://christianbroms.com" />
+    <meta property="og:url" content="https://christianbroms.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Christian Broms" />
+    <meta name="Description" content="I design and build websites" />
+    <meta property="og:description" content="I design and build websites" />
+    <meta property="og:image" content="images/cb.png" />
+    <link rel="icon" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style id="popups">
+      .hyperfov-preview-element-wrapper {
+        /* font-family: "Charter", serif; */
+        border: none;
+        background-color: black;
+        color: white;
+        box-shadow: 4px 4px 20px #140c0973;
+        border-radius: 4px;
+      }
+
+      .hyperfov-link-image {
+        filter: saturate(0%);
+      }
+
+      .hyperfov-link-content {
+        background-color: black;
+      }
+      .hyperfov-link-content::after {
+        background-image: none;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="content">
+        <div class="indented">
+          <div class="header">
+            <div>Christian Broms</div>
+            <div><em>I design and build websites.</em></div>
+          </div>
+
+          <div>
+            I'm a product designer at
+            <a href="https://10xgenomics.com">10x Genomics</a>.
+          </div>
+          <div>
+            I like making little websites. A few you might check out are
+            <a href="https://pith.is">pith</a>,
+            <a href="https://classicinterfaces.com">classicinterfaces</a>,
+            <a href="https://twelvewebsites.com">twelvewebsites</a>, and
+            <a href="https://simplest.page">simplest.page</a>.
+          </div>
+          <div>
+            I recently graduated from
+            <a href="https://cmu.edu">CMU</a> having studied
+            <a
+              href="https://www.cmu.edu/dietrich/psychology/research-areas/cognitive-neuroscience.html"
+              >Cognitive Science</a
+            >, <a href="http://www.art.cmu.edu/">Art</a>, and
+            <a href="https://hcii.cmu.edu/">Human-Computer Interaction</a>.
+          </div>
+          <div>
+            <a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script defer>
+      import(
+        "https://previews.hyperfov.com/js/hyperfov-link-previews.min.js"
+      ).then(() => {
+        document.fonts.ready.then(() => {
+          setPagePreviews({
+            workerUrl: "https://preview-worker.hyperfov.com",
+            styles: document.getElementById("popups").sheet,
+            getLinks: () => {
+              const tags = [...document.getElementsByTagName("a")];
+              return tags.filter((t) => {
+                return t.href.indexOf("mailto:") === -1;
+              });
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

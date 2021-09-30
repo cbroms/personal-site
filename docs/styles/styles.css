@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Charter";
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/charter_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Charter";
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/charter_italic.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+  font-family: "Charter", serif;
+}
+
+body {
+  margin: 0;
+}
+
+article {
+  color: #140c09;
+  font-size: 18px;
+}
+
+.indented {
+  max-width: 500px;
+  width: 100%;
+  /* padding-left: 119px; */
+  margin-left: 22vw;
+  margin-top: 25vh;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 743px) {
+  .indented {
+    margin-left: 0;
+  }
+}
+
+div {
+  padding: 12px 0;
+}
+
+a {
+  color: #140c09;
+  display: inline-block;
+}
+
+a:visited {
+  color: #140c09;
+}
