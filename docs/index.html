@@ -9,8 +9,11 @@
     <meta property="og:url" content="https://christianbroms.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Christian Broms" />
-    <meta name="Description" content="I design and build websites" />
-    <meta property="og:description" content="I design and build websites" />
+    <meta name="Description" content="I design and build digital tools" />
+    <meta
+      property="og:description"
+      content="I design and build digital tools"
+    />
     <meta
       property="og:image"
       content="https://christianbroms.com/images/cb.png"
@@ -30,28 +33,41 @@
         <div class="indented">
           <div class="header">
             <div>Christian Broms</div>
-            <div><em>I design and build websites.</em></div>
+            <div><em>I design and build digital tools.</em></div>
           </div>
 
           <div>
             I'm a product designer at
-            <a href="https://10xgenomics.com">10x Genomics</a>.
+            <a href="https://10xgenomics.com" target="_blank">10x Genomics</a>.
           </div>
           <div>
-            I'm currently working on a set of tools called
-            <a href="https://hyperfov.com">Hyperfov</a>. Last year I made
-            <a href="https://twelvewebsites.com">Twelve Websites</a>. I hang out
-            on <a href="https://futureland.tv/christian">Futureland</a>, where I
-            log my daily practice.
+            <!-- I'm currently working on a set of tools called
+            <a href="https://hyperfov.com">Hyperfov</a>. -->
+            I enjoy building little tools for the web, like these
+            <a href="https://previews.hyperfov.com">link previews</a>. Last year
+            I made
+            <a
+              href="https://twelvewebsites.com"
+              target="_blank"
+              lp-description="In 2021 I decided to try building a website every month."
+              >Twelve Websites</a
+            >. I hang out on
+            <a href="https://futureland.tv/christian" target="_blank"
+              >Futureland</a
+            >, where I log my daily creative practice.
           </div>
           <div>
-            I recently graduated from
-            <a href="https://cmu.edu">Carnegie Mellon</a> having studied
+            Last year I graduated from
+            <a href="https://cmu.edu" target="_blank">Carnegie Mellon</a> having
+            studied
             <a
               href="https://www.cmu.edu/dietrich/psychology/research-areas/cognitive-neuroscience.html"
+              lp-description="What psychological and neural mechanisms support human perception, learning, memory, language, reasoning, and problem-solving?"
               >Cognitive Science</a
-            >, <a href="http://www.art.cmu.edu/">Art</a>, and
-            <a href="https://hcii.cmu.edu/">Human-Computer Interaction</a>.
+            >, <a href="http://www.art.cmu.edu/" target="_blank">Art</a>, and
+            <a href="https://hcii.cmu.edu/" target="_blank"
+              >Human-Computer Interaction</a
+            >.
           </div>
           <div>
             <a href="mailto:cb@christianbroms.com">cb@christianbroms.com</a>
@@ -59,23 +75,66 @@
         </div>
       </div>
     </article>
-    <!-- <script defer>
-      import(
-        "https://previews.hyperfov.com/js/hyperfov-link-previews.min.js"
-      ).then(() => {
-        document.fonts.ready.then(() => {
-          setPagePreviews({
-            workerUrl: "https://preview-worker.hyperfov.com",
-            styles: document.getElementById("popups").sheet,
-            getLinks: () => {
-              const tags = [...document.getElementsByTagName("a")];
-              return tags.filter((t) => {
-                return t.href.indexOf("mailto:") === -1;
-              });
-            },
+
+    <template id="link-preview-template">
+      <style>
+        .link-popup-wrapper {
+          padding: 10px;
+          background-color: white;
+          box-shadow: 0px 5px 15px rgba(101, 101, 110, 0.3);
+          border-radius: 6px;
+          max-width: 225px;
+          font-family: sans-serif;
+        }
+        .link-interior-content div:not(:last-child):not(:first-child) {
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        .link-url {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: grey;
+          font-size: 12px;
+        }
+        .link-image {
+          flex-shrink: 0;
+        }
+        .link-title {
+          font-weight: bold;
+        }
+        ::slotted(img) {
+          max-width: 100%;
+          border-radius: 3px;
+          width: max-content;
+          height: auto;
+          object-fit: cover;
+          object-position: top center;
+          max-height: 150px;
+        }
+      </style>
+      <div class="link-popup-wrapper">
+        <div class="link-interior-content">
+          <div class="link-image"><slot name="lp-image"></slot></div>
+          <div class="link-title"><slot name="lp-title"></slot></div>
+          <div class="link-description">
+            <slot name="lp-description"></slot>
+          </div>
+          <div class="link-url"><slot name="lp-href"></slot></div>
+        </div>
+      </div>
+    </template>
+
+    <script src="https://cdn.hyperfov.com/link-previews/latest/hyperfov-link-previews.js"></script>
+    <script defer>
+      document.querySelectorAll("a").forEach((elt) => {
+        if (elt.href.includes("http")) {
+          linkPreview(elt, {
+            template: "#link-preview-template",
+            backend: "https://preview-worker.hyperfov.com",
           });
-        });
+        }
       });
-    </script> -->
+    </script>
   </body>
 </html>
