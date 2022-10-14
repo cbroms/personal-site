@@ -6,7 +6,7 @@
   font-display: swap;
   src: url("../fonts/charter_regular.woff2") format("woff2");
 }
-
+/* 
 @font-face {
   font-family: "Charter";
   font-style: italic;
@@ -14,14 +14,59 @@
   font-stretch: normal;
   font-display: swap;
   src: url("../fonts/charter_italic.woff2") format("woff2");
-}
+} */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: swap;
+    src: url("../fonts/inter_regular.woff2") format("woff2");
+  }
+
+
 
 * {
+    /* --link-background: #C2D2E9;
+    --link-background-hover: #A3BDE6; */
+    --link-background: #F4F8CA;
+    --link-background-hover: #E2EE61;
+    --link-color: #1C1C1C;
+    --text-color: #1C1C1C;
+
+    --serif: "Charter", serif;
+    --sans: "Inter", sans-serif;
+
   box-sizing: border-box;
 }
+
+link-preview {
+
+    --lp-font-family: var(--sans);
+    --lp-background: var(--link-background);
+    --lp-border-radius: 3px;
+    --lp-box-shadow: none;
+    --lp-border: 1px solid var(--link-background-hover);
+    --lp-description-font-size: 14px;
+    --lp-description-color: var(--text-color);
+    --lp-title-font-size: 14px;
+    --lp-title-color: var(--text-color);
+ }
+
 body {
-  background-color: #f0f0f0;
-  font-family: "Charter", serif;
+  background-color: #E1E1E1;
+}
+
+
+a, .sans {
+    font-family: var(--sans);
+    font-size: 16.5px;
+}
+
+em, .serif {
+    font-family: var(--serif);
+   
 }
 
 body {
@@ -29,16 +74,17 @@ body {
 }
 
 article {
-  color: #140c09;
+  color: var(--text-color);
   font-size: 18px;
+  line-height: 28px;
 }
 
 .indented {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   /* padding-left: 119px; */
   margin-left: 22vw;
-  margin-top: 7rem;
+  margin-top: 8rem;
   padding: 20px;
 }
 
@@ -57,11 +103,21 @@ div {
 }
 
 a {
-  color: #140c09;
+  color: var(--link-color);
   display: inline-block;
   text-decoration-style: dotted;
+  /* background: var(--link-background); */
+  border-radius: 3px;
+  padding: 0 1px;
+  transition: background 0.3s;
+  line-height: 22px;
+}
+
+a:hover {
+    background: var(--link-background);
+
 }
 
 a:visited {
-  color: #140c09;
+  color: var(--link-color);
 }
