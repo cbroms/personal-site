@@ -17,51 +17,47 @@
 } */
 
 @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-display: swap;
-    src: url("../fonts/inter_regular.woff2") format("woff2");
-  }
-
-
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/inter_regular.woff2") format("woff2");
+}
 
 * {
-    /* --link-background: #C2D2E9;
+  /* --link-background: #C2D2E9;
     --link-background-hover: #A3BDE6; */
-    --link-background: #F4F8CA;
-    --link-background-hover: #E2EE61;
-    --link-color: #1C1C1C;
-    --text-color: #1C1C1C;
+  --link-background: #f4f8ca;
+  --link-background-hover: #e2ee61;
+  --link-color: #1c1c1c;
+  --text-color: #1c1c1c;
 
-    --serif: "Charter", serif;
-    --sans: "Inter", sans-serif;
+  --serif: "Charter", serif;
+  --sans: "Inter", sans-serif;
 
   box-sizing: border-box;
 }
 
 link-preview {
-
-    --lp-font-family: var(--sans);
-    --lp-background: var(--link-background);
-    --lp-border-radius: 3px;
-    --lp-box-shadow: none;
-    --lp-border: 1px solid var(--link-background-hover);
-    --lp-description-font-size: 14px;
-    --lp-description-color: var(--text-color);
-    --lp-title-font-size: 14px;
-    --lp-title-color: var(--text-color);
- }
-
-body {
-  background-color: #E1E1E1;
+  --lp-font-family: var(--sans);
+  --lp-background: var(--link-background);
+  --lp-border-radius: 3px;
+  --lp-box-shadow: none;
+  --lp-border: 1px solid var(--link-background-hover);
+  --lp-description-font-size: 14px;
+  --lp-description-color: var(--text-color);
+  --lp-title-font-size: 14px;
+  --lp-title-color: var(--text-color);
 }
 
+body {
+  background-color: #e1e1e1;
+}
 
- .sans {
-    font-family: var(--sans);
-    font-size: 16.5px;
+.sans {
+  font-family: var(--sans);
+  font-size: 16.5px;
 }
 
 /* em, .serif, a {
@@ -98,7 +94,7 @@ article {
   }
 }
 
-div {
+.sans {
   padding: 12px 0;
 }
 
@@ -114,8 +110,7 @@ a {
 }
 
 a:hover {
-    background: var(--link-background);
-
+  background: var(--link-background);
 }
 
 a:visited {
