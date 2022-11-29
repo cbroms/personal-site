@@ -20,6 +20,10 @@
     />
     <link rel="icon" href="images/favicon.jpg" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@hyperfov/link-previews@latest/dist/index.css"
+    />
     <script
       async
       defer
@@ -80,9 +84,7 @@
             <a href="https://futureland.tv/christian/rainflame" target="_blank"
               >local-first software</a
             >. I also keep a sprawling digital garden in
-            <a
-              href="https://en.wikipedia.org/wiki/Gemini_(protocol)"
-              target="_blank"
+            <a href="https://gemini.circumlunar.space/" target="_blank"
               >geminispace</a
             >
             called <a href="gemini://gemini.onedimension.net">onedimension</a>.
@@ -169,12 +171,12 @@
       </div>
     </template>
 
-    <script src="https://cdn.hyperfov.com/link-previews/latest/hyperfov-link-previews.js"></script>
+    <script src="https://unpkg.com/@hyperfov/link-previews@latest/dist/index.js"></script>
     <script defer>
       document.querySelectorAll("a").forEach((elt) => {
         if (elt.href.includes("http")) {
           linkPreview(elt, {
-            backend: "https://preview-worker.hyperfov.com",
+            worker: "https://preview-worker.hyperfov.com",
             template: "#link-preview-template",
           });
         }
