@@ -6,3 +6,4 @@ env/
 .cache
 server-prediction/
 public/
+dist/

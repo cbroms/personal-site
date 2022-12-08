@@ -1,10 +1,15 @@
 # Christian's Personal Site
 
-This is my personal homepage, which can be found online at [christianbroms.com](https://christianbroms.com) It's a single page built with Sapper in case I ever want to add more to it. 
-
-You can run the site locally:
+Install dependencies:
 
 ```
-npm install 
-npm run dev
+npm install
+```
+
+This is a static html site. However, there is a build step that replaces the unpkg dependencies with local js versions so they can be served from the same location in production.
+
+Build it:
+
+```
+npm run build
 ```
